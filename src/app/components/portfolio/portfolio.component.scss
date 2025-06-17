@@ -1,0 +1,96 @@
+.portfolio-section {
+  background-color: #f9f9f9;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+
+  .section-tag {
+    display: inline-block;
+    background-color: #e3f2fd;
+    color: var(--primary-color);
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  }
+
+  .nav-pills .nav-link {
+    border-radius: 20px;
+    color: #333;
+    background-color: #f1f1f1;
+    font-weight: 500;
+    transition: all 0.3s;
+  }
+
+  .nav-pills .nav-link.active {
+    background-color: var(--secondary-color);
+    color: #fff;
+  }
+
+  .project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.12);
+    }
+
+    img {
+      height: 12rem;
+      object-fit: cover;
+    }
+
+    .badge {
+      font-size: 0.75rem;
+      padding: 0.4em 0.6em;
+      border-radius: 12px;
+      color: #fff;
+      text-transform: capitalize;
+    }
+
+    .html {
+      background-color: #e34f26;
+    }
+    .css {
+      background-color: #264de4;
+    }
+    .bootstrap {
+      background-color: #7952b3;
+    }
+    .typescript {
+      background-color: #3178c6;
+    }
+    .angular {
+      background-color: #dd1b16;
+    }
+    .dotnet {
+      background-color: #512bd4;
+    }
+    .sql {
+      background-color: #00618a;
+    }
+    .python {
+      background-color: #3776ab;
+    }
+    .flask {
+      background-color: #000000;
+    }
+    .js {
+      background-color: #f7df1e;
+      color: #000;
+    }
+    .figma {
+      background-color: #f24e1e;
+    }
+    .ml {
+      background-color: #6c757d;
+    }
+  }
+
+  .icon-btn i {
+    font-size: 1rem;
+    vertical-align: middle;
+  }
+}
