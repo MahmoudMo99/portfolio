@@ -1,0 +1,46 @@
+.about-section {
+  .btn {
+    border-radius: 30px;
+    padding: 0.5rem 1.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  .profile-wrapper {
+    border: black 4px solid;
+    background-color: transparent;
+    width: 30rem;
+    height: 30rem;
+    border-radius: 20px;
+  }
+
+  .profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 2px solid gray;
+    transform: translate(20px, -20px);
+    border-radius: 20px;
+
+    transition: all 0.3s ease;
+    &:hover {
+      transform: translate(0px, 0px);
+      border: none !important;
+    }
+  }
+  @media (max-width: 768px) {
+    .profile-wrapper {
+      width: 20rem;
+      height: 20rem;
+    }
+    .profile-img {
+      transform: translate(0px, 0px);
+      border: none !important;
+    }
+  }
+}

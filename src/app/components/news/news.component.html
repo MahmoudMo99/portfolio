@@ -1,0 +1,18 @@
+<section id="news" class="news-section py-5 bg-white">
+    <div class="container">
+        <h2 class="text-center mb-5">Latest News & Updates</h2>
+        <div class="row g-4">
+            <ng-container *ngFor="let item of news; let i = index">
+                <div class="col-md-4">
+                    <div class="card news-card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ item.title }}</h5>
+                            <p class="card-text">{{ item.summary }}</p>
+                            <p class="text-muted small">{{ item.date }}</p>
+                        </div>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</section>

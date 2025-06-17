@@ -1,0 +1,21 @@
+<section id="portfolio" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5">Projects</h2>
+        <div class="row g-4">
+            @for( project of projects; track $index) {
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ project.title }}</h5>
+                        <p class="card-text">{{ project.description }}</p>
+                        @if (project.link) {
+                        <a class="btn btn-sm btn-outline-primary" href="{{ project.link }}" target="_blank">View
+                            Project</a>
+                        }
+                    </div>
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+</section>
