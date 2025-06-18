@@ -1,0 +1,65 @@
+.skills-section {
+  background-color: #f9f9f9;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  .section-tag {
+    display: inline-block;
+    background-color: #e3f2fd;
+    color: var(--primary-color);
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  }
+
+  .title-color {
+    color: var(--secondary-color);
+  }
+
+  .skill-icon-card {
+    background: #ffffff;
+    border-radius: 4px;
+    border: 1px solid #e5e5e5;
+    transition: 0.3s;
+    position: relative;
+
+    &:hover {
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+      transform: translateY(-5px);
+    }
+
+    .icon-circle {
+      width: 50px;
+      height: 50px;
+      margin: 0 auto;
+      background: var(--primary-color);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+    }
+
+    h5 {
+      color: var(--primary-color);
+    }
+
+    .badge {
+      background-color: #f0f0f0;
+      border-radius: 30px;
+      padding: 6px 12px;
+      font-size: 0.85rem;
+      color: #333;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        background-color: var(--primary-color);
+        color: #fff;
+      }
+    }
+  }
+}

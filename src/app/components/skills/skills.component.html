@@ -1,19 +1,29 @@
-<section id="skills" class="bg-white py-5">
-    <div class="container">
-        <h2 class="text-center mb-5">Skills & Technologies</h2>
-        <div class="row text-center">
+<div class="container-fluid">
+    <section id="skills" class="py-5 my-3 skills-section">
+        <div class="container text-center">
+            <div class="section-tag mb-2">
+                <span>My Skills</span>
+            </div>
+            <h2 class="fw-bold mb-5 title-color">Technical Skills</h2>
 
-            @for (item of skills ; track $index) {
-            <div class="col-md-3 mb-4">
-                <div class="card border-0 shadow-sm h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ item.name }}</h5>
+
+            <div class="row gy-4">
+                @for (category of skillCategories; track $index) {
+                <div class="col-md-6 col-lg-4">
+                    <div class="skill-icon-card p-4 h-100 shadow-sm text-center">
+                        <div class="icon-circle mb-3">
+                            <i class="{{ category.icon }}"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">{{ category.title }}</h5>
+                        <div class="d-flex flex-wrap justify-content-center gap-2">
+                            @for (skill of category.items; track $index) {
+                            <span class="badge bg-soft">{{ skill }}</span>
+                            }
+                        </div>
                     </div>
                 </div>
+                }
             </div>
-            }
-
-
         </div>
-    </div>
-</section>
+    </section>
+</div>

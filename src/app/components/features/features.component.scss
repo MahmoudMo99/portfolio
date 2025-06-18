@@ -15,6 +15,10 @@
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   }
 
+  .title-color {
+    color: var(--secondary-color);
+  }
+
   .card {
     border: 1px solid #ddd;
     transition: all 0.3s ease;
