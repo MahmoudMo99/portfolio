@@ -5,7 +5,6 @@ import { AboutComponent } from './components/about/about.component';
 import { FeaturesComponent } from './components/features/features.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { SkillsComponent } from './components/skills/skills.component';
-import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { WorkExperiencesComponent } from './components/work-experiences/work-experiences.component';
 
@@ -18,7 +17,6 @@ import { WorkExperiencesComponent } from './components/work-experiences/work-exp
     FeaturesComponent,
     PortfolioComponent,
     SkillsComponent,
-    ContactComponent,
     FooterComponent,
     WorkExperiencesComponent,
   ],

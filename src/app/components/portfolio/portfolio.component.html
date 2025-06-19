@@ -4,9 +4,9 @@
             <div class="section-tag mb-2">
                 <span>My Work</span>
             </div>
-            <h2 class="fw-bold mb-4 title-color">What I've Built</h2>
+            <h2 class="fw-bold mb-5 title-color">What I've Built</h2>
 
-            <ul class="nav nav-pills justify-content-center mb-4 gap-2" id="portfolioTabs">
+            <ul class="nav nav-pills justify-content-center mb-5 gap-2" id="portfolioTabs">
                 <li class="nav-item" *ngFor="let category of categories">
                     <button class="nav-link" [class.active]="selectedCategory === category"
                         (click)="filterProjects(category)">
