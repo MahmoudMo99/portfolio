@@ -10,7 +10,7 @@
   --text-color: #333;
   --background-color: #f5f5f5;
   --border-color: #ddd;
-  --secondary-color-rgb: 13, 71, 161; 
+  --secondary-color-rgb: 13, 71, 161;
 }
 
 html,
@@ -20,4 +20,8 @@ body {
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.section-container-border {
+  border: 2px solid var(--secondary-color);
 }

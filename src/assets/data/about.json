@@ -1,0 +1,25 @@
+{
+  "name": "Mahmoud Mohamed",
+  "description": "I'm Mahmoud Mohamed, a Frontend Developer specializing in Angular and the MEARN stack. I build dynamic, scalable web applications and have solid experience in .NET, Node.js, and SQL Server,enabling me to deliver full-stack solutions that align with real business needs.",
+  "educations": [
+    {
+      "degree": "Master's Degree",
+      "field": "Computer Science",
+      "institution": "Assiut University",
+      "year": "2025-Present"
+    },
+    {
+      "degree": "Full Stack Diploma",
+      "field": "MEARN",
+      "institution": "ITI",
+      "year": "2024-2025"
+    },
+    {
+      "degree": "Bachelor's Degree",
+      "field": "Computers and Information",
+      "institution": "South Valley University",
+      "year": "2020-2024"
+    }
+  ],
+  "image": "images/mahmoud.jpg"
+}
