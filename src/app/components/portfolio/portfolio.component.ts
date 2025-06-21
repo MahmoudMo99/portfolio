@@ -14,12 +14,21 @@ export class PortfolioComponent {
 
   projects = [
     {
+      title: 'Personal Portfolio',
+      description: 'My personal portfolio showcasing my projects and skills.',
+      category: 'Web',
+      skills: ['HTML', 'SASS', 'Bootstrap', 'TypeScript', 'Angular'],
+      image: '/images/projects/portfolio.png',
+      github: 'https://github.com/MahmoudMo99/portfolio',
+      live: 'https://mahmoud-mohamed-portfolio.vercel.app/',
+    },
+    {
       title: 'Tripadvisor Clone',
       description: 'Clone of Tripadvisor with Angular & Node JS.',
       category: 'Web',
       skills: [
         'HTML',
-        'CSS',
+        'SASS',
         'Bootstrap',
         'Angular',
         'Node JS',
@@ -29,6 +38,7 @@ export class PortfolioComponent {
       image: '/images/projects/trip.png',
       github: 'https://github.com/MahmoudMo99/tripadvisor-angular',
     },
+
     {
       title: 'University Campus Housing Management',
       description: 'System for student housing using Angular and .NET.',
