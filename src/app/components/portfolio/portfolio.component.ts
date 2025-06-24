@@ -55,7 +55,7 @@ export class PortfolioComponent {
       category: 'Web',
       skills: ['HTML', 'CSS', 'Bootstrap', 'TypeScript', 'Angular'],
       image: '/images/projects/ecommerce.png',
-      github: 'https://github.com/MahmoudMo99/Angular-E-Commerce',
+      github: 'https://github.com/MahmoudMo99/AngularE-Commerce',
     },
     {
       title: 'Medium Articles Platform',
@@ -100,7 +100,7 @@ export class PortfolioComponent {
       category: 'Web',
       skills: ['HTML', 'CSS', 'JavaScript', 'Bootstrap', 'ASP.NET Core'],
       image: '/images/projects/OLMS.png',
-      github: 'https://github.com/MahmoudMo99/Learning-Management-System',
+      github: 'https://github.com/MahmoudMo99/FullStack-OLMS',
     },
     {
       title: 'JavaScript Assignments Solutions',
@@ -108,7 +108,7 @@ export class PortfolioComponent {
       category: 'Tools',
       skills: ['JavaScript', 'HTML', 'CSS'],
       image: '/images/projects/Js.jpg',
-      github: 'https://github.com/MahmoudMo99/JavaScript-Assignments',
+      github: 'https://github.com/MahmoudMo99/JavaScript-Assignments-Solutions',
     },
     {
       title: 'Personality Detection App',
