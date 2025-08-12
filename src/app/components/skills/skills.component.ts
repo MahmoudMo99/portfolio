@@ -42,6 +42,11 @@ export class SkillsComponent {
       ],
     },
     {
+      title: 'Backend Development',
+      icon: 'bi bi-code-slash',
+      items: ['Node JS', 'Express JS'],
+    },
+    {
       title: 'Database',
       icon: 'bi bi-database',
       items: ['MS SQL Server', 'Mongo DB'],
@@ -59,7 +64,7 @@ export class SkillsComponent {
     {
       title: 'Testing & Version Control',
       icon: 'bi bi-git',
-      items: ['Jasmine', 'Git', 'GitHub'],
+      items: ['Jasmine', 'Postman', 'Git', 'GitHub'],
     },
   ];
 }
