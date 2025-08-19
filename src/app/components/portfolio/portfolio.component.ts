@@ -144,6 +144,7 @@ export class PortfolioComponent {
       ML: 'bg-warning text-dark',
       UX: 'bg-success',
       UI: 'bg-success',
+      
     };
     return 'badge rounded-pill ' + (map[skill] || 'bg-secondary');
   }

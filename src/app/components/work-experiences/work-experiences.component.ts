@@ -9,10 +9,10 @@ import { Component } from '@angular/core';
 export class WorkExperiencesComponent {
   experiences = [
     {
-      title: ' External Instructor',
+      title: 'External Instructor',
       organization: 'Information Technology Institute (ITI)',
       date: '07/2025 - Present',
-      type: 'External | Part Time',
+      type: 'Part Time',
       description: [
         'Delivering technical lectures and hands-on training in the MEARN Stack (MongoDB, Express, Angular, Node.js) across multiple ITI tracks.',
         'Focused on practical applications, real-world projects, and mentoring junior developers.',
