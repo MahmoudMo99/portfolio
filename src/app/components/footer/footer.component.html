@@ -1,26 +1,46 @@
 <footer id="footer" class="main-footer py-4 mt-5 text-white position-relative">
-    <div class="container text-center">
-        <div class="social-icons mb-3 d-flex justify-content-center gap-3 flex-wrap">
-            <a href="https://github.com/MahmoudMo99" target="_blank" class="footer-icon github">
-                <i class="bi bi-github"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/mahmoud-mo-mahmoud" target="_blank" class="footer-icon linkedin">
-                <i class="bi bi-linkedin"></i>
-            </a>
-            <a href="mailto:mmahmoud092002@gmail.com" class="footer-icon email">
-                <i class="bi bi-envelope-fill"></i>
-            </a>
-            <a href="https://wa.me/+201155347463" target="_blank" class="footer-icon whatsapp">
-                <i class="bi bi-whatsapp"></i>
-            </a>
-        </div>
-
-        <small>Copyright &copy; {{currentYear}} Mahmoud Mohamed</small>
+  <div class="container text-center">
+    <div
+      class="social-icons mb-3 d-flex justify-content-center gap-3 flex-wrap"
+    >
+      <a
+        href="https://github.com/MahmoudMo99"
+        target="_blank"
+        class="footer-icon github"
+      >
+        <i class="bi bi-github"></i>
+      </a>
+      <a
+        href="https://www.linkedin.com/in/mahmoud-mo-mahmoud"
+        target="_blank"
+        class="footer-icon linkedin"
+      >
+        <i class="bi bi-linkedin"></i>
+      </a>
+      <a href="mailto:mmahmoud092002@gmail.com" class="footer-icon email">
+        <i class="bi bi-envelope-fill"></i>
+      </a>
+      <a
+        href="https://wa.me/+201155347463"
+        target="_blank"
+        class="footer-icon whatsapp"
+      >
+        <i class="bi bi-whatsapp"></i>
+      </a>
     </div>
 
-    @if ( showBackToTop ) {
-    <button class="back-to-top" (click)="scrollToTop()" title="Back to top">
-        <i class="bi bi-arrow-up"></i>
-    </button>
-    }
+    <div class="d-flex flex-column align-items-center">
+      <small>Copyright &copy; {{ currentYear }} Mahmoud Mohamed</small>
+      <small class="visits-count">
+        <i class="bi bi-eye pe-1"></i>
+        {{ formatNumber(visitsCount) }} visits
+      </small>
+    </div>
+  </div>
+
+  @if ( showBackToTop ) {
+  <button class="back-to-top" (click)="scrollToTop()" title="Back to top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+  }
 </footer>
