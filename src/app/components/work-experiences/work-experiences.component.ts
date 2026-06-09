@@ -30,6 +30,17 @@ export class WorkExperiencesComponent {
       ],
     },
     {
+      title: 'Freelancing Project',
+      organization: 'Mostaql',
+      date: '12/2025',
+      type: 'Webflow Website Enhancement',
+      description: [
+        'Completed and enhanced a partially built Webflow website with a focus on clean UI, better structure, and consistent branding.',
+        'Improved mobile responsiveness, fixed layout issues, adjusted spacing, typography, navigation links, and CTA behavior.',
+        'Refined key pages including Home, Services, Why IGCA, Testimonials, and FAQ, and applied basic SEO improvements.',
+      ],
+    },
+    {
       title: 'Coach for Freelancing in Software Development',
       organization: 'EYouth',
       date: '10/2024 - 04/2025',
@@ -42,7 +53,7 @@ export class WorkExperiencesComponent {
     {
       title: 'Freelancing Project',
       organization: 'Mostaql',
-      date: '11/2024 - 01/2025',
+      date: '11/2024 - 02/2025',
       type: 'Web Application Project',
       description: [
         'Developed a web application for small businesses to manage services, employees, and bookings.',
