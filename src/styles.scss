@@ -17,6 +17,11 @@ html,
 body {
   height: 100%;
 }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;

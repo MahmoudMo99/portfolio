@@ -1,47 +1,60 @@
-import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+
+type ProjectCategory = 'All' | 'Web' | 'AI' | 'Mobile UI' | 'Tools';
+
+interface PortfolioProject {
+  title: string;
+  description: string;
+  category: Exclude<ProjectCategory, 'All'>;
+  skills: string[];
+  image: string;
+  github?: string;
+  live?: string;
+  video?: string;
+}
 
 @Component({
   selector: 'app-portfolio',
   standalone: true,
-  imports: [CommonModule],
+  imports: [],
   templateUrl: './portfolio.component.html',
   styleUrl: './portfolio.component.scss',
 })
 export class PortfolioComponent {
-  categories = ['All', 'Web', 'AI', 'Mobile UI', 'Tools'];
-  selectedCategory = 'All';
+  readonly categories: ProjectCategory[] = [
+    'All',
+    'Web',
+    'AI',
+    'Mobile UI',
+    'Tools',
+  ];
 
-  projects = [
+  selectedCategory: ProjectCategory = 'All';
+
+  readonly projects: PortfolioProject[] = [
     {
       title: 'Personal Portfolio',
-      description: 'My personal portfolio showcasing my projects and skills.',
+      description:
+        'My personal portfolio showcasing my projects, skills, and work experience.',
       category: 'Web',
-      skills: ['HTML', 'SASS', 'Bootstrap', 'TypeScript', 'Angular'],
+      skills: ['Angular', 'TypeScript', 'SASS', 'Bootstrap'],
       image: '/images/projects/portfolio.png',
       github: 'https://github.com/MahmoudMo99/portfolio',
       live: 'https://mahmoud-mohamed-portfolio.vercel.app/',
     },
     {
       title: 'Tripadvisor Clone',
-      description: 'Clone of Tripadvisor with Angular & Node JS.',
+      description:
+        'A Tripadvisor clone built with Angular, Node.js, Express, and MongoDB.',
       category: 'Web',
-      skills: [
-        'HTML',
-        'SASS',
-        'Bootstrap',
-        'Angular',
-        'Node JS',
-        'Express JS',
-        'Mongo DB',
-      ],
+      skills: ['Angular', 'Node.js', 'Express', 'MongoDB', 'Bootstrap'],
       image: '/images/projects/trip.png',
       github: 'https://github.com/MahmoudMo99/tripadvisor-angular',
     },
-
     {
       title: 'University Campus Housing Management',
-      description: 'System for student housing using Angular and .NET.',
+      description:
+        'A system for managing student housing, services, employees, and reservations.',
       category: 'Web',
       skills: ['Angular', '.NET', 'SQL Server'],
       image: '/images/projects/madina.jpg',
@@ -51,15 +64,17 @@ export class PortfolioComponent {
     },
     {
       title: 'E-Commerce Website',
-      description: 'Filter & view product details with Angular.',
+      description:
+        'An Angular e-commerce interface with product filtering and details pages.',
       category: 'Web',
-      skills: ['HTML', 'CSS', 'Bootstrap', 'TypeScript', 'Angular'],
+      skills: ['Angular', 'TypeScript', 'Bootstrap'],
       image: '/images/projects/ecommerce.png',
       github: 'https://github.com/MahmoudMo99/AngularE-Commerce',
     },
     {
       title: 'Medium Articles Platform',
-      description: 'Full CRUD blog with profile & auth.',
+      description:
+        'A full CRUD articles platform with authentication, profiles, and REST APIs.',
       category: 'Web',
       skills: ['Angular', 'ASP.NET Core', 'REST API'],
       image: '/images/projects/medium.png',
@@ -68,43 +83,46 @@ export class PortfolioComponent {
     },
     {
       title: 'Islamic and Quran Website',
-      description: 'A website for Islamic content and Quran & Tafsir reading.',
+      description:
+        'A platform for Islamic content, Quran reading, and Tafsir using REST APIs.',
       category: 'Web',
-      skills: ['HTML', 'CSS', 'Bootstrap', 'Angular', 'Rest API'],
+      skills: ['Angular', 'Bootstrap', 'REST API'],
       image: '/images/projects/quran.png',
       github: 'https://github.com/MahmoudMo99/QuranSunnah',
       live: 'https://quran-sunnah.vercel.app/',
     },
     {
       title: 'YouTube Playlist Downloader',
-      description: 'Download playlists as ZIP using Flask & JS.',
+      description:
+        'A tool for downloading YouTube playlists as ZIP files using Flask and JavaScript.',
       category: 'Tools',
-      skills: ['HTML', 'CSS', 'Bootstrap', 'JavaScript', 'Python', 'Flask'],
+      skills: ['Python', 'Flask', 'JavaScript', 'Bootstrap'],
       image: '/images/projects/download-yout.png',
       github: 'https://github.com/MahmoudMo99/Youtube-Playlist-Downloader',
       video:
         'https://www.linkedin.com/posts/mahmoud-mohamed-a25901223_for-youtube-playlists-download-lovers-activity-7215057068204933121-ydzQ?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADgyaH0BbjEuGZZyUMA7ZMkUi7YePJjokFU',
     },
-
     {
       title: 'Mobile Food UI',
-      description: 'Food ordering app UI built with Figma.',
+      description: 'A modern food ordering mobile app UI designed with Figma.',
       category: 'Mobile UI',
-      skills: ['Figma', 'UX', 'UI'],
+      skills: ['Figma', 'UI', 'UX'],
       image: '/images/projects/food.png',
       live: 'https://www.figma.com/file/9cxnbJy4BtnaQgSbnxbdbp/Fast-Food-Design?type=design&node-id=0%3A1&mode=design&t=uX0rKOu1kSSBGGcx-1',
     },
     {
       title: 'Online Learning Management System',
-      description: 'Manage courses, materials, and students.',
+      description:
+        'A learning management system for courses, materials, and student management.',
       category: 'Web',
-      skills: ['HTML', 'CSS', 'JavaScript', 'Bootstrap', 'ASP.NET Core'],
+      skills: ['ASP.NET Core', 'JavaScript', 'Bootstrap'],
       image: '/images/projects/OLMS.png',
       github: 'https://github.com/MahmoudMo99/FullStack-OLMS',
     },
     {
       title: 'JavaScript Assignments Solutions',
-      description: 'Solutions for JS tasks from Elzero Academy.',
+      description:
+        'A collection of JavaScript problem-solving assignments from Elzero Academy.',
       category: 'Tools',
       skills: ['JavaScript', 'HTML', 'CSS'],
       image: '/images/projects/Js.jpg',
@@ -112,7 +130,8 @@ export class PortfolioComponent {
     },
     {
       title: 'Personality Detection App',
-      description: 'ML model detects personality based on inputs.',
+      description:
+        'A machine learning app that predicts personality type based on user inputs.',
       category: 'AI',
       skills: ['Python', 'ML', 'Flask'],
       image: '/images/projects/personality.png',
@@ -122,30 +141,17 @@ export class PortfolioComponent {
     },
   ];
 
-  get filteredProjects() {
-    if (this.selectedCategory === 'All') return this.projects;
-    return this.projects.filter((p) => p.category === this.selectedCategory);
+  get filteredProjects(): PortfolioProject[] {
+    if (this.selectedCategory === 'All') {
+      return this.projects;
+    }
+
+    return this.projects.filter(
+      (project) => project.category === this.selectedCategory,
+    );
   }
 
-  filterProjects(category: string) {
+  filterProjects(category: ProjectCategory): void {
     this.selectedCategory = category;
-  }
-
-  getBadgeClass(skill: string): string {
-    const map: { [key: string]: string } = {
-      Angular: 'bg-danger',
-      '.NET': 'bg-secondary',
-      Python: 'bg-warning text-dark',
-      Flask: 'bg-warning text-dark',
-      SQL: 'bg-primary',
-      'SQL Server': 'bg-primary',
-      JS: 'bg-info text-dark',
-      Figma: 'bg-success',
-      ML: 'bg-warning text-dark',
-      UX: 'bg-success',
-      UI: 'bg-success',
-      
-    };
-    return 'badge rounded-pill ' + (map[skill] || 'bg-secondary');
   }
 }

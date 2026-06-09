@@ -1,28 +1,39 @@
-<div class="container-fluid">
-    <section id="skills" class="py-5 my-3 skills-section section-container-border">
-        <div class="container text-center">
-            <div class="section-tag mb-2">
-                <span>My Skills</span>
-            </div>
-            <h2 class="fw-bold mb-5 title-color">Technical Skills</h2>
+<section id="skills" class="skills-section">
+  <div class="container">
+    <div class="section-heading text-center">
+      <span class="section-badge">My Skills</span>
 
-            <div class="row gy-4">
-                @for (category of skillCategories; track $index) {
-                <div class="col-md-6 col-lg-4">
-                    <div class="skill-icon-card p-4 h-100 shadow-sm text-center">
-                        <div class="icon-circle mb-3">
-                            <i class="{{ category.icon }}"></i>
-                        </div>
-                        <h5 class="fw-bold mb-3">{{ category.title }}</h5>
-                        <div class="d-flex flex-wrap justify-content-center gap-2">
-                            @for (skill of category.items; track $index) {
-                            <span class="badge bg-soft">{{ skill }}</span>
-                            }
-                        </div>
-                    </div>
-                </div>
-                }
+      <h2>Technical Skills</h2>
+
+      <p>
+        A collection of technologies, tools, and concepts I use to build modern,
+        scalable, and maintainable software solutions.
+      </p>
+    </div>
+
+    <div class="row g-4">
+      @for (category of skillCategories; track category.title) {
+        <div class="col-md-6 col-lg-4">
+          <article class="skill-card">
+            <div class="skill-card-header">
+              <div class="skill-icon">
+                <i [class]="category.icon"></i>
+              </div>
+
+              <div>
+                <h3>{{ category.title }}</h3>
+                <p>{{ category.description }}</p>
+              </div>
             </div>
+
+            <div class="skills-list">
+              @for (skill of category.items; track skill) {
+                <span>{{ skill }}</span>
+              }
+            </div>
+          </article>
         </div>
-    </section>
-</div>
+      }
+    </div>
+  </div>
+</section>

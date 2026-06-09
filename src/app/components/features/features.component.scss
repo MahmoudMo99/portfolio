@@ -1,74 +1,151 @@
 .features-section {
-  background-color: #f9f9f9;
-  border-radius: 5px;
-  .section-tag {
-    display: inline-block;
-    background-color: #e3f2fd;
-    color: var(--primary-color);
-    font-size: 0.85rem;
-    font-weight: 600;
-    padding: 4px 12px;
-    border-radius: 30px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  }
+  position: relative;
+  overflow: hidden;
+  padding: 3rem 0;
+  background:
+    radial-gradient(
+      circle at 12% 20%,
+      rgba(var(--secondary-color-rgb), 0.08),
+      transparent 28%
+    ),
+    linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
 
-  .title-color {
-    color: var(--secondary-color);
-  }
+  .section-heading {
+    max-width: 720px;
+    margin: 0 auto 3.5rem;
 
-  .card {
-    border: 1px solid #ddd;
-    transition: all 0.3s ease;
-
-    &:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-      border-color: var(--primary-color);
-      background-color: var(--secondary-color);
-      color: #fff;
-
-      p {
-        color: #fff;
-      }
-
-      .feature-icon {
-        background-color: #fff;
-        color: var(--primary-color);
-      }
+    .section-badge {
+      display: inline-flex;
+      align-items: center;
+      margin-bottom: 0.9rem;
+      padding: 0.45rem 1rem;
+      border-radius: 999px;
+      background-color: rgba(var(--secondary-color-rgb), 0.08);
+      color: var(--secondary-color);
+      font-size: 0.85rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
     }
 
-    h5 {
-      font-size: 1.25rem;
+    h2 {
+      margin-bottom: 0.9rem;
+      color: var(--secondary-color);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      letter-spacing: -1px;
     }
 
     p {
-      font-size: 0.95rem;
-      color: #555;
+      margin: 0;
+      color: #64748b;
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
+  }
+
+  .feature-card {
+    position: relative;
+    height: 100%;
+    padding: 2rem;
+    border-radius: 28px;
+    background-color: #ffffff;
+    border: 1px solid rgba(var(--secondary-color-rgb), 0.12);
+    box-shadow: 0 20px 55px rgba(var(--secondary-color-rgb), 0.08);
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease,
+      border-color 0.3s ease;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: linear-gradient(
+        135deg,
+        rgba(25, 118, 210, 0.08),
+        transparent 45%
+      );
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+    }
+
+    &:hover {
+      transform: translateY(-8px);
+      border-color: rgba(var(--secondary-color-rgb), 0.25);
+      box-shadow: 0 26px 70px rgba(var(--secondary-color-rgb), 0.14);
+
+      &::before {
+        opacity: 1;
+      }
+
+      .feature-icon {
+        color: #ffffff;
+        background-color: var(--primary-color);
+        transform: rotate(-4deg) scale(1.05);
+      }
+    }
+
+    h3 {
+      position: relative;
+      margin-bottom: 0.85rem;
+      color: #1f2937;
+      font-size: 1.35rem;
+      font-weight: 800;
+      letter-spacing: -0.3px;
+    }
+
+    p {
+      position: relative;
+      margin: 0;
+      color: #5d6b7c;
+      font-size: 1rem;
+      line-height: 1.8;
     }
   }
 
   .feature-icon {
-    font-size: 1.5rem;
-    background-color: #e3f2fd;
-    color: #1976d2;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 58px;
+    height: 58px;
+    margin-bottom: 1.5rem;
+    border-radius: 20px;
+    background-color: rgba(var(--secondary-color-rgb), 0.08);
+    color: var(--primary-color);
+    font-size: 1.55rem;
+    transition:
+      transform 0.3s ease,
+      background-color 0.3s ease,
+      color 0.3s ease;
   }
+}
 
-  @media (max-width: 768px) {
-    .card {
+@media (max-width: 991px) {
+  .features-section {
+    padding: 4.5rem 0;
+
+    .section-heading {
+      margin-bottom: 2.5rem;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .features-section {
+    padding: 3.5rem 0;
+
+    .feature-card {
+      padding: 1.5rem;
+      border-radius: 22px;
       text-align: center;
     }
 
     .feature-icon {
-      margin: 0 auto 1rem;
+      margin-inline: auto;
     }
   }
 }

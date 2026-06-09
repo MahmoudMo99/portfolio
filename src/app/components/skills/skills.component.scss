@@ -1,64 +1,177 @@
 .skills-section {
-  background-color: #f9f9f9;
-  border-radius: 5px;
-  .section-tag {
-    display: inline-block;
-    background-color: #e3f2fd;
-    color: var(--primary-color);
-    font-size: 0.85rem;
-    font-weight: 600;
-    padding: 4px 12px;
-    border-radius: 30px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+  padding: 3rem 0;
+  background:
+    radial-gradient(
+      circle at 90% 12%,
+      rgba(25, 118, 210, 0.1),
+      transparent 30%
+    ),
+    linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
+
+  .section-heading {
+    max-width: 760px;
+    margin: 0 auto 3.5rem;
+
+    .section-badge {
+      display: inline-flex;
+      align-items: center;
+      margin-bottom: 0.9rem;
+      padding: 0.45rem 1rem;
+      border-radius: 999px;
+      background-color: rgba(var(--secondary-color-rgb), 0.08);
+      color: var(--secondary-color);
+      font-size: 0.85rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    h2 {
+      margin-bottom: 0.9rem;
+      color: var(--secondary-color);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      letter-spacing: -1px;
+    }
+
+    p {
+      margin: 0;
+      color: #64748b;
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
   }
 
-  .title-color {
-    color: var(--secondary-color);
-  }
-
-  .skill-icon-card {
-    background: #ffffff;
-    border-radius: 4px;
-    border: 1px solid #e5e5e5;
-    transition: 0.3s;
-    position: relative;
+  .skill-card {
+    height: 100%;
+    padding: 1.75rem;
+    border-radius: 28px;
+    background-color: #ffffff;
+    border: 1px solid rgba(var(--secondary-color-rgb), 0.12);
+    box-shadow: 0 20px 55px rgba(var(--secondary-color-rgb), 0.08);
+    transition:
+      box-shadow 0.3s ease,
+      border-color 0.3s ease;
 
     &:hover {
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
-      transform: translateY(-5px);
+      border-color: rgba(var(--secondary-color-rgb), 0.22);
+      box-shadow: 0 24px 65px rgba(var(--secondary-color-rgb), 0.11);
+
+      .skill-icon {
+        color: #ffffff;
+        background-color: var(--primary-color);
+      }
+    }
+  }
+
+  .skill-card-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.4rem;
+
+    h3 {
+      margin-bottom: 0.45rem;
+      color: #1f2937;
+      font-size: 1.18rem;
+      font-weight: 800;
+      line-height: 1.35;
+      letter-spacing: -0.3px;
     }
 
-    .icon-circle {
-      width: 50px;
-      height: 50px;
-      margin: 0 auto;
-      background: var(--primary-color);
-      color: white;
-      border-radius: 50%;
-      display: flex;
+    p {
+      margin: 0;
+      color: #64748b;
+      font-size: 0.94rem;
+      line-height: 1.7;
+    }
+  }
+
+  .skill-icon {
+    display: grid;
+    place-items: center;
+    flex: 0 0 52px;
+    width: 52px;
+    height: 52px;
+    border-radius: 18px;
+    background-color: rgba(var(--secondary-color-rgb), 0.08);
+    color: var(--primary-color);
+    font-size: 1.35rem;
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease;
+  }
+
+  .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+
+    span {
+      display: inline-flex;
       align-items: center;
-      justify-content: center;
-      font-size: 1.4rem;
-    }
-
-    h5 {
-      color: var(--primary-color);
-    }
-
-    .badge {
-      background-color: #f0f0f0;
-      border-radius: 30px;
-      padding: 6px 12px;
-      font-size: 0.85rem;
-      color: #333;
-      transition: all 0.3s ease-in-out;
+      padding: 0.42rem 0.75rem;
+      border-radius: 999px;
+      background-color: #f7fbff;
+      color: var(--secondary-color);
+      font-size: 0.82rem;
+      font-weight: 800;
+      border: 1px solid rgba(var(--secondary-color-rgb), 0.08);
+      transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease;
 
       &:hover {
-        background-color: var(--primary-color);
-        color: #fff;
+        color: #ffffff;
+        background-color: var(--secondary-color);
+        border-color: var(--secondary-color);
       }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .skills-section {
+    padding: 4.5rem 0;
+
+    .section-heading {
+      margin-bottom: 2.5rem;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .skills-section {
+    padding: 3.5rem 0;
+
+    .skill-card {
+      padding: 1.4rem;
+      border-radius: 22px;
+    }
+
+    .skill-card-header {
+      gap: 0.85rem;
+    }
+
+    .skill-icon {
+      flex-basis: 46px;
+      width: 46px;
+      height: 46px;
+      border-radius: 16px;
+      font-size: 1.2rem;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skills-section {
+    .skill-card,
+    .skill-icon,
+    .skills-list span {
+      transition: none;
     }
   }
 }

@@ -6,4 +6,10 @@ import { Component } from '@angular/core';
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.scss',
 })
-export class HeroComponent {}
+export class HeroComponent {
+  codeSnippet = `const developer = {
+  name: 'Mahmoud',
+  role: 'Angular Developer',
+  focus: 'Clean UI'
+};`;
+}

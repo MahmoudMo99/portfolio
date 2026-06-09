@@ -1,5 +1,15 @@
 import { Component } from '@angular/core';
 
+interface WorkExperience {
+  title: string;
+  organization: string;
+  date: string;
+  type: string;
+  description: string[];
+  reviewLink?: string;
+  current?: boolean;
+}
+
 @Component({
   selector: 'app-work-experiences',
   imports: [],
@@ -7,18 +17,18 @@ import { Component } from '@angular/core';
   styleUrl: './work-experiences.component.scss',
 })
 export class WorkExperiencesComponent {
-  experiences = [
+  readonly experiences: WorkExperience[] = [
     {
       title: 'External Instructor',
       organization: 'Information Technology Institute (ITI)',
       date: '07/2025 - Present',
       type: 'Part Time',
+      current: true,
       description: [
-        'Delivering technical lectures and hands-on training in the MEARN Stack (MongoDB, Express, Angular, Node.js) across multiple ITI tracks.',
+        'Delivering technical lectures and hands-on training in the MEARN Stack across multiple ITI tracks.',
         'Focused on practical applications, real-world projects, and mentoring junior developers.',
       ],
     },
-
     {
       title: 'Coach for Freelancing in Software Development',
       organization: 'EYouth',
@@ -26,7 +36,7 @@ export class WorkExperiencesComponent {
       type: 'Project-Based | DEPI Initiative',
       description: [
         'Provided guidance on freelancing skills, client engagement, and portfolio building.',
-        'Helped participants obtain software development opportunities.',
+        'Helped participants prepare for software development opportunities.',
       ],
     },
     {
@@ -35,9 +45,9 @@ export class WorkExperiencesComponent {
       date: '11/2024 - 01/2025',
       type: 'Web Application Project',
       description: [
-        'Developed a web app for small businesses to manage services, employees, and bookings.',
-        'Included client-facing pages to reserve time slots and view availability.',
-        'Built using Angular, .NET, and MS SQL Server.',
+        'Developed a web application for small businesses to manage services, employees, and bookings.',
+        'Built client-facing pages to reserve time slots and view availability.',
+        'Used Angular, .NET, and MS SQL Server.',
       ],
       reviewLink: 'https://mostaql.com/u/Mahmoud_7oda_9/reviews/8202653',
     },
@@ -48,18 +58,18 @@ export class WorkExperiencesComponent {
       type: 'Documentation & UX Design',
       description: [
         'Analyzed a mobile app idea and prepared a clear SRS document.',
-        'Designed user-friendly UX layouts.',
+        'Designed user-friendly UX layouts for the proposed application.',
       ],
       reviewLink: 'https://mostaql.com/u/Mahmoud_7oda_9/reviews/6995300',
     },
     {
       title: 'Web Development Internship',
-      organization: 'netarabia',
+      organization: 'NetArabia',
       date: '08/2022 - 09/2022',
       type: 'Training Internship',
       description: [
-        'Learned HTML, CSS, JavaScript, and WordPress.',
-        'Built basic websites and practiced frontend fundamentals.',
+        'Learned HTML, CSS, JavaScript, and WordPress fundamentals.',
+        'Built basic websites and practiced frontend development concepts.',
       ],
     },
   ];
