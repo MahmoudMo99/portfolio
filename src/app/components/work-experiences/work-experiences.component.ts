@@ -71,7 +71,7 @@ export class WorkExperiencesComponent {
         'Analyzed a mobile app idea and prepared a clear SRS document.',
         'Designed user-friendly UX layouts for the proposed application.',
       ],
-      reviewLink: 'https://mostaql.com/u/Mahmoud_7oda_9/reviews/6995300',
+      reviewLink: 'https://mostaql.com/u/Mahmoud_7oda_9/reviews/8076027',
     },
     {
       title: 'Web Development Internship',
