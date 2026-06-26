@@ -30,7 +30,7 @@ export class WorkExperiencesComponent {
       ],
     },
     {
-      title: 'Freelancing Project',
+      title: 'Freelance Webflow Developer',
       organization: 'Mostaql',
       date: '12/2025',
       type: 'Webflow Website Enhancement',
@@ -51,7 +51,7 @@ export class WorkExperiencesComponent {
       ],
     },
     {
-      title: 'Freelancing Project',
+      title: 'Freelance Angular Developer',
       organization: 'Mostaql',
       date: '11/2024 - 02/2025',
       type: 'Web Application Project',
@@ -63,7 +63,7 @@ export class WorkExperiencesComponent {
       reviewLink: 'https://mostaql.com/u/Mahmoud_7oda_9/reviews/8202653',
     },
     {
-      title: 'Freelancing Project',
+      title: 'Freelance UI/UX & SRS Project',
       organization: 'Mostaql',
       date: '09/2024',
       type: 'Documentation & UX Design',
