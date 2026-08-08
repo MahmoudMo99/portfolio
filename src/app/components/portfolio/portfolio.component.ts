@@ -33,6 +33,16 @@ export class PortfolioComponent {
 
   readonly projects: PortfolioProject[] = [
     {
+      title: 'Nova AI Learning Assistant',
+      description:
+        'A full-stack AI learning assistant with real-time streaming responses, Markdown rendering, persistent conversations, and a responsive Angular interface.',
+      category: 'AI',
+      skills: ['Angular', 'TypeScript', 'Node.js', 'Express', 'Gemini API'],
+      image: '/images/projects/nova-ai.png',
+      github: 'https://github.com/MahmoudMo99/nova-ai',
+    },
+
+    {
       title: 'Personal Portfolio',
       description:
         'My personal portfolio showcasing my projects, skills, and work experience.',
