@@ -3,11 +3,11 @@
     <div class="section-heading text-center">
       <span class="section-badge">About Me</span>
 
-      <h2>Who Am I?</h2>
+      <h2>Frontend Developer focused on Angular</h2>
 
       <p>
         A quick overview of my background, education, and the technologies I use
-        to build modern web applications.
+        to build responsive, maintainable, and user-friendly web applications.
       </p>
     </div>
 
@@ -15,28 +15,33 @@
       <div class="col-lg-6">
         <div class="about-card about-intro-card">
           <div>
-            <h3>Frontend Developer focused on Angular.</h3>
+            <h3>Building clean Angular interfaces with real business value.</h3>
 
             <p>
-              I'm <strong>Mahmoud Mohamed</strong>, a Software Engineer
-              specializing in Angular and frontend development. I build
-              responsive, scalable, and user-friendly web applications with a
-              strong focus on clean UI and maintainable code.
+              I'm <strong>Mahmoud Mohamed</strong>, a Software Engineer focused
+              on Frontend Development, specializing in Angular, TypeScript, and
+              building responsive web applications.
             </p>
 
             <p>
-              I also have experience with .NET, Node.js, and SQL Server, which
-              helps me understand full-stack workflows and deliver solutions
-              that align with real business needs.
+              I have hands-on experience with reusable components, routing,
+              guards, interceptors, RxJS, REST API integration, and clean UI
+              implementation.
+            </p>
+
+            <p>
+              I also work as an External Instructor at ITI, where I mentor
+              students through real-world web projects, debugging, code reviews,
+              and practical implementation.
             </p>
 
             <div class="about-highlights">
               <div class="highlight-item">
-                <i class="bi bi-code-slash"></i>
+                <i class="bi bi-code-slash" aria-hidden="true"></i>
 
                 <div>
-                  <strong>Frontend</strong>
-                  <span>Angular & TypeScript</span>
+                  <strong>Frontend Development</strong>
+                  <span>Angular, TypeScript, RxJS, REST APIs</span>
                 </div>
               </div>
             </div>
@@ -44,34 +49,27 @@
 
           <div class="about-bottom-content">
             <div class="focus-grid">
-              <div class="focus-item">
-                <i class="bi bi-phone"></i>
-                <span>Responsive UI</span>
-              </div>
-
-              <div class="focus-item">
-                <i class="bi bi-braces"></i>
-                <span>Clean Code</span>
-              </div>
-
-              <div class="focus-item">
-                <i class="bi bi-plug"></i>
-                <span>API Integration</span>
-              </div>
+              @for (item of focusItems; track item.label) {
+                <div class="focus-item">
+                  <i [class]="'bi ' + item.icon" aria-hidden="true"></i>
+                  <span>{{ item.label }}</span>
+                </div>
+              }
             </div>
 
             <div class="about-actions">
-              <a class="btn btn-primary about-btn" href="#footer">
-                <i class="bi bi-chat-dots me-2"></i>
-                Hire Me
+              <a class="btn btn-primary about-btn" href="#contact">
+                <i class="bi bi-chat-dots me-2" aria-hidden="true"></i>
+                Contact Me
               </a>
 
               <a
                 class="btn btn-outline-primary about-btn"
-                href="/Mahmoud.Mohamed.CV.pdf"
-                download
+                href="cv/Mahmoud.Mohamed.CV.pdf"
+                target="_blank"
+                rel="noopener"
               >
-                <i class="bi bi-download me-2"></i>
+                <i class="bi bi-download me-2" aria-hidden="true"></i>
                 Download CV
               </a>
             </div>
@@ -83,7 +81,7 @@
         <div class="about-card education-card">
           <div class="card-header-content">
             <span class="icon-box">
-              <i class="bi bi-mortarboard"></i>
+              <i class="bi bi-mortarboard" aria-hidden="true"></i>
             </span>
 
             <div>
@@ -93,40 +91,20 @@
           </div>
 
           <div class="education-timeline">
-            <div class="timeline-item">
-              <span class="timeline-dot"></span>
+            @for (item of educationItems; track item.title) {
+              <div class="timeline-item">
+                <span class="timeline-dot"></span>
 
-              <div class="timeline-content">
-                <span class="timeline-date">2025 - Present</span>
-                <h4>Master's Degree</h4>
-                <p>Computer Science Department</p>
-                <p>Faculty of Computers and Information</p>
-                <p>Assiut University</p>
+                <div class="timeline-content">
+                  <span class="timeline-date">{{ item.date }}</span>
+                  <h4>{{ item.title }}</h4>
+
+                  @for (detail of item.details; track detail) {
+                    <p>{{ detail }}</p>
+                  }
+                </div>
               </div>
-            </div>
-
-            <div class="timeline-item">
-              <span class="timeline-dot"></span>
-
-              <div class="timeline-content">
-                <span class="timeline-date">2024 - 2025</span>
-                <h4>Full Stack Diploma</h4>
-                <p>MEARN Stack Track</p>
-                <p>Information Technology Institute (ITI)</p>
-              </div>
-            </div>
-
-            <div class="timeline-item">
-              <span class="timeline-dot"></span>
-
-              <div class="timeline-content">
-                <span class="timeline-date">2020 - 2024</span>
-                <h4>Bachelor's Degree</h4>
-                <p>Computer Science Department</p>
-                <p>Faculty of Computers and Information</p>
-                <p>South Valley University</p>
-              </div>
-            </div>
+            }
           </div>
         </div>
       </div>

@@ -11,6 +11,10 @@
   --background-color: #f5f5f5;
   --border-color: #ddd;
   --secondary-color-rgb: 13, 71, 161;
+
+  --surface-color: #ffffff;
+  --muted-text-color: #667085;
+  --shadow-soft: 0 16px 40px rgba(var(--secondary-color-rgb), 0.1);
 }
 
 html,

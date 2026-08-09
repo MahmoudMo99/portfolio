@@ -3,59 +3,30 @@
     <div class="section-heading text-center">
       <span class="section-badge">What I Do</span>
 
-      <h2>Services I Provide</h2>
+      <h2>Frontend Work I Do</h2>
 
       <p>
-        I focus on building clean, responsive, and maintainable web experiences
-        using modern frontend technologies.
+        I focus on building clean, responsive, and maintainable frontend
+        experiences using Angular, TypeScript, and modern web technologies.
       </p>
     </div>
 
     <div class="row g-4 justify-content-center">
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="feature-card">
-          <div class="feature-icon">
-            <i class="bi bi-code-slash"></i>
-          </div>
+      @for (feature of features; track feature.title) {
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="feature-card">
+            <div class="feature-icon">
+              <i [class]="'bi ' + feature.icon" aria-hidden="true"></i>
+            </div>
 
-          <h3>Angular Development</h3>
+            <h3>{{ feature.title }}</h3>
 
-          <p>
-            Building responsive and scalable web applications using Angular,
-            TypeScript, Bootstrap, and clean component-based architecture.
-          </p>
+            <p>
+              {{ feature.description }}
+            </p>
+          </article>
         </div>
-      </div>
-
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="feature-card">
-          <div class="feature-icon">
-            <i class="bi bi-window-sidebar"></i>
-          </div>
-
-          <h3>UI Implementation</h3>
-
-          <p>
-            Turning designs into clean, accessible, and responsive interfaces
-            with attention to spacing, typography, and user experience.
-          </p>
-        </div>
-      </div>
-
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="feature-card">
-          <div class="feature-icon">
-            <i class="bi bi-person-video3"></i>
-          </div>
-
-          <h3>Mentoring & Training</h3>
-
-          <p>
-            Providing guidance in frontend development, freelancing basics, and
-            career growth to help learners start their software journey.
-          </p>
-        </div>
-      </div>
+      }
     </div>
   </div>
 </section>

@@ -1,18 +1,24 @@
-import { Component, HostListener } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  HostListener,
+  signal,
+} from '@angular/core';
 
 @Component({
   selector: 'app-footer',
   imports: [],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FooterComponent {
-  currentYear = new Date().getFullYear();
-  showBackToTop = false;
+  readonly currentYear = new Date().getFullYear();
+  readonly showBackToTop = signal(false);
 
   @HostListener('window:scroll')
   onScroll(): void {
-    this.showBackToTop = window.scrollY > 300;
+    this.showBackToTop.set(window.scrollY > 300);
   }
 
   scrollToTop(): void {

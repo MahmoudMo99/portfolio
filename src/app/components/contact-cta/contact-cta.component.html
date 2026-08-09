@@ -1,0 +1,38 @@
+<section id="contact" class="contact-cta-section">
+  <div class="container">
+    <div class="contact-card">
+      <div class="contact-content">
+        <span class="section-badge">Available for opportunities</span>
+
+        <h2>Let’s work together.</h2>
+
+        <p>
+          Have an Angular role, frontend project, or collaboration idea? I’d be
+          happy to hear from you.
+        </p>
+      </div>
+
+      <div class="contact-actions">
+        @for (link of contactLinks; track link.href) {
+          <a
+            [href]="link.href"
+            [attr.target]="link.external ? '_blank' : null"
+            [attr.rel]="link.external ? 'noopener noreferrer' : null"
+            class="contact-link"
+            [class.primary-link]="link.primary"
+            [attr.aria-label]="link.label"
+          >
+            <span class="contact-icon">
+              <i [class]="'bi ' + link.icon" aria-hidden="true"></i>
+            </span>
+
+            <span>
+              <strong>{{ link.label }}</strong>
+              <small>{{ link.value }}</small>
+            </span>
+          </a>
+        }
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,27 +1,27 @@
 <section id="experience" class="experience-section">
   <div class="container">
     <div class="section-heading text-center">
-      <span class="section-badge">My Experience</span>
+      <span class="section-badge">Experience</span>
 
-      <h2>Work History</h2>
+      <h2>Professional Experience</h2>
 
       <p>
-        A timeline of my professional experience, freelance projects, training,
-        and mentoring roles.
+        A timeline of my frontend work, freelance projects, training, and
+        mentoring experience.
       </p>
     </div>
 
     <div class="experience-timeline">
       @for (exp of experiences; track exp.title + exp.date) {
         <article class="experience-item">
-          <div class="timeline-marker">
+          <div class="timeline-marker" aria-hidden="true">
             <span></span>
           </div>
 
           <div class="experience-card">
             <div class="experience-card-header">
               <div class="experience-icon">
-                <i class="bi bi-briefcase"></i>
+                <i [class]="'bi ' + exp.icon" aria-hidden="true"></i>
               </div>
 
               <div class="experience-info">
@@ -41,12 +41,12 @@
 
             <div class="experience-meta">
               <span>
-                <i class="bi bi-calendar3"></i>
+                <i class="bi bi-calendar3" aria-hidden="true"></i>
                 {{ exp.date }}
               </span>
 
               <span>
-                <i class="bi bi-tag"></i>
+                <i class="bi bi-tag" aria-hidden="true"></i>
                 {{ exp.type }}
               </span>
             </div>
@@ -63,10 +63,12 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 class="review-link"
-                [attr.aria-label]="'Open client review for ' + exp.title"
+                [attr.aria-label]="
+                  'Open ' + exp.linkLabel + ' for ' + exp.title
+                "
               >
-                <i class="bi bi-link-45deg"></i>
-                Client Review
+                <i class="bi bi-link-45deg" aria-hidden="true"></i>
+                {{ exp.linkLabel || "View Link" }}
               </a>
             }
           </div>

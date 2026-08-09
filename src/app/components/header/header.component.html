@@ -1,67 +1,64 @@
-<header class="main-header" [class.header-scrolled]="isScrolled">
-  <nav class="navbar navbar-expand-lg">
+<header class="main-header" [class.header-scrolled]="isScrolled()">
+  <nav class="navbar navbar-expand-lg" aria-label="Main navigation">
     <div class="container">
       <a
         class="navbar-brand d-flex align-items-center gap-2"
         href="#home"
-        aria-label="Go to home section"
+        (click)="setActiveSection('home')"
       >
         <img
           src="images/mahmoud.jpg"
           alt="Mahmoud Mohamed"
           class="avatar-img"
-          width="44"
-          height="44"
         />
-        <span>Mahmoud</span>
+        <span>Mahmoud Mohamed</span>
       </a>
 
       <button
-        class="navbar-toggler"
+        class="navbar-toggler menu-button"
         type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNav"
         aria-controls="navbarNav"
-        aria-expanded="false"
+        [attr.aria-expanded]="isMenuOpen()"
         aria-label="Toggle navigation"
+        [class.is-open]="isMenuOpen()"
+        (click)="toggleMenu()"
       >
-        <span class="navbar-toggler-icon"></span>
+        <span class="menu-line"></span>
+        <span class="menu-line"></span>
+        <span class="menu-line"></span>
       </button>
 
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <div
+        class="collapse navbar-collapse justify-content-end"
+        id="navbarNav"
+        [class.show]="isMenuOpen()"
+      >
         <ul class="navbar-nav align-items-lg-center gap-lg-3 text-center">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#home">Home</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="#about">About Me</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="#portfolio">Projects</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="#experience">Experiences</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="#skills">Skills</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="#footer">Contact</a>
-          </li>
+          @for (link of navLinks; track link.id) {
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                [class.active]="activeSection() === link.id"
+                [attr.aria-current]="
+                  activeSection() === link.id ? 'location' : null
+                "
+                [href]="'#' + link.id"
+                (click)="setActiveSection(link.id)"
+              >
+                {{ link.label }}
+              </a>
+            </li>
+          }
         </ul>
 
         <a
           href="cv/Mahmoud.Mohamed.CV.pdf"
           target="_blank"
           rel="noopener"
-          class="btn btn-outline-primary cv-btn ms-lg-4 mt-3 mt-lg-0"
+          class="btn cv-btn ms-lg-4 mt-3 mt-lg-0"
+          (click)="closeMenu()"
         >
-          <i class="bi bi-download me-1"></i>
+          <i class="bi bi-download me-1" aria-hidden="true"></i>
           Download CV
         </a>
       </div>

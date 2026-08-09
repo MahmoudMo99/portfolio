@@ -6,8 +6,8 @@
       <h2>Featured Projects</h2>
 
       <p>
-        A selection of web applications, tools, UI designs, and AI experiments I
-        have built or contributed to.
+        A selection of Angular applications and AI-powered web projects I have
+        built or contributed to.
       </p>
     </div>
 
@@ -16,8 +16,8 @@
         <button
           type="button"
           class="filter-btn"
-          [class.active]="selectedCategory === category"
-          [attr.aria-pressed]="selectedCategory === category"
+          [class.active]="selectedCategory() === category"
+          [attr.aria-pressed]="selectedCategory() === category"
           (click)="filterProjects(category)"
         >
           {{ category }}
@@ -26,7 +26,7 @@
     </div>
 
     <div class="row g-4">
-      @for (project of filteredProjects; track project.title) {
+      @for (project of filteredProjects(); track project.title) {
         <div class="col-md-6 col-lg-4">
           <article class="project-card">
             <div class="project-image-wrapper">
@@ -38,53 +38,8 @@
               />
 
               <span class="project-category">
-                {{ project.category }}
+                {{ project.primaryCategory }}
               </span>
-
-              <div class="project-overlay">
-                @if (project.github) {
-                  <a
-                    [href]="project.github"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="overlay-link"
-                    [attr.aria-label]="
-                      'View GitHub repository for ' + project.title
-                    "
-                  >
-                    <i class="bi bi-github"></i>
-                    GitHub
-                  </a>
-                }
-
-                @if (project.live) {
-                  <a
-                    [href]="project.live"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="overlay-link primary-link"
-                    [attr.aria-label]="'View live project for ' + project.title"
-                  >
-                    <i class="bi bi-box-arrow-up-right"></i>
-                    Live
-                  </a>
-                }
-
-                @if (project.video) {
-                  <a
-                    [href]="project.video"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="overlay-link"
-                    [attr.aria-label]="
-                      'Watch project video for ' + project.title
-                    "
-                  >
-                    <i class="bi bi-play-circle"></i>
-                    Video
-                  </a>
-                }
-              </div>
             </div>
 
             <div class="project-content">
@@ -99,10 +54,68 @@
                   <span>{{ skill }}</span>
                 }
               </div>
+
+              <div class="project-actions">
+                @if (project.github) {
+                  <a
+                    [href]="project.github"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-link"
+                    [attr.aria-label]="
+                      'View GitHub repository for ' + project.title
+                    "
+                  >
+                    <i class="bi bi-github" aria-hidden="true"></i>
+                    GitHub
+                  </a>
+                }
+
+                @if (project.live) {
+                  <a
+                    [href]="project.live"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-link primary-link"
+                    [attr.aria-label]="'View live project for ' + project.title"
+                  >
+                    <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
+                    Live
+                  </a>
+                }
+
+                @if (project.video) {
+                  <a
+                    [href]="project.video"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-link"
+                    [attr.aria-label]="
+                      'Watch project video for ' + project.title
+                    "
+                  >
+                    <i class="bi bi-play-circle" aria-hidden="true"></i>
+                    Video
+                  </a>
+                }
+              </div>
             </div>
           </article>
         </div>
       }
+    </div>
+
+    <div class="github-more text-center">
+      <a
+        href="https://github.com/MahmoudMo99"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="github-more-link"
+        aria-label="View more projects on Mahmoud Mohamed GitHub profile"
+      >
+        <i class="bi bi-github" aria-hidden="true"></i>
+        View More on GitHub
+      </a>
     </div>
   </div>
 </section>

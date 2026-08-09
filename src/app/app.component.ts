@@ -7,6 +7,8 @@ import { HeroComponent } from './components/hero/hero.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { WorkExperiencesComponent } from './components/work-experiences/work-experiences.component';
+import { TestimonialsComponent } from "./components/testimonials/testimonials.component";
+import { ContactCtaComponent } from "./components/contact-cta/contact-cta.component";
 
 @Component({
   selector: 'app-root',
@@ -19,7 +21,9 @@ import { WorkExperiencesComponent } from './components/work-experiences/work-exp
     SkillsComponent,
     FooterComponent,
     WorkExperiencesComponent,
-  ],
+    TestimonialsComponent,
+    ContactCtaComponent
+],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
