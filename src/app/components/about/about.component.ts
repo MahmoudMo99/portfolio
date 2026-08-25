@@ -20,8 +20,8 @@ interface EducationItem {
 })
 export class AboutComponent {
   readonly focusItems: FocusItem[] = [
+    { icon: 'bi-layout-sidebar-inset', label: 'Dashboards' },
     { icon: 'bi-phone', label: 'Responsive UI' },
-    { icon: 'bi-braces', label: 'Clean Code' },
     { icon: 'bi-plug', label: 'API Integration' },
   ];
 

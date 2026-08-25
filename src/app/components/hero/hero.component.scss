@@ -25,26 +25,6 @@
     max-width: 680px;
   }
 
-  .hero-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.45rem;
-    margin-bottom: 1.25rem;
-    padding: 0.55rem 1rem;
-    border: 1px solid rgba(var(--secondary-color-rgb), 0.14);
-    border-radius: 999px;
-    background-color: rgba(255, 255, 255, 0.75);
-    color: var(--secondary-color);
-    font-size: 0.9rem;
-    font-weight: 800;
-    box-shadow: 0 10px 30px rgba(var(--secondary-color-rgb), 0.08);
-    backdrop-filter: blur(10px);
-
-    i {
-      color: var(--primary-color);
-    }
-  }
-
   .hero-title {
     max-width: 700px;
     margin-bottom: 1.25rem;
@@ -217,10 +197,6 @@
 
   .delay-4 {
     animation-delay: 0.4s;
-  }
-
-  .delay-5 {
-    animation-delay: 0.5s;
   }
 
   @keyframes fadeUp {

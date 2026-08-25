@@ -13,8 +13,7 @@ type SectionId =
   | 'portfolio'
   | 'testimonials'
   | 'skills'
-  | 'contact'
-  | 'footer';
+  | 'contact';
 
 interface NavLink {
   id: SectionId;
@@ -36,10 +35,10 @@ export class HeaderComponent {
   readonly navLinks: NavLink[] = [
     { id: 'home', label: 'Home' },
     { id: 'about', label: 'About' },
-    { id: 'features', label: 'Features' },
+    { id: 'features', label: 'Services' },
     { id: 'experience', label: 'Experience' },
     { id: 'portfolio', label: 'Projects' },
-    { id: 'testimonials', label: 'Testimonials' },
+    { id: 'testimonials', label: 'Reviews' },
     { id: 'skills', label: 'Skills' },
     { id: 'contact', label: 'Contact' },
   ];

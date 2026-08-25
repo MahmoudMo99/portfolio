@@ -6,10 +6,8 @@
 
         <h2>Let’s work together.</h2>
 
-        <p>
-          Have an Angular role, frontend project, or collaboration idea? I’d be
-          happy to hear from you.
-        </p>
+        Have an Angular role, frontend project, dashboard, or collaboration
+        idea? I’d be happy to hear from you.
       </div>
 
       <div class="contact-actions">
@@ -20,7 +18,7 @@
             [attr.rel]="link.external ? 'noopener noreferrer' : null"
             class="contact-link"
             [class.primary-link]="link.primary"
-            [attr.aria-label]="link.label"
+            [attr.aria-label]="'Contact Mahmoud Mohamed via ' + link.label"
           >
             <span class="contact-icon">
               <i [class]="'bi ' + link.icon" aria-hidden="true"></i>

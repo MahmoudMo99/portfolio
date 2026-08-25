@@ -28,8 +28,9 @@ export class SkillsComponent {
         'JavaScript',
         'ES6',
         'TypeScript',
-        'Responsive Design',
         'Bootstrap 5',
+        'Responsive Design',
+        'RTL UI',
       ],
     },
     {
@@ -45,8 +46,16 @@ export class SkillsComponent {
         'Interceptors',
         'Reactive Forms',
         'RxJS',
+        'Lazy Loading',
         'REST API Integration',
       ],
+    },
+    {
+      title: 'UI Libraries & Visualization',
+      icon: 'bi-window-sidebar',
+      description:
+        'Using UI libraries, charts, and localization tools to build richer frontend experiences.',
+      items: ['PrimeNG', 'Chart.js', 'ngx-translate', 'Custom SCSS'],
     },
     {
       title: 'APIs & Backend Basics',
@@ -56,31 +65,28 @@ export class SkillsComponent {
       items: ['Node.js', 'Express.js', 'ASP.NET Core', 'REST APIs'],
     },
     {
-      title: 'Database',
+      title: 'Databases',
       icon: 'bi-database',
       description:
         'Working with relational and NoSQL databases in full-stack projects.',
       items: ['MS SQL Server', 'MongoDB'],
     },
     {
-      title: 'Testing & Tools',
+      title: 'Tools & Core Concepts',
       icon: 'bi-tools',
       description:
-        'Tools used for development workflow, testing, debugging, and collaboration.',
-      items: ['Jasmine', 'Postman', 'Git', 'GitHub', 'VS Code'],
-    },
-    {
-      title: 'Core Concepts',
-      icon: 'bi-diagram-3',
-      description:
-        'Computer science and software engineering foundations used in development.',
+        'Development tools and software engineering foundations used in daily work.',
       items: [
+        'Git',
+        'GitHub',
+        'Postman',
+        'VS Code',
+        'Jasmine',
         'OOP',
         'Data Structures',
         'Algorithms',
         'Design Patterns',
         'SDLC',
-        'Problem Solving',
       ],
     },
   ];

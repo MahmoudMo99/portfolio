@@ -19,19 +19,19 @@ export class FeaturesComponent {
       icon: 'bi-code-slash',
       title: 'Angular Development',
       description:
-        'Building responsive and scalable web applications using Angular, TypeScript, RxJS, REST APIs, and clean component-based architecture.',
+        'Building scalable Angular applications using TypeScript, RxJS, reusable components, routing, forms, and REST API integration.',
     },
     {
-      icon: 'bi-window-sidebar',
-      title: 'UI Implementation',
+      icon: 'bi-speedometer2',
+      title: 'Admin Dashboards & Systems',
       description:
-        'Turning designs into clean, accessible, and responsive interfaces with attention to spacing, typography, usability, and user experience.',
+        'Creating dashboard experiences with tables, filters, forms, authentication flows, role-based UI, analytics, and responsive layouts.',
     },
     {
-      icon: 'bi-person-video3',
-      title: 'Mentoring & Code Review',
+      icon: 'bi-layout-text-window-reverse',
+      title: 'Responsive & RTL Interfaces',
       description:
-        'Supporting learners and junior developers through debugging, code reviews, frontend guidance, and practical project implementation.',
+        'Turning designs into clean, responsive, and user-friendly interfaces with attention to spacing, typography, usability, and Arabic RTL support.',
     },
   ];
 }

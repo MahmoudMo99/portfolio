@@ -35,7 +35,7 @@ export class ContactCtaComponent {
     {
       label: 'WhatsApp',
       value: 'Send a message',
-      href: 'https://wa.me/201155347463',
+      href: 'https://wa.me/201155347463?text=Hi%20Mahmoud%2C%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project',
       icon: 'bi-whatsapp',
       external: true,
     },
