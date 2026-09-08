@@ -20,8 +20,8 @@ interface EducationItem {
 })
 export class AboutComponent {
   readonly focusItems: FocusItem[] = [
-    { icon: 'bi-layout-sidebar-inset', label: 'Dashboards' },
-    { icon: 'bi-phone', label: 'Responsive UI' },
+    { icon: 'bi-code-slash', label: 'Angular Apps' },
+    { icon: 'bi-phone', label: 'Responsive RTL UI' },
     { icon: 'bi-plug', label: 'API Integration' },
   ];
 
@@ -37,8 +37,12 @@ export class AboutComponent {
     },
     {
       date: '2024 - 2025',
-      title: 'Full Stack Diploma',
-      details: ['MEARN Stack Track', 'Information Technology Institute (ITI)'],
+      title: 'Intensive Training Program',
+      details: [
+        'Full Stack Web Development',
+        'MEARN Stack Track',
+        'Information Technology Institute (ITI)',
+      ],
     },
     {
       date: '2020 - 2024',
