@@ -40,6 +40,26 @@ export class PortfolioComponent {
 
   readonly projects: PortfolioProject[] = [
     {
+      title: 'Qurb | قُرب',
+      description:
+        'A modern Arabic Islamic web application with Quran reading, prayer times, azkar, hadith collections, favorites, local caching, and a fully responsive RTL user experience.',
+      categories: ['Angular'],
+      primaryCategory: 'Angular',
+      skills: [
+        'Angular 22',
+        'TypeScript',
+        'SCSS',
+        'Signals',
+        'RxJS',
+        'REST APIs',
+        'RTL UI',
+        'Vercel',
+      ],
+      image: '/images/projects/qurb.png',
+      github: 'https://github.com/MahmoudMo99/qurb',
+      live: 'https://qurb-islamic.vercel.app/',
+    },
+    {
       title: 'RetailOps Admin Dashboard',
       description:
         'A production-style e-commerce operations dashboard with authentication, RBAC, data tables, analytics, RTL support, themes, and responsive admin layouts.',
@@ -106,17 +126,6 @@ export class PortfolioComponent {
       live: 'http://193.227.49.104/madina/login',
       video:
         'https://drive.google.com/file/d/1MvZCvKK9nqqJO3jpELBa6q4r7aUjEGPk/view?usp=sharing',
-    },
-    {
-      title: 'Medium Plus',
-      description:
-        'A Medium-like articles platform where users can register, create, edit, and delete articles, follow writers, and manage profiles.',
-      categories: ['Angular'],
-      primaryCategory: 'Angular',
-      skills: ['Angular', 'ASP.NET Core', 'REST API'],
-      image: '/images/projects/medium.png',
-      github: 'https://github.com/MahmoudMo99/MediumPlus',
-      live: 'https://medium-plus.vercel.app/',
     },
   ];
 
