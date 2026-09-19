@@ -3,6 +3,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 interface FocusItem {
   icon: string;
   label: string;
+  description: string;
 }
 
 interface EducationItem {
@@ -19,13 +20,27 @@ interface EducationItem {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AboutComponent {
-  readonly focusItems: FocusItem[] = [
-    { icon: 'bi-code-slash', label: 'Angular Apps' },
-    { icon: 'bi-phone', label: 'Responsive RTL UI' },
-    { icon: 'bi-plug', label: 'API Integration' },
+  readonly focusItems: readonly FocusItem[] = [
+    {
+      icon: 'bi-code-slash',
+      label: 'Angular Development',
+      description:
+        'Reusable components, forms, routing, and application structure',
+    },
+    {
+      icon: 'bi-display',
+      label: 'Responsive UI',
+      description:
+        'Clean interfaces that work across desktop, tablet, and mobile',
+    },
+    {
+      icon: 'bi-plug',
+      label: 'API Integration',
+      description: 'REST APIs, RxJS workflows, guards, and interceptors',
+    },
   ];
 
-  readonly educationItems: EducationItem[] = [
+  readonly educationItems: readonly EducationItem[] = [
     {
       date: '2025 - Present',
       title: "Master's Degree",

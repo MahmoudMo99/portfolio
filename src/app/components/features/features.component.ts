@@ -14,24 +14,24 @@ interface FeatureItem {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FeaturesComponent {
-  readonly features: FeatureItem[] = [
+  readonly features: readonly FeatureItem[] = [
     {
       icon: 'bi-code-slash',
       title: 'Angular Development',
       description:
-        'Building scalable Angular applications using TypeScript, RxJS, reusable components, routing, forms, and REST API integration.',
+        'Building maintainable Angular applications with TypeScript, RxJS, reusable components, forms, routing, and REST APIs.',
     },
     {
       icon: 'bi-speedometer2',
       title: 'Admin Dashboards & Systems',
       description:
-        'Creating dashboard experiences with tables, filters, forms, authentication flows, role-based UI, analytics, and responsive layouts.',
+        'Developing dashboards with data tables, filters, forms, authentication, role-based interfaces, and responsive layouts.',
     },
     {
       icon: 'bi-layout-text-window-reverse',
       title: 'Responsive & RTL Interfaces',
       description:
-        'Turning designs into clean, responsive, and user-friendly interfaces with attention to spacing, typography, usability, and Arabic RTL support.',
+        'Creating responsive, user-friendly interfaces with careful attention to usability, typography, accessibility, and Arabic RTL support.',
     },
   ];
 }

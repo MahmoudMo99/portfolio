@@ -1,13 +1,16 @@
 <section id="skills" class="skills-section">
   <div class="container">
     <div class="section-heading text-center">
-      <span class="section-badge">My Skills</span>
+      <span class="section-label">
+        <i class="bi bi-braces" aria-hidden="true"></i>
+        My Skills
+      </span>
 
       <h2>Technical Skills</h2>
 
       <p>
-        A focused overview of the frontend technologies, Angular concepts, and
-        development tools I use to build modern web applications.
+        Technologies, Angular patterns, and development tools I use to build
+        modern web applications.
       </p>
     </div>
 
@@ -20,13 +23,16 @@
                 <i [class]="'bi ' + category.icon" aria-hidden="true"></i>
               </div>
 
-              <div>
+              <div class="skill-heading">
                 <h3>{{ category.title }}</h3>
                 <p>{{ category.description }}</p>
               </div>
             </div>
 
-            <div class="skills-list">
+            <div
+              class="skills-list"
+              [attr.aria-label]="category.title + ' skills'"
+            >
               @for (skill of category.items; track skill) {
                 <span>{{ skill }}</span>
               }

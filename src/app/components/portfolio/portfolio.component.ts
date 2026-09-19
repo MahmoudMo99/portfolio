@@ -28,7 +28,7 @@ interface PortfolioProject {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PortfolioComponent {
-  readonly categories: ProjectCategory[] = [
+  readonly categories: readonly ProjectCategory[] = [
     'All',
     'Dashboard',
     'E-Commerce',
@@ -38,22 +38,22 @@ export class PortfolioComponent {
 
   readonly selectedCategory = signal<ProjectCategory>('All');
 
-  readonly projects: PortfolioProject[] = [
+  readonly projects: readonly PortfolioProject[] = [
     {
       title: 'Qurb | قُرب',
       description:
-        'A modern Arabic Islamic web application with Quran reading, prayer times, azkar, hadith collections, favorites, local caching, and a fully responsive RTL user experience.',
+        'An RTL-first Islamic Angular application featuring Quran reading, prayer times, azkar, hadith, daily wird tracking, favorites, and resilient local caching.',
       categories: ['Angular'],
       primaryCategory: 'Angular',
       skills: [
         'Angular 22',
         'TypeScript',
-        'SCSS',
         'Signals',
         'RxJS',
         'REST APIs',
-        'RTL UI',
-        'Vercel',
+        'SCSS',
+        'RTL',
+        'Local Caching',
       ],
       image: '/images/projects/qurb.png',
       github: 'https://github.com/MahmoudMo99/qurb',
@@ -62,16 +62,18 @@ export class PortfolioComponent {
     {
       title: 'RetailOps Admin Dashboard',
       description:
-        'A production-style e-commerce operations dashboard with authentication, RBAC, data tables, analytics, RTL support, themes, and responsive admin layouts.',
+        'A production-style Angular e-commerce dashboard with authentication, permission-based RBAC, data management workflows, analytics, localization, and responsive RTL support.',
       categories: ['Dashboard', 'Angular'],
       primaryCategory: 'Dashboard',
       skills: [
-        'Angular',
+        'Angular 22',
         'TypeScript',
         'RxJS',
         'PrimeNG',
-        'Chart.js',
         'REST APIs',
+        'RBAC',
+        'Chart.js',
+        'i18n & RTL',
       ],
       image: '/images/projects/retail-ops.png',
       github: 'https://github.com/MahmoudMo99/retail-ops',
@@ -80,15 +82,18 @@ export class PortfolioComponent {
     {
       title: 'Touché de Gateau E-Commerce Demo',
       description:
-        'An Arabic RTL e-commerce frontend demo for a Saudi cake shop, including homepage, product catalog, product details, cart, and checkout flow.',
+        'An Arabic RTL e-commerce experience built with Angular, featuring product discovery, Signals-based cart state, persistent shopping data, and a responsive checkout flow.',
       categories: ['E-Commerce', 'Angular'],
       primaryCategory: 'E-Commerce',
       skills: [
         'Angular',
         'TypeScript',
+        'Signals',
+        'Reactive Forms',
         'Custom SCSS',
-        'RTL UI',
-        'Responsive Design',
+        'RTL',
+        'Responsive UI',
+        'Local Storage',
       ],
       image: '/images/projects/touche-de-gateau.png',
       github: 'https://github.com/MahmoudMo99/touche-de-gateau-demo',
@@ -97,20 +102,29 @@ export class PortfolioComponent {
     {
       title: 'Nova AI Learning Assistant',
       description:
-        'A full-stack AI learning assistant with real-time streaming responses, Markdown rendering, persistent conversations, and a responsive Angular interface.',
+        'A full-stack AI learning assistant with real-time Gemini streaming, multi-turn conversations, persistent chat history, Markdown rendering, and a responsive Angular interface.',
       categories: ['AI', 'Angular'],
       primaryCategory: 'AI',
-      skills: ['Angular', 'TypeScript', 'Node.js', 'Express', 'Gemini API'],
+      skills: [
+        'Angular',
+        'TypeScript',
+        'Node.js',
+        'Express',
+        'Gemini API',
+        'Streaming',
+        'REST API',
+        'Markdown',
+      ],
       image: '/images/projects/nova-ai.png',
       github: 'https://github.com/MahmoudMo99/nova-ai',
     },
     {
       title: 'Personal Portfolio',
       description:
-        'My personal portfolio showcasing my projects, skills, work experience, client feedback, and frontend background.',
+        'A responsive Angular portfolio showcasing selected projects, technical skills, professional experience, and client feedback.',
       categories: ['Angular'],
       primaryCategory: 'Angular',
-      skills: ['Angular', 'TypeScript', 'SASS', 'Bootstrap'],
+      skills: ['Angular', 'TypeScript', 'SCSS', 'Bootstrap'],
       image: '/images/projects/portfolio.png',
       github: 'https://github.com/MahmoudMo99/portfolio',
       live: 'https://mahmoud-mohamed-portfolio.vercel.app/',
@@ -118,7 +132,7 @@ export class PortfolioComponent {
     {
       title: 'University Campus Housing Management',
       description:
-        'A web application for managing student housing workflows, room selection, availability tracking, violations, reporting, and admin settings.',
+        'A web application for managing student housing workflows, room selection, availability, violations, reporting, and administrative settings.',
       categories: ['Angular'],
       primaryCategory: 'Angular',
       skills: ['Angular', '.NET', 'SQL Server', 'REST APIs'],

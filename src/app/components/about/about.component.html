@@ -1,14 +1,16 @@
 <section id="about" class="about-section">
   <div class="container">
     <div class="section-heading text-center">
-      <span class="section-badge">About Me</span>
+      <span class="section-label">
+        <i class="bi bi-person" aria-hidden="true"></i>
+        About Me
+      </span>
 
-      <h2>Angular Frontend Developer & Software Engineer</h2>
+      <h2>Frontend development with a practical engineering mindset.</h2>
 
       <p>
-        A quick overview of my background, education, and the technologies I use
-        to build responsive Angular applications, dashboards, and user-friendly
-        interfaces.
+        A quick look at my development focus, teaching experience, and academic
+        background.
       </p>
     </div>
 
@@ -16,66 +18,51 @@
       <div class="col-lg-6">
         <div class="about-card about-intro-card">
           <div>
-            <h3>Building clean Angular interfaces with real business value.</h3>
+            <h3>
+              Building Angular applications that are clear, maintainable, and
+              useful.
+            </h3>
 
             <p>
               I'm <strong>Mahmoud Mohamed</strong>, a Software Engineer and
-              Angular Frontend Developer focused on building responsive,
-              maintainable, and user-friendly web applications.
+              Angular Frontend Developer with hands-on experience building admin
+              dashboards and web applications using Angular, TypeScript, RxJS,
+              and REST APIs.
             </p>
 
             <p>
-              I have hands-on experience with admin dashboards, reusable
-              components, Reactive Forms, routing, guards, interceptors, RxJS,
-              REST API integration, and clean UI implementation.
+              My work covers reusable components, Reactive Forms, routing,
+              guards, interceptors, API integration, responsive layouts, and
+              clean UI implementation.
             </p>
 
             <p>
-              I also work as an External Instructor at ITI, where I deliver
-              hands-on web development training and mentor trainees through
-              real-world projects, debugging, code reviews, and practical
-              implementation.
+              Alongside development, I work as an
+              <strong>External Instructor at ITI</strong>, delivering practical
+              web development training and mentoring trainees through projects,
+              debugging, and code reviews.
             </p>
+          </div>
 
-            <div class="about-highlights">
-              <div class="highlight-item">
-                <i class="bi bi-code-slash" aria-hidden="true"></i>
+          <div class="focus-list">
+            @for (item of focusItems; track item.label) {
+              <div class="focus-item">
+                <span class="focus-icon">
+                  <i [class]="'bi ' + item.icon" aria-hidden="true"></i>
+                </span>
 
                 <div>
-                  <strong>Frontend Development</strong>
-                  <span>Angular, TypeScript, RxJS, REST APIs</span>
+                  <h4>{{ item.label }}</h4>
+                  <p>{{ item.description }}</p>
                 </div>
               </div>
-            </div>
+            }
           </div>
 
-          <div class="about-bottom-content">
-            <div class="focus-grid">
-              @for (item of focusItems; track item.label) {
-                <div class="focus-item">
-                  <i [class]="'bi ' + item.icon" aria-hidden="true"></i>
-                  <span>{{ item.label }}</span>
-                </div>
-              }
-            </div>
-
-            <div class="about-actions">
-              <a class="btn btn-primary about-btn" href="#contact">
-                <i class="bi bi-chat-dots me-2" aria-hidden="true"></i>
-                Contact Me
-              </a>
-
-              <a
-                class="btn btn-outline-primary about-btn"
-                href="cv/Mahmoud.Mohamed.CV.pdf"
-                target="_blank"
-                rel="noopener"
-              >
-                <i class="bi bi-download me-2" aria-hidden="true"></i>
-                Download CV
-              </a>
-            </div>
-          </div>
+          <a class="about-contact" href="#contact">
+            Let's work together
+            <i class="bi bi-arrow-right" aria-hidden="true"></i>
+          </a>
         </div>
       </div>
 
@@ -88,22 +75,24 @@
 
             <div>
               <h3>Education & Training</h3>
-              <p>My academic and professional learning path.</p>
+              <p>Academic background and professional training.</p>
             </div>
           </div>
 
           <div class="education-timeline">
             @for (item of educationItems; track item.title) {
               <div class="timeline-item">
-                <span class="timeline-dot"></span>
+                <span class="timeline-dot" aria-hidden="true"></span>
 
                 <div class="timeline-content">
                   <span class="timeline-date">{{ item.date }}</span>
                   <h4>{{ item.title }}</h4>
 
-                  @for (detail of item.details; track detail) {
-                    <p>{{ detail }}</p>
-                  }
+                  <div class="timeline-details">
+                    @for (detail of item.details; track detail) {
+                      <p>{{ detail }}</p>
+                    }
+                  </div>
                 </div>
               </div>
             }

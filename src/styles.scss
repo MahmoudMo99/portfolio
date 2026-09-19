@@ -28,9 +28,18 @@ html {
 }
 body {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: "Inter", sans-serif;
+  color: var(--text-color);
+  background-color: var(--background-color);
 }
 
 .section-container-border {
   border: 2px solid var(--secondary-color);
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
 }

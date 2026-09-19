@@ -1,5 +1,10 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
+interface HeroTech {
+  name: string;
+  icon: string;
+}
+
 @Component({
   selector: 'app-hero',
   imports: [],
@@ -8,5 +13,10 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HeroComponent {
-  readonly techs = ['Angular', 'TypeScript', 'RxJS', 'REST APIs'];
+  readonly techs: readonly HeroTech[] = [
+    { name: 'Angular', icon: 'bi-braces' },
+    { name: 'TypeScript', icon: 'bi-filetype-tsx' },
+    { name: 'RxJS', icon: 'bi-arrow-repeat' },
+    { name: 'REST APIs', icon: 'bi-plug' },
+  ];
 }

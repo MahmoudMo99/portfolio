@@ -1,25 +1,33 @@
 <header class="main-header" [class.header-scrolled]="isScrolled()">
-  <nav class="navbar navbar-expand-lg" aria-label="Main navigation">
+  <nav class="navbar" aria-label="Main navigation">
     <div class="container">
       <a
-        class="navbar-brand d-flex align-items-center gap-2"
+        class="navbar-brand"
         href="#home"
-        (click)="setActiveSection('home')"
+        aria-label="Mahmoud Mohamed — Home"
+        (click)="navigateTo('home')"
       >
-        <img
-          src="images/mahmoud.jpg"
-          alt="Mahmoud Mohamed"
-          class="avatar-img"
-        />
-        <span>Mahmoud Mohamed</span>
+        <span class="avatar-wrapper" aria-hidden="true">
+          <img
+            src="images/mahmoud.jpg"
+            alt=""
+            class="avatar-img"
+            width="42"
+            height="42"
+          />
+        </span>
+
+        <span class="brand-name">Mahmoud Mohamed</span>
       </a>
 
       <button
-        class="navbar-toggler menu-button"
+        class="menu-button"
         type="button"
         aria-controls="navbarNav"
         [attr.aria-expanded]="isMenuOpen()"
-        aria-label="Toggle navigation"
+        [attr.aria-label]="
+          isMenuOpen() ? 'Close navigation' : 'Open navigation'
+        "
         [class.is-open]="isMenuOpen()"
         (click)="toggleMenu()"
       >
@@ -28,14 +36,10 @@
         <span class="menu-line"></span>
       </button>
 
-      <div
-        class="collapse navbar-collapse justify-content-end"
-        id="navbarNav"
-        [class.show]="isMenuOpen()"
-      >
-        <ul class="navbar-nav align-items-lg-center gap-lg-3 text-center">
+      <div class="navigation" id="navbarNav" [class.is-open]="isMenuOpen()">
+        <ul class="nav-list">
           @for (link of navLinks; track link.id) {
-            <li class="nav-item">
+            <li>
               <a
                 class="nav-link"
                 [class.active]="activeSection() === link.id"
@@ -43,7 +47,7 @@
                   activeSection() === link.id ? 'location' : null
                 "
                 [href]="'#' + link.id"
-                (click)="setActiveSection(link.id)"
+                (click)="navigateTo(link.id)"
               >
                 {{ link.label }}
               </a>
@@ -53,13 +57,13 @@
 
         <a
           href="cv/Mahmoud.Mohamed.CV.pdf"
-          target="_blank"
-          rel="noopener"
-          class="btn cv-btn ms-lg-4 mt-3 mt-lg-0"
+          download="Mahmoud-Mohamed-CV.pdf"
+          class="cv-btn"
+          aria-label="Download Mahmoud Mohamed CV as PDF"
           (click)="closeMenu()"
         >
-          <i class="bi bi-download me-1" aria-hidden="true"></i>
-          Download CV
+          <i class="bi bi-download" aria-hidden="true"></i>
+          <span>Download CV</span>
         </a>
       </div>
     </div>

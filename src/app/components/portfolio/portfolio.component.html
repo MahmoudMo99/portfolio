@@ -1,13 +1,16 @@
 <section id="portfolio" class="portfolio-section">
   <div class="container">
     <div class="section-heading text-center">
-      <span class="section-badge">My Work</span>
+      <span class="section-label">
+        <i class="bi bi-folder2-open" aria-hidden="true"></i>
+        My Work
+      </span>
 
       <h2>Featured Projects</h2>
 
       <p>
-        A selection of Angular dashboards, RTL e-commerce demos, AI-powered
-        apps, and web platforms I have built or contributed to.
+        A selection of frontend projects covering Angular applications,
+        dashboards, e-commerce, RTL interfaces, and AI-powered experiences.
       </p>
     </div>
 
@@ -26,51 +29,46 @@
     </div>
 
     <div class="row g-4">
-      @for (project of filteredProjects(); track project.title) {
+      @for (
+        project of filteredProjects();
+        track project.title;
+        let index = $index
+      ) {
         <div class="col-md-6 col-lg-4">
           <article class="project-card">
             <div class="project-image-wrapper">
               <img
                 [src]="project.image"
-                [alt]="project.title"
+                [alt]="project.title + ' project preview'"
                 class="project-image"
                 loading="lazy"
               />
-
-              <span class="project-category">
-                {{ project.primaryCategory }}
-              </span>
             </div>
 
             <div class="project-content">
+              <div class="project-meta">
+                <span class="project-category">
+                  {{ project.primaryCategory }}
+                </span>
+
+                <span class="project-number" aria-hidden="true">
+                  {{ index + 1 < 10 ? "0" + (index + 1) : index + 1 }}
+                </span>
+              </div>
+
               <h3>{{ project.title }}</h3>
 
-              <p>
+              <p class="project-description">
                 {{ project.description }}
               </p>
 
-              <div class="project-skills">
+              <div class="project-skills" aria-label="Technologies used">
                 @for (skill of project.skills; track skill) {
                   <span>{{ skill }}</span>
                 }
               </div>
 
               <div class="project-actions">
-                @if (project.github) {
-                  <a
-                    [href]="project.github"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="project-link"
-                    [attr.aria-label]="
-                      'View GitHub repository for ' + project.title
-                    "
-                  >
-                    <i class="bi bi-github" aria-hidden="true"></i>
-                    GitHub
-                  </a>
-                }
-
                 @if (project.live) {
                   <a
                     [href]="project.live"
@@ -79,8 +77,23 @@
                     class="project-link primary-link"
                     [attr.aria-label]="'View live project for ' + project.title"
                   >
-                    <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
-                    Live
+                    <span>Live Demo</span>
+                    <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+                  </a>
+                }
+
+                @if (project.github) {
+                  <a
+                    [href]="project.github"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-link secondary-link"
+                    [attr.aria-label]="
+                      'View GitHub repository for ' + project.title
+                    "
+                  >
+                    <i class="bi bi-github" aria-hidden="true"></i>
+                    <span>GitHub</span>
                   </a>
                 }
 
@@ -89,13 +102,13 @@
                     [href]="project.video"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="project-link"
+                    class="project-link secondary-link"
                     [attr.aria-label]="
                       'Watch project video for ' + project.title
                     "
                   >
                     <i class="bi bi-play-circle" aria-hidden="true"></i>
-                    Video
+                    <span>Video</span>
                   </a>
                 }
               </div>
@@ -114,7 +127,8 @@
         aria-label="View more projects on Mahmoud Mohamed GitHub profile"
       >
         <i class="bi bi-github" aria-hidden="true"></i>
-        View More on GitHub
+        <span>Explore More on GitHub</span>
+        <i class="bi bi-arrow-right" aria-hidden="true"></i>
       </a>
     </div>
   </div>
