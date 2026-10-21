@@ -17,7 +17,7 @@ interface ContactLink {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ContactCtaComponent {
-  readonly contactLinks: ContactLink[] = [
+  readonly contactLinks: readonly ContactLink[] = [
     {
       label: 'Email',
       value: 'mahmoud.mmi.dev@gmail.com',
@@ -33,10 +33,10 @@ export class ContactCtaComponent {
       external: true,
     },
     {
-      label: 'WhatsApp',
-      value: 'Send a message',
-      href: 'https://wa.me/201155347463?text=Hi%20Mahmoud%2C%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project',
-      icon: 'bi-whatsapp',
+      label: 'GitHub',
+      value: 'Explore my repositories',
+      href: 'https://github.com/MahmoudMo99',
+      icon: 'bi-github',
       external: true,
     },
   ];

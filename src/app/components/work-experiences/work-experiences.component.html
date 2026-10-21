@@ -9,8 +9,8 @@
       <h2>Professional Experience</h2>
 
       <p>
-        A timeline of my frontend development, freelance projects, training, and
-        mentoring experience.
+        A timeline of my development work, freelance projects, technical
+        training, and mentoring experience.
       </p>
     </div>
 
@@ -23,8 +23,8 @@
 
           <div class="experience-card">
             <div class="experience-card-header">
-              <div class="experience-icon">
-                <i [class]="'bi ' + exp.icon" aria-hidden="true"></i>
+              <div class="experience-icon" aria-hidden="true">
+                <i [class]="'bi ' + exp.icon"></i>
               </div>
 
               <div class="experience-info">
@@ -32,7 +32,10 @@
                   <h3>{{ exp.title }}</h3>
 
                   @if (exp.current) {
-                    <span class="current-badge">Current</span>
+                    <span class="current-badge">
+                      <span class="current-dot" aria-hidden="true"></span>
+                      Current
+                    </span>
                   }
                 </div>
 
@@ -66,11 +69,9 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 class="review-link"
-                [attr.aria-label]="
-                  'Open ' + exp.linkLabel + ' for ' + exp.title
-                "
               >
                 <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
+
                 {{ exp.linkLabel || "View Link" }}
               </a>
             }

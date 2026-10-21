@@ -3,14 +3,21 @@
     <div class="row align-items-center min-vh-hero g-5">
       <div class="col-lg-7">
         <div class="hero-content">
+          <span class="hero-availability animate-fade-up">
+            <span class="availability-dot" aria-hidden="true"></span>
+            Open to Angular / Frontend opportunities
+          </span>
+
           <h1 class="hero-title animate-fade-up delay-1">
-            Building clean, scalable web apps with Angular.
+            I build responsive, maintainable Angular applications for real-world
+            products.
           </h1>
 
           <p class="hero-subtitle animate-fade-up delay-2">
             I'm <strong>Mahmoud Mohamed</strong>, a Software Engineer and
-            Angular Frontend Developer building responsive dashboards and
-            scalable web applications with Angular, TypeScript, and REST APIs.
+            Angular Frontend Developer focused on dashboards, RTL interfaces,
+            and API-driven web applications using Angular, TypeScript, RxJS, and
+            REST APIs.
           </p>
 
           <div
@@ -20,6 +27,7 @@
             @for (tech of techs; track tech.name) {
               <span class="tech-item">
                 <i class="bi {{ tech.icon }}" aria-hidden="true"></i>
+
                 {{ tech.name }}
               </span>
             }
@@ -27,12 +35,14 @@
 
           <div class="hero-actions animate-fade-up delay-3">
             <a href="#portfolio" class="hero-btn hero-btn-primary">
-              View Projects
+              <span>View Projects</span>
+
               <i class="bi bi-arrow-right" aria-hidden="true"></i>
             </a>
 
             <a href="#contact" class="hero-btn hero-btn-secondary">
-              Let's Talk
+              <span>Contact Me</span>
+
               <i class="bi bi-chat-dots" aria-hidden="true"></i>
             </a>
           </div>
@@ -54,7 +64,12 @@
 
             <div class="profile-info">
               <h2>Mahmoud Mohamed</h2>
-              <p>Angular Frontend Developer</p>
+
+              <p>
+                Software Engineer
+                <span aria-hidden="true">•</span>
+                Angular Frontend Developer
+              </p>
             </div>
           </div>
         </div>

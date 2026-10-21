@@ -15,7 +15,7 @@ interface HeroTech {
 export class HeroComponent {
   readonly techs: readonly HeroTech[] = [
     { name: 'Angular', icon: 'bi-braces' },
-    { name: 'TypeScript', icon: 'bi-filetype-tsx' },
+    { name: 'TypeScript', icon: 'bi-code-slash' },
     { name: 'RxJS', icon: 'bi-arrow-repeat' },
     { name: 'REST APIs', icon: 'bi-plug' },
   ];

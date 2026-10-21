@@ -4,7 +4,7 @@ interface SkillCategory {
   title: string;
   icon: string;
   description: string;
-  items: string[];
+  items: readonly string[];
 }
 
 @Component({
@@ -17,18 +17,18 @@ interface SkillCategory {
 export class SkillsComponent {
   readonly skillCategories: readonly SkillCategory[] = [
     {
-      title: 'Frontend Development',
+      title: 'Frontend Foundations',
       icon: 'bi-code-slash',
       description:
-        'Building responsive, maintainable, and accessible web interfaces.',
+        'Core technologies for responsive, maintainable, and accessible web interfaces.',
       items: [
         'HTML5',
         'CSS3',
         'SCSS',
-        'JavaScript',
+        'JavaScript ES6+',
         'TypeScript',
         'Bootstrap 5',
-        'Responsive Design',
+        'Responsive Web Design',
         'RTL UI',
       ],
     },
@@ -36,58 +36,62 @@ export class SkillsComponent {
       title: 'Angular Ecosystem',
       icon: 'bi-lightning-charge',
       description:
-        'Building structured Angular applications with modern framework patterns.',
+        'Modern Angular patterns and application architecture used across my projects.',
       items: [
         'Angular',
+        'Standalone Components',
         'Signals',
         'RxJS',
-        'Standalone Components',
+        'Services',
         'Routing',
+        'Reactive Forms',
         'Guards',
         'Interceptors',
-        'Reactive Forms',
         'Lazy Loading',
+        'REST API Integration',
       ],
     },
     {
       title: 'UI & Frontend Libraries',
       icon: 'bi-window-sidebar',
       description:
-        'Using component libraries, visualization, and localization tools.',
+        'Libraries and tools for component-driven UI, visualization, localization, and content.',
       items: [
         'PrimeNG',
         'Chart.js',
         'ngx-translate',
-        'Lucide Icons',
+        'Lucide Angular',
         'ngx-markdown',
-        'Custom SCSS',
       ],
     },
     {
-      title: 'APIs & Backend',
+      title: 'Backend, APIs & Data',
       icon: 'bi-server',
       description:
-        'Integrating frontend applications with APIs and backend services.',
-      items: ['REST APIs', 'Node.js', 'Express', 'ASP.NET Core', 'Gemini API'],
+        'Backend technologies and data services used in full-stack and API-driven projects.',
+      items: [
+        'Node.js',
+        'Express.js',
+        'REST APIs',
+        '.NET API Integration',
+        'Gemini API',
+        'MongoDB',
+        'Microsoft SQL Server',
+      ],
     },
     {
-      title: 'Databases',
-      icon: 'bi-database',
-      description:
-        'Working with relational and NoSQL databases in full-stack projects.',
-      items: ['SQL Server', 'MongoDB'],
-    },
-    {
-      title: 'Tools & Core Concepts',
+      title: 'Testing & Developer Tools',
       icon: 'bi-tools',
       description:
-        'Development tools and software engineering fundamentals used in my workflow.',
+        'Tools used for testing, API development, version control, deployment, and collaboration.',
+      items: ['Jasmine', 'Git', 'GitHub', 'Postman', 'Vercel', 'Figma'],
+    },
+    {
+      title: 'Core Engineering Concepts',
+      icon: 'bi-diagram-3',
+      description:
+        'Software engineering and computer science fundamentals that guide implementation decisions.',
       items: [
-        'Git',
-        'GitHub',
-        'Postman',
-        'VS Code',
-        'Jasmine',
         'OOP',
         'Data Structures',
         'Algorithms',

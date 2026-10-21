@@ -9,7 +9,7 @@ interface FocusItem {
 interface EducationItem {
   date: string;
   title: string;
-  details: string[];
+  details: readonly string[];
 }
 
 @Component({
@@ -23,50 +23,42 @@ export class AboutComponent {
   readonly focusItems: readonly FocusItem[] = [
     {
       icon: 'bi-code-slash',
-      label: 'Angular Development',
+      label: 'Angular Engineering',
       description:
-        'Reusable components, forms, routing, and application structure',
+        'Reusable components, Signals, Reactive Forms, routing, and application structure',
     },
     {
       icon: 'bi-display',
-      label: 'Responsive UI',
+      label: 'Responsive & RTL UI',
       description:
-        'Clean interfaces that work across desktop, tablet, and mobile',
+        'Responsive interfaces designed for desktop, tablet, mobile, and RTL experiences',
     },
     {
       icon: 'bi-plug',
-      label: 'API Integration',
-      description: 'REST APIs, RxJS workflows, guards, and interceptors',
+      label: 'API-Driven Applications',
+      description:
+        'REST API integration, RxJS workflows, authentication, guards, and interceptors',
     },
   ];
 
   readonly educationItems: readonly EducationItem[] = [
     {
       date: '2025 - Present',
-      title: "Master's Degree",
-      details: [
-        'Computer Science Department',
-        'Faculty of Computers and Information',
-        'Assiut University',
-      ],
+      title: "Master's in Computer Science",
+      details: ['Faculty of Computers and Information', 'Assiut University'],
     },
     {
       date: '2024 - 2025',
-      title: 'Intensive Training Program',
+      title: 'Intensive Training Program – MEARN Stack',
       details: [
-        'Full Stack Web Development',
-        'MEARN Stack Track',
+        'Full-Stack Web Development',
         'Information Technology Institute (ITI)',
       ],
     },
     {
       date: '2020 - 2024',
-      title: "Bachelor's Degree",
-      details: [
-        'Computer Science Department',
-        'Faculty of Computers and Information',
-        'South Valley University',
-      ],
+      title: "Bachelor's in Computers & Information",
+      details: ['Computer Science Department', 'South Valley University'],
     },
   ];
 }

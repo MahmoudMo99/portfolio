@@ -6,9 +6,12 @@
         Client Feedback
       </span>
 
-      <h2>Client Reviews</h2>
+      <h2>Verified Client Reviews</h2>
 
-      <p>Verified feedback from clients I worked with on freelance projects.</p>
+      <p>
+        Feedback from clients on completed freelance projects, with links to the
+        original reviews on Mostaql.
+      </p>
     </div>
 
     <div class="row g-4 justify-content-center">
@@ -18,19 +21,27 @@
             class="testimonial-card"
             [attr.dir]="testimonial.language === 'ar' ? 'rtl' : 'ltr'"
           >
-            <div class="testimonial-stars" aria-label="5 out of 5 rating">
-              @for (_ of stars; track $index) {
-                <i class="bi bi-star-fill" aria-hidden="true"></i>
-              }
+            <div class="testimonial-top">
+              <div class="testimonial-stars" aria-label="5 out of 5 rating">
+                @for (_ of stars; track $index) {
+                  <i class="bi bi-star-fill" aria-hidden="true"></i>
+                }
+              </div>
+
+              <span class="verified-badge">
+                <i class="bi bi-patch-check" aria-hidden="true"></i>
+                {{ testimonial.platform }}
+              </span>
             </div>
 
-            <p
+            <blockquote
               class="testimonial-quote"
               [class.arabic-quote]="testimonial.language === 'ar'"
               [class.english-quote]="testimonial.language === 'en'"
+              [attr.lang]="testimonial.language"
             >
               {{ testimonial.quote }}
-            </p>
+            </blockquote>
 
             <div class="testimonial-footer">
               <div class="client-info">
@@ -44,10 +55,11 @@
                 rel="noopener noreferrer"
                 class="review-link"
                 [attr.aria-label]="
-                  'View ' + testimonial.project + ' review on Mostaql'
+                  'View original review for ' + testimonial.project
                 "
               >
-                {{ testimonial.source }}
+                <span>View Original Review</span>
+
                 <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
               </a>
             </div>

@@ -9,11 +9,10 @@ import {
 type SectionId =
   | 'home'
   | 'about'
-  | 'features'
   | 'experience'
   | 'portfolio'
-  | 'testimonials'
   | 'skills'
+  | 'testimonials'
   | 'contact';
 
 interface NavLink {
@@ -36,11 +35,10 @@ export class HeaderComponent implements OnInit {
   readonly navLinks: readonly NavLink[] = [
     { id: 'home', label: 'Home' },
     { id: 'about', label: 'About' },
-    { id: 'features', label: 'Services' },
     { id: 'experience', label: 'Experience' },
     { id: 'portfolio', label: 'Projects' },
-    { id: 'testimonials', label: 'Reviews' },
     { id: 'skills', label: 'Skills' },
+    { id: 'testimonials', label: 'Reviews' },
     { id: 'contact', label: 'Contact' },
   ];
 
