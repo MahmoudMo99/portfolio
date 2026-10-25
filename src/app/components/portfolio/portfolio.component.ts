@@ -24,22 +24,23 @@ export class PortfolioComponent {
     {
       title: 'Qurb | قُرب',
       description:
-        'An Arabic-first RTL Angular application for Quran reading, prayer times, azkar, hadith, favorites, daily Wird tracking, and resilient local caching.',
-      primaryCategory: 'Angular',
+        'An installable Arabic-first Islamic PWA built with Angular 22, featuring Madinah Mushaf Quran reading with offline support, prayer times, azkar, hadith, daily Wird tracking, and favorites.',
+      primaryCategory: 'Angular · PWA',
       skills: [
         'Angular 22',
         'TypeScript',
+        'PWA',
+        'Service Worker',
         'Signals',
         'RxJS',
-        'REST APIs',
-        'SCSS',
         'RTL',
-        'Local Caching',
+        'Offline Support',
       ],
       image: '/images/projects/qurb.png',
       github: 'https://github.com/MahmoudMo99/qurb',
-      live: 'https://qurb-islamic.vercel.app/',
+      live: 'https://qurb-islamic.vercel.app/home',
     },
+
     {
       title: 'RetailOps Admin Dashboard',
       description:
