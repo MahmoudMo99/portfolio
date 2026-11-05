@@ -45,10 +45,7 @@
           track testimonial.reviewLink;
           let index = $index
         ) {
-          <article
-            class="review-item"
-            [attr.dir]="testimonial.language === 'ar' ? 'rtl' : 'ltr'"
-          >
+          <article class="review-item">
             <div class="review-header">
               <div class="review-meta">
                 <span class="review-number" aria-hidden="true">
@@ -70,7 +67,10 @@
               </div>
             </div>
 
-            <div class="review-body">
+            <div
+              class="review-body"
+              [attr.dir]="testimonial.language === 'ar' ? 'rtl' : 'ltr'"
+            >
               <span class="quote-icon" aria-hidden="true">
                 <i class="bi bi-quote"></i>
               </span>

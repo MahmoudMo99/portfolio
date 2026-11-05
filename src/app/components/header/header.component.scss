@@ -193,11 +193,6 @@
   color: var(--brand-primary);
 }
 
-.nav-link.active::after {
-  opacity: 1;
-  transform: translateX(-50%) scaleX(1);
-}
-
 .header-actions {
   display: flex;
   align-items: center;
