@@ -1,32 +1,58 @@
-<section id="features" class="features-section">
-  <div class="container">
-    <div class="section-heading text-center">
-      <span class="section-label">
-        <i class="bi bi-grid" aria-hidden="true"></i>
-        What I Build
-      </span>
+<section
+  id="features"
+  class="features-section"
+  aria-labelledby="features-title"
+>
+  <div class="site-container">
+    <div class="features-heading">
+      <div class="heading-main">
+        <span class="features-eyebrow">
+          {{ "features.eyebrow" | translate }}
+        </span>
 
-      <h2>Frontend solutions built for real-world applications.</h2>
+        <h2 id="features-title">
+          {{ "features.title.before" | translate }}
 
-      <p>
-        From Angular applications to business dashboards and Arabic RTL
-        experiences, I build interfaces designed around usability,
-        maintainability, and real product needs.
+          <span>
+            {{ "features.title.highlight" | translate }}
+          </span>
+        </h2>
+      </div>
+
+      <p class="heading-description">
+        {{ "features.description" | translate }}
       </p>
     </div>
 
-    <div class="row g-4 justify-content-center">
-      @for (feature of features; track feature.title) {
-        <div class="col-12 col-md-6 col-lg-4">
-          <article class="feature-card">
-            <div class="feature-icon" aria-hidden="true">
-              <i [class]="'bi ' + feature.icon"></i>
-            </div>
+    <div class="features-board">
+      @for (feature of features; track feature.titleKey; let index = $index) {
+        <article class="feature-item">
+          <div class="feature-top">
+            <span class="feature-number"> 0{{ index + 1 }} </span>
 
-            <h3>{{ feature.title }}</h3>
-            <p>{{ feature.description }}</p>
-          </article>
-        </div>
+            <span class="feature-icon" aria-hidden="true">
+              <i [class]="'bi ' + feature.icon"></i>
+            </span>
+          </div>
+
+          <div class="feature-content">
+            <h3>
+              {{ feature.titleKey | translate }}
+            </h3>
+
+            <p>
+              {{ feature.descriptionKey | translate }}
+            </p>
+          </div>
+
+          <div class="feature-detail">
+            <span></span>
+
+            <p>
+              {{ feature.detailKey | translate }}
+            </p>
+          </div>
+        </article>
       }
     </div>
   </div>

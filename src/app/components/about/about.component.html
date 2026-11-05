@@ -1,104 +1,153 @@
-<section id="about" class="about-section">
-  <div class="container">
-    <div class="section-heading text-center">
-      <span class="section-label">
-        <i class="bi bi-person" aria-hidden="true"></i>
-        About Me
-      </span>
+<section id="about" class="about-section" aria-labelledby="about-title">
+  <div class="site-container">
+    <div class="section-heading">
+      <div class="heading-main">
+        <span class="about-eyebrow">
+          {{ "about.eyebrow" | translate }}
+        </span>
 
-      <h2>Frontend development with a practical engineering mindset.</h2>
+        <h2 id="about-title">
+          {{ "about.title.before" | translate }}
 
-      <p>
-        A closer look at how I approach frontend development, mentoring, and
-        continuous learning.
+          <span>
+            {{ "about.title.highlight" | translate }}
+          </span>
+        </h2>
+      </div>
+
+      <p class="heading-description">
+        {{ "about.description" | translate }}
       </p>
     </div>
 
-    <div class="row g-4 align-items-stretch">
-      <div class="col-lg-6">
-        <div class="about-card about-intro-card">
-          <div class="about-copy">
-            <h3>
-              Building Angular applications that are clear, maintainable, and
-              useful.
-            </h3>
+    <div class="about-layout">
+      <article class="about-card">
+        <div class="about-card-head">
+          <span class="about-card-label">
+            {{ "about.story.label" | translate }}
+          </span>
 
-            <p>
-              I focus on building maintainable Angular applications that turn
-              product requirements into responsive, practical user experiences —
-              from admin dashboards and RTL interfaces to API-driven workflows.
-            </p>
-
-            <p>
-              My work includes reusable components, Angular Signals, Reactive
-              Forms, routing, guards, interceptors, RxJS workflows, REST API
-              integration, responsive layouts, and structured frontend
-              architecture.
-            </p>
-
-            <p>
-              Alongside development, I work as a
-              <strong>Part-Time External Instructor at ITI</strong>, delivering
-              practical web development training and mentoring trainees through
-              projects, debugging, and code reviews.
-            </p>
-          </div>
-
-          <div class="focus-list" aria-label="Development focus areas">
-            @for (item of focusItems; track item.label) {
-              <div class="focus-item">
-                <span class="focus-icon" aria-hidden="true">
-                  <i [class]="'bi ' + item.icon"></i>
-                </span>
-
-                <div class="focus-content">
-                  <h4>{{ item.label }}</h4>
-                  <p>{{ item.description }}</p>
-                </div>
-              </div>
-            }
-          </div>
-
-          <a class="about-contact" href="#experience">
-            View My Experience
-            <i class="bi bi-arrow-right" aria-hidden="true"></i>
-          </a>
+          <span class="about-card-index"> 01 </span>
         </div>
-      </div>
 
-      <div class="col-lg-6">
-        <div class="about-card education-card">
-          <div class="card-header-content">
-            <span class="icon-box" aria-hidden="true">
-              <i class="bi bi-mortarboard"></i>
+        <div class="about-card-content">
+          <h3>
+            {{ "about.story.title" | translate }}
+          </h3>
+
+          <p>
+            {{ "about.story.paragraph1" | translate }}
+          </p>
+
+          <p>
+            {{ "about.story.paragraph2" | translate }}
+          </p>
+        </div>
+
+        <div class="instructor-block">
+          <span class="instructor-icon" aria-hidden="true">
+            <i class="bi bi-easel2"></i>
+          </span>
+
+          <div>
+            <span class="instructor-label">
+              {{ "about.instructor.label" | translate }}
             </span>
 
-            <div>
-              <h3>Education & Training</h3>
-              <p>Academic background and professional development.</p>
-            </div>
-          </div>
-
-          <div class="education-timeline">
-            @for (item of educationItems; track item.title) {
-              <div class="timeline-item">
-                <span class="timeline-dot" aria-hidden="true"></span>
-
-                <div class="timeline-content">
-                  <span class="timeline-date">{{ item.date }}</span>
-
-                  <h4>{{ item.title }}</h4>
-
-                  <div class="timeline-details">
-                    @for (detail of item.details; track detail) {
-                      <p>{{ detail }}</p>
-                    }
-                  </div>
-                </div>
-              </div>
-            }
+            <p>
+              {{ "about.instructor.description" | translate }}
+            </p>
           </div>
         </div>
+
+        <a href="#experience" class="experience-link">
+          <span>
+            {{ "about.actions.experience" | translate }}
+          </span>
+
+          <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+        </a>
+      </article>
+
+      <aside
+        class="focus-card"
+        [attr.aria-label]="'about.focus.ariaLabel' | translate"
+      >
+        <div class="focus-heading">
+          <span>
+            {{ "about.focus.label" | translate }}
+          </span>
+
+          <h3>
+            {{ "about.focus.title" | translate }}
+          </h3>
+        </div>
+
+        <div class="focus-list">
+          @for (item of focusItems; track item.titleKey; let index = $index) {
+            <div class="focus-item">
+              <span class="focus-number"> 0{{ index + 1 }} </span>
+
+              <span class="focus-icon" aria-hidden="true">
+                <i [class]="'bi ' + item.icon"></i>
+              </span>
+
+              <div class="focus-content">
+                <h4>
+                  {{ item.titleKey | translate }}
+                </h4>
+
+                <p>
+                  {{ item.descriptionKey | translate }}
+                </p>
+              </div>
+            </div>
+          }
+        </div>
+      </aside>
+    </div>
+
+    <div class="education-section">
+      <div class="education-heading">
+        <div>
+          <span>
+            {{ "about.education.label" | translate }}
+          </span>
+
+          <h3>
+            {{ "about.education.title" | translate }}
+          </h3>
+        </div>
+
+        <p>
+          {{ "about.education.description" | translate }}
+        </p>
+      </div>
+
+      <div class="education-grid">
+        @for (item of educationItems; track item.titleKey; let index = $index) {
+          <article class="education-item">
+            <div class="education-meta">
+              <span class="education-number"> 0{{ index + 1 }} </span>
+
+              <span class="education-date">
+                {{ item.dateKey | translate }}
+              </span>
+            </div>
+
+            <h4>
+              {{ item.titleKey | translate }}
+            </h4>
+
+            <div class="education-details">
+              @for (detailKey of item.detailsKeys; track detailKey) {
+                <span>
+                  {{ detailKey | translate }}
+                </span>
+              }
+            </div>
+          </article>
+        }
       </div>
     </div>
   </div>

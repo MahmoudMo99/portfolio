@@ -3,8 +3,13 @@ import {
   Component,
   HostListener,
   OnInit,
+  inject,
   signal,
 } from '@angular/core';
+import { TranslatePipe } from '@ngx-translate/core';
+
+import { LanguageService } from '../../core/services/language.service';
+import { ThemeService } from '../../core/services/theme.service';
 
 type SectionId =
   | 'home'
@@ -17,29 +22,53 @@ type SectionId =
 
 interface NavLink {
   id: SectionId;
-  label: string;
+  translationKey: string;
 }
 
 @Component({
   selector: 'app-header',
-  imports: [],
+  imports: [TranslatePipe],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HeaderComponent implements OnInit {
+  readonly themeService = inject(ThemeService);
+  readonly languageService = inject(LanguageService);
+
   readonly isScrolled = signal(false);
   readonly isMenuOpen = signal(false);
   readonly activeSection = signal<SectionId>('home');
 
   readonly navLinks: readonly NavLink[] = [
-    { id: 'home', label: 'Home' },
-    { id: 'about', label: 'About' },
-    { id: 'experience', label: 'Experience' },
-    { id: 'portfolio', label: 'Projects' },
-    { id: 'skills', label: 'Skills' },
-    { id: 'testimonials', label: 'Reviews' },
-    { id: 'contact', label: 'Contact' },
+    {
+      id: 'home',
+      translationKey: 'header.navigation.home',
+    },
+    {
+      id: 'about',
+      translationKey: 'header.navigation.about',
+    },
+    {
+      id: 'experience',
+      translationKey: 'header.navigation.experience',
+    },
+    {
+      id: 'portfolio',
+      translationKey: 'header.navigation.projects',
+    },
+    {
+      id: 'skills',
+      translationKey: 'header.navigation.skills',
+    },
+    {
+      id: 'testimonials',
+      translationKey: 'header.navigation.reviews',
+    },
+    {
+      id: 'contact',
+      translationKey: 'header.navigation.contact',
+    },
   ];
 
   private scrollTicking = false;
@@ -50,7 +79,9 @@ export class HeaderComponent implements OnInit {
 
   @HostListener('window:scroll')
   onWindowScroll(): void {
-    if (this.scrollTicking) return;
+    if (this.scrollTicking) {
+      return;
+    }
 
     this.scrollTicking = true;
 
@@ -62,7 +93,7 @@ export class HeaderComponent implements OnInit {
 
   @HostListener('window:resize')
   onWindowResize(): void {
-    if (window.innerWidth >= 1200) {
+    if (window.innerWidth >= 1180) {
       this.closeMenu();
     }
 
@@ -74,23 +105,21 @@ export class HeaderComponent implements OnInit {
     this.closeMenu();
   }
 
-  @HostListener('document:click', ['$event'])
-  onDocumentClick(event: MouseEvent): void {
-    if (!this.isMenuOpen()) return;
-
-    const target = event.target as HTMLElement;
-
-    if (!target.closest('.main-header')) {
-      this.closeMenu();
-    }
-  }
-
   toggleMenu(): void {
-    this.isMenuOpen.update((isOpen) => !isOpen);
+    this.isMenuOpen.update((value) => !value);
   }
 
   closeMenu(): void {
     this.isMenuOpen.set(false);
+  }
+
+  toggleTheme(): void {
+    this.themeService.toggleTheme();
+  }
+
+  toggleLanguage(): void {
+    this.languageService.toggleLanguage();
+    this.closeMenu();
   }
 
   navigateTo(sectionId: SectionId): void {
@@ -99,7 +128,7 @@ export class HeaderComponent implements OnInit {
   }
 
   private updateScrollState(): void {
-    this.isScrolled.set(window.scrollY > 16);
+    this.isScrolled.set(window.scrollY > 12);
     this.updateActiveSection();
   }
 
@@ -110,22 +139,28 @@ export class HeaderComponent implements OnInit {
         element: document.getElementById(link.id),
       }))
       .filter(
-        (section): section is { id: SectionId; element: HTMLElement } =>
-          section.element !== null,
+        (
+          section,
+        ): section is {
+          id: SectionId;
+          element: HTMLElement;
+        } => section.element !== null,
       );
 
-    if (!sections.length) return;
-
-    const pageBottom =
-      window.innerHeight + window.scrollY >=
-      document.documentElement.scrollHeight - 2;
-
-    if (pageBottom) {
-      this.activeSection.set(sections[sections.length - 1].id);
+    if (!sections.length) {
       return;
     }
 
-    const activationPoint = window.scrollY + 130;
+    const reachedBottom =
+      window.innerHeight + window.scrollY >=
+      document.documentElement.scrollHeight - 4;
+
+    if (reachedBottom) {
+      this.activeSection.set(sections.at(-1)!.id);
+      return;
+    }
+
+    const activationPoint = window.scrollY + 120;
     let currentSection = sections[0].id;
 
     for (const section of sections) {

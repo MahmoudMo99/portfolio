@@ -1,78 +1,126 @@
-<section id="home" class="hero-section">
-  <div class="container">
-    <div class="row align-items-center min-vh-hero g-5">
-      <div class="col-lg-7">
-        <div class="hero-content">
-          <span class="hero-availability animate-fade-up">
-            <span class="availability-dot" aria-hidden="true"></span>
-            Open to Angular / Frontend opportunities
+<section id="home" class="hero-section" aria-labelledby="hero-title">
+  <div class="hero-glow" aria-hidden="true"></div>
+
+  <div class="site-container">
+    <div class="hero-layout">
+      <div class="hero-content">
+        <div class="hero-availability hero-reveal">
+          <span class="availability-dot" aria-hidden="true"></span>
+
+          <span>
+            {{ "hero.availability" | translate }}
+          </span>
+        </div>
+
+        <h1 id="hero-title" class="hero-title hero-reveal reveal-1">
+          {{ "hero.title.before" | translate }}
+
+          <span>
+            {{ "hero.title.highlight" | translate }}
+          </span>
+        </h1>
+
+        <p class="hero-description hero-reveal reveal-2">
+          {{ "hero.description.beforeName" | translate }}
+
+          <strong>
+            {{ "hero.description.name" | translate }}
+          </strong>
+
+          {{ "hero.description.afterName" | translate }}
+        </p>
+
+        <div class="hero-actions hero-reveal reveal-3">
+          <a href="#portfolio" class="hero-button hero-button-primary">
+            <span>
+              {{ "hero.actions.projects" | translate }}
+            </span>
+
+            <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+          </a>
+
+          <a href="#contact" class="hero-button hero-button-secondary">
+            <span>
+              {{ "hero.actions.contact" | translate }}
+            </span>
+
+            <i class="bi bi-chat-dots" aria-hidden="true"></i>
+          </a>
+        </div>
+
+        <div class="hero-stack hero-reveal reveal-3">
+          <span class="stack-label">
+            {{ "hero.stack.label" | translate }}
           </span>
 
-          <h1 class="hero-title animate-fade-up delay-1">
-            I build responsive, maintainable Angular applications for
-            real&#8209;world products.
-          </h1>
-
-          <p class="hero-subtitle animate-fade-up delay-2">
-            I'm <strong>Mahmoud Mohamed</strong>, a Software Engineer and
-            Angular Frontend Developer focused on dashboards, RTL interfaces,
-            and API-driven web applications using Angular, TypeScript, RxJS, and
-            REST APIs.
-          </p>
-
-          <div
-            class="hero-techs animate-fade-up delay-2"
-            aria-label="Core technologies"
-          >
-            @for (tech of techs; track tech.name) {
-              <span class="tech-item">
-                <i class="bi {{ tech.icon }}" aria-hidden="true"></i>
-
-                {{ tech.name }}
+          <div class="stack-list">
+            @for (tech of techs; track tech) {
+              <span class="stack-item">
+                {{ tech }}
               </span>
             }
-          </div>
-
-          <div class="hero-actions animate-fade-up delay-3">
-            <a href="#portfolio" class="hero-btn hero-btn-primary">
-              <span>View Projects</span>
-
-              <i class="bi bi-arrow-right" aria-hidden="true"></i>
-            </a>
-
-            <a href="#contact" class="hero-btn hero-btn-secondary">
-              <span>Contact Me</span>
-
-              <i class="bi bi-chat-dots" aria-hidden="true"></i>
-            </a>
           </div>
         </div>
       </div>
 
-      <div class="col-lg-5">
-        <div class="hero-visual animate-fade-up delay-2">
-          <div class="profile-card">
-            <div class="profile-image-wrapper">
-              <img
-                src="/images/mahmoud.jpg"
-                alt="Mahmoud Mohamed"
-                class="profile-image"
-                width="420"
-                height="340"
-              />
+      <div class="hero-visual hero-reveal reveal-2">
+        <article class="profile-card">
+          <div class="profile-top">
+            <div class="profile-heading">
+              <span class="profile-eyebrow">
+                {{ "hero.card.eyebrow" | translate }}
+              </span>
+
+              <strong>
+                {{ "hero.card.name" | translate }}
+              </strong>
             </div>
 
-            <div class="profile-info">
-              <h2>Mahmoud Mohamed</h2>
+            <div class="profile-status">
+              <span class="status-dot"></span>
 
-              <p>
-                Software Engineer
-                <span aria-hidden="true">•</span>
-                Angular Frontend Developer
-              </p>
+              <span>
+                {{ "hero.card.status" | translate }}
+              </span>
             </div>
           </div>
-        </div>
+
+          <div class="profile-media">
+            <img
+              src="/images/mahmoud.jpg"
+              [attr.alt]="'hero.card.imageAlt' | translate"
+              class="profile-image"
+              width="620"
+              height="620"
+            />
+
+            <div class="profile-gradient" aria-hidden="true"></div>
+
+            <div class="profile-role">
+              <span>
+                {{ "hero.card.roleLabel" | translate }}
+              </span>
+
+              <strong>
+                {{ "hero.card.role" | translate }}
+              </strong>
+            </div>
+          </div>
+
+          <div class="profile-bottom">
+            <div class="profile-current">
+              <span>
+                {{ "hero.card.currentLabel" | translate }}
+              </span>
+
+              <strong>
+                {{ "hero.card.currentValue" | translate }}
+              </strong>
+            </div>
+
+            <div class="profile-mark" aria-hidden="true">MM</div>
+          </div>
+        </article>
       </div>
     </div>
   </div>

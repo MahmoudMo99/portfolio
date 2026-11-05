@@ -1,20 +1,21 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { TranslatePipe } from '@ngx-translate/core';
 
 interface FocusItem {
   icon: string;
-  label: string;
-  description: string;
+  titleKey: string;
+  descriptionKey: string;
 }
 
 interface EducationItem {
-  date: string;
-  title: string;
-  details: readonly string[];
+  dateKey: string;
+  titleKey: string;
+  detailsKeys: readonly string[];
 }
 
 @Component({
   selector: 'app-about',
-  imports: [],
+  imports: [TranslatePipe],
   templateUrl: './about.component.html',
   styleUrl: './about.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -22,43 +23,46 @@ interface EducationItem {
 export class AboutComponent {
   readonly focusItems: readonly FocusItem[] = [
     {
-      icon: 'bi-code-slash',
-      label: 'Angular Engineering',
-      description:
-        'Reusable components, Signals, Reactive Forms, routing, and application structure',
+      icon: 'bi-braces',
+      titleKey: 'about.focus.angular.title',
+      descriptionKey: 'about.focus.angular.description',
     },
     {
       icon: 'bi-display',
-      label: 'Responsive & RTL UI',
-      description:
-        'Responsive interfaces designed for desktop, tablet, mobile, and RTL experiences',
+      titleKey: 'about.focus.ui.title',
+      descriptionKey: 'about.focus.ui.description',
     },
     {
-      icon: 'bi-plug',
-      label: 'API-Driven Applications',
-      description:
-        'REST API integration, RxJS workflows, authentication, guards, and interceptors',
+      icon: 'bi-diagram-3',
+      titleKey: 'about.focus.api.title',
+      descriptionKey: 'about.focus.api.description',
     },
   ];
 
   readonly educationItems: readonly EducationItem[] = [
     {
-      date: '2025 - Present',
-      title: "Master's in Computer Science",
-      details: ['Faculty of Computers and Information', 'Assiut University'],
-    },
-    {
-      date: '2024 - 2025',
-      title: 'Intensive Training Program – MEARN Stack',
-      details: [
-        'Full-Stack Web Development',
-        'Information Technology Institute (ITI)',
+      dateKey: 'about.education.items.master.date',
+      titleKey: 'about.education.items.master.title',
+      detailsKeys: [
+        'about.education.items.master.detail1',
+        'about.education.items.master.detail2',
       ],
     },
     {
-      date: '2020 - 2024',
-      title: "Bachelor's in Computers & Information",
-      details: ['Computer Science Department', 'South Valley University'],
+      dateKey: 'about.education.items.iti.date',
+      titleKey: 'about.education.items.iti.title',
+      detailsKeys: [
+        'about.education.items.iti.detail1',
+        'about.education.items.iti.detail2',
+      ],
+    },
+    {
+      dateKey: 'about.education.items.bachelor.date',
+      titleKey: 'about.education.items.bachelor.title',
+      detailsKeys: [
+        'about.education.items.bachelor.detail1',
+        'about.education.items.bachelor.detail2',
+      ],
     },
   ];
 }

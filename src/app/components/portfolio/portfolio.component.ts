@@ -1,9 +1,10 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { TranslatePipe } from '@ngx-translate/core';
 
 interface PortfolioProject {
-  title: string;
-  description: string;
-  primaryCategory: string;
+  titleKey: string;
+  descriptionKey: string;
+  categoryKey: string;
   skills: readonly string[];
   image: string;
   github?: string;
@@ -14,7 +15,7 @@ interface PortfolioProject {
 @Component({
   selector: 'app-portfolio',
   standalone: true,
-  imports: [],
+  imports: [TranslatePipe],
   templateUrl: './portfolio.component.html',
   styleUrl: './portfolio.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -22,30 +23,27 @@ interface PortfolioProject {
 export class PortfolioComponent {
   readonly projects: readonly PortfolioProject[] = [
     {
-      title: 'Qurb | قُرب',
-      description:
-        'An installable Arabic-first Islamic PWA built with Angular 22, featuring Madinah Mushaf Quran reading with offline support, prayer times, azkar, hadith, daily Wird tracking, and favorites.',
-      primaryCategory: 'Angular · PWA',
+      titleKey: 'portfolio.projects.qurb.title',
+      descriptionKey: 'portfolio.projects.qurb.description',
+      categoryKey: 'portfolio.projects.qurb.category',
       skills: [
         'Angular 22',
         'TypeScript',
         'PWA',
-        'Service Worker',
         'Signals',
         'RxJS',
         'RTL',
+        'Service Worker',
         'Offline Support',
       ],
       image: '/images/projects/qurb.png',
       github: 'https://github.com/MahmoudMo99/qurb',
       live: 'https://qurb-islamic.vercel.app/home',
     },
-
     {
-      title: 'RetailOps Admin Dashboard',
-      description:
-        'An Angular e-commerce operations dashboard with authentication, permission-based RBAC, data management workflows, analytics, localization, and responsive RTL support.',
-      primaryCategory: 'Dashboard',
+      titleKey: 'portfolio.projects.retailOps.title',
+      descriptionKey: 'portfolio.projects.retailOps.description',
+      categoryKey: 'portfolio.projects.retailOps.category',
       skills: [
         'Angular 22',
         'TypeScript',
@@ -61,10 +59,9 @@ export class PortfolioComponent {
       live: 'https://retail-ops-sigma.vercel.app/',
     },
     {
-      title: 'Touché de Gateau | Arabic RTL E-Commerce Frontend',
-      description:
-        'A responsive Arabic RTL e-commerce frontend with product discovery, filtering, cart and checkout workflows, feature-based architecture, and Signals-driven state management.',
-      primaryCategory: 'E-Commerce',
+      titleKey: 'portfolio.projects.touche.title',
+      descriptionKey: 'portfolio.projects.touche.description',
+      categoryKey: 'portfolio.projects.touche.category',
       skills: [
         'Angular 20',
         'TypeScript',
@@ -80,10 +77,9 @@ export class PortfolioComponent {
       live: 'https://touche-de-gateau-demo.vercel.app/',
     },
     {
-      title: 'Nova AI Learning Assistant',
-      description:
-        'A full-stack AI learning assistant with real-time Gemini response streaming, multi-turn conversations, Markdown rendering, persistent chat history, and a responsive Angular frontend.',
-      primaryCategory: 'AI',
+      titleKey: 'portfolio.projects.nova.title',
+      descriptionKey: 'portfolio.projects.nova.description',
+      categoryKey: 'portfolio.projects.nova.category',
       skills: [
         'Angular',
         'TypeScript',
@@ -98,20 +94,18 @@ export class PortfolioComponent {
       github: 'https://github.com/MahmoudMo99/nova-ai',
     },
     {
-      title: 'Personal Portfolio',
-      description:
-        'A responsive Angular portfolio designed to present selected projects, professional experience, technical skills, and client feedback.',
-      primaryCategory: 'Angular',
-      skills: ['Angular', 'TypeScript', 'SCSS', 'Bootstrap', 'Responsive UI'],
+      titleKey: 'portfolio.projects.portfolio.title',
+      descriptionKey: 'portfolio.projects.portfolio.description',
+      categoryKey: 'portfolio.projects.portfolio.category',
+      skills: ['Angular', 'TypeScript', 'SCSS', 'Responsive UI'],
       image: '/images/projects/portfolio.png',
       github: 'https://github.com/MahmoudMo99/portfolio',
       live: 'https://mahmoud-mohamed-portfolio.vercel.app/',
     },
     {
-      title: 'University Campus Housing Management',
-      description:
-        'A web application for managing student housing workflows, room selection, availability, violations, reporting, and administrative settings.',
-      primaryCategory: 'Angular',
+      titleKey: 'portfolio.projects.housing.title',
+      descriptionKey: 'portfolio.projects.housing.description',
+      categoryKey: 'portfolio.projects.housing.category',
       skills: ['Angular', '.NET', 'SQL Server', 'REST APIs'],
       image: '/images/projects/madina.jpg',
       live: 'http://193.227.49.104/madina/login',

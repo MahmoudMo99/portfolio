@@ -1,0 +1,13 @@
+@if (isVisible()) {
+  <button
+    type="button"
+    class="scroll-to-top"
+    (click)="scrollToTop()"
+    [attr.aria-label]="'scrollToTop.label' | translate"
+    [attr.title]="'scrollToTop.label' | translate"
+  >
+    <span class="scroll-icon">
+      <i class="bi bi-arrow-up" aria-hidden="true"></i>
+    </span>
+  </button>
+}

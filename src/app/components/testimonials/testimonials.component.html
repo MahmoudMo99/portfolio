@@ -1,52 +1,99 @@
-<section id="testimonials" class="testimonials-section">
-  <div class="container">
-    <div class="section-heading text-center">
-      <span class="section-label">
-        <i class="bi bi-chat-quote" aria-hidden="true"></i>
-        Client Feedback
-      </span>
+<section
+  id="testimonials"
+  class="testimonials-section"
+  aria-labelledby="testimonials-title"
+>
+  <div class="site-container">
+    <div class="testimonials-layout">
+      <div class="testimonials-intro">
+        <span class="testimonials-eyebrow">
+          {{ "testimonials.eyebrow" | translate }}
+        </span>
 
-      <h2>Verified Client Reviews</h2>
+        <h2 id="testimonials-title">
+          {{ "testimonials.title.before" | translate }}
 
-      <p>
-        Feedback from clients on completed freelance projects, with links to the
-        original reviews on Mostaql.
-      </p>
-    </div>
+          <span>
+            {{ "testimonials.title.highlight" | translate }}
+          </span>
+        </h2>
 
-    <div class="row g-4 justify-content-center">
-      @for (testimonial of testimonials; track testimonial.reviewLink) {
-        <div class="col-lg-6">
+        <p class="testimonials-description">
+          {{ "testimonials.description" | translate }}
+        </p>
+
+        <div class="verification-note">
+          <span class="verification-icon" aria-hidden="true">
+            <i class="bi bi-patch-check-fill"></i>
+          </span>
+
+          <div>
+            <strong>
+              {{ "testimonials.verification.title" | translate }}
+            </strong>
+
+            <span>
+              {{ "testimonials.verification.description" | translate }}
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="reviews-board">
+        @for (
+          testimonial of testimonials;
+          track testimonial.reviewLink;
+          let index = $index
+        ) {
           <article
-            class="testimonial-card"
+            class="review-item"
             [attr.dir]="testimonial.language === 'ar' ? 'rtl' : 'ltr'"
           >
-            <div class="testimonial-top">
-              <div class="testimonial-stars" aria-label="5 out of 5 rating">
+            <div class="review-header">
+              <div class="review-meta">
+                <span class="review-number" aria-hidden="true">
+                  0{{ index + 1 }}
+                </span>
+
+                <span class="review-project">
+                  {{ testimonial.projectKey | translate }}
+                </span>
+              </div>
+
+              <div
+                class="review-rating"
+                [attr.aria-label]="'testimonials.rating' | translate"
+              >
                 @for (_ of stars; track $index) {
                   <i class="bi bi-star-fill" aria-hidden="true"></i>
                 }
               </div>
-
-              <span class="verified-badge">
-                <i class="bi bi-patch-check" aria-hidden="true"></i>
-                {{ testimonial.platform }}
-              </span>
             </div>
 
-            <blockquote
-              class="testimonial-quote"
-              [class.arabic-quote]="testimonial.language === 'ar'"
-              [class.english-quote]="testimonial.language === 'en'"
-              [attr.lang]="testimonial.language"
-            >
-              {{ testimonial.quote }}
-            </blockquote>
+            <div class="review-body">
+              <span class="quote-icon" aria-hidden="true">
+                <i class="bi bi-quote"></i>
+              </span>
 
-            <div class="testimonial-footer">
+              <blockquote
+                [attr.lang]="testimonial.language"
+                [class.arabic-quote]="testimonial.language === 'ar'"
+              >
+                {{ testimonial.quote }}
+              </blockquote>
+            </div>
+
+            <div class="review-footer">
               <div class="client-info">
-                <h3>{{ testimonial.client }}</h3>
-                <span>{{ testimonial.project }}</span>
+                <strong>
+                  {{ testimonial.clientKey | translate }}
+                </strong>
+
+                <span>
+                  <i class="bi bi-patch-check" aria-hidden="true"></i>
+
+                  {{ testimonial.platformKey | translate }}
+                </span>
               </div>
 
               <a
@@ -55,17 +102,21 @@
                 rel="noopener noreferrer"
                 class="review-link"
                 [attr.aria-label]="
-                  'View original review for ' + testimonial.project
+                  ('testimonials.actions.reviewAria' | translate) +
+                  ' ' +
+                  (testimonial.projectKey | translate)
                 "
               >
-                <span>View Original Review</span>
+                <span>
+                  {{ "testimonials.actions.review" | translate }}
+                </span>
 
-                <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
+                <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
               </a>
             </div>
           </article>
-        </div>
-      }
+        }
+      </div>
     </div>
   </div>
 </section>

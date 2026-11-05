@@ -1,66 +1,123 @@
-<section id="portfolio" class="portfolio-section">
-  <div class="container">
-    <div class="section-heading text-center">
-      <span class="section-label">
-        <i class="bi bi-folder2-open" aria-hidden="true"></i>
-        My Work
-      </span>
+<section
+  id="portfolio"
+  class="portfolio-section"
+  aria-labelledby="portfolio-title"
+>
+  <div class="site-container">
+    <div class="portfolio-heading">
+      <div class="heading-copy">
+        <span class="portfolio-eyebrow">
+          {{ "portfolio.eyebrow" | translate }}
+        </span>
 
-      <h2>Selected Projects</h2>
+        <h2 id="portfolio-title">
+          {{ "portfolio.title.before" | translate }}
 
-      <p>
-        Selected Angular and full-stack projects covering dashboards,
-        e-commerce, Arabic RTL experiences, and AI-powered applications.
-      </p>
+          <span>
+            {{ "portfolio.title.highlight" | translate }}
+          </span>
+        </h2>
+
+        <p>
+          {{ "portfolio.description" | translate }}
+        </p>
+      </div>
+
+      <a
+        href="https://github.com/MahmoudMo99"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="github-link"
+        [attr.aria-label]="'portfolio.actions.githubAria' | translate"
+      >
+        <i class="bi bi-github" aria-hidden="true"></i>
+
+        <span>
+          {{ "portfolio.actions.github" | translate }}
+        </span>
+
+        <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+      </a>
     </div>
 
-    <div class="row g-4">
-      @for (project of projects; track project.title; let index = $index) {
-        <div class="col-md-6 col-lg-4">
-          <article class="project-card">
-            <div class="project-image-wrapper">
-              <img
-                [src]="project.image"
-                [alt]="project.title + ' project preview'"
-                class="project-image"
-                loading="lazy"
-                decoding="async"
-              />
+    <div class="projects-grid">
+      @for (project of projects; track project.titleKey; let index = $index) {
+        <article
+          class="project-card"
+          [class.featured-project]="index < 2"
+          [class.compact-project]="index >= 2"
+        >
+          <div class="project-media">
+            <img
+              [src]="project.image"
+              [alt]="project.titleKey | translate"
+              class="project-image"
+              loading="lazy"
+              decoding="async"
+            />
+
+            <div class="project-media-top">
+              <span class="project-category">
+                {{ project.categoryKey | translate }}
+              </span>
+
+              <span class="project-number" aria-hidden="true">
+                0{{ index + 1 }}
+              </span>
             </div>
 
-            <div class="project-content">
-              <div class="project-meta">
-                <span class="project-category">
-                  {{ project.primaryCategory }}
-                </span>
+            <div class="project-image-shade" aria-hidden="true"></div>
+          </div>
 
-                <span class="project-number" aria-hidden="true">
-                  {{ index + 1 < 10 ? "0" + (index + 1) : index + 1 }}
-                </span>
-              </div>
+          <div class="project-content">
+            <div class="project-copy">
+              <h3>
+                {{ project.titleKey | translate }}
+              </h3>
 
-              <h3>{{ project.title }}</h3>
-
-              <p class="project-description">
-                {{ project.description }}
+              <p>
+                {{ project.descriptionKey | translate }}
               </p>
+            </div>
 
-              <div class="project-skills" aria-label="Technologies used">
-                @for (skill of project.skills; track skill) {
-                  <span>{{ skill }}</span>
-                }
-              </div>
+            <div
+              class="project-skills"
+              [attr.aria-label]="'portfolio.skillsLabel' | translate"
+            >
+              @for (
+                skill of project.skills.slice(0, index < 2 ? 5 : 4);
+                track skill
+              ) {
+                <span>
+                  {{ skill }}
+                </span>
+              }
 
+              @if (project.skills.length > (index < 2 ? 5 : 4)) {
+                <span class="more-skills">
+                  +{{ project.skills.length - (index < 2 ? 5 : 4) }}
+                </span>
+              }
+            </div>
+
+            <div class="project-footer">
               <div class="project-actions">
                 @if (project.live) {
                   <a
                     [href]="project.live"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="project-link primary-link"
-                    [attr.aria-label]="'View live project for ' + project.title"
+                    class="project-action primary-action"
+                    [attr.aria-label]="
+                      ('portfolio.actions.liveAria' | translate) +
+                      ' ' +
+                      (project.titleKey | translate)
+                    "
                   >
-                    <span>Live Demo</span>
+                    <span>
+                      {{ "portfolio.actions.live" | translate }}
+                    </span>
+
                     <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
                   </a>
                 }
@@ -70,15 +127,18 @@
                     [href]="project.github"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="project-link"
-                    [class.primary-link]="!project.live"
-                    [class.secondary-link]="project.live"
+                    class="project-action secondary-action"
                     [attr.aria-label]="
-                      'View GitHub repository for ' + project.title
+                      ('portfolio.actions.repositoryAria' | translate) +
+                      ' ' +
+                      (project.titleKey | translate)
                     "
                   >
                     <i class="bi bi-github" aria-hidden="true"></i>
-                    <span>GitHub</span>
+
+                    <span>
+                      {{ "portfolio.actions.repository" | translate }}
+                    </span>
                   </a>
                 }
 
@@ -87,35 +147,25 @@
                     [href]="project.video"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="project-link secondary-link"
+                    class="project-action secondary-action"
                     [attr.aria-label]="
-                      'Watch project video for ' + project.title
+                      ('portfolio.actions.videoAria' | translate) +
+                      ' ' +
+                      (project.titleKey | translate)
                     "
                   >
                     <i class="bi bi-play-circle" aria-hidden="true"></i>
 
-                    <span>Video</span>
+                    <span>
+                      {{ "portfolio.actions.video" | translate }}
+                    </span>
                   </a>
                 }
               </div>
             </div>
-          </article>
-        </div>
+          </div>
+        </article>
       }
-    </div>
-
-    <div class="github-more text-center">
-      <a
-        href="https://github.com/MahmoudMo99"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="github-more-link"
-        aria-label="View more projects on Mahmoud Mohamed GitHub profile"
-      >
-        <i class="bi bi-github" aria-hidden="true"></i>
-        <span>Explore More on GitHub</span>
-        <i class="bi bi-arrow-right" aria-hidden="true"></i>
-      </a>
     </div>
   </div>
 </section>

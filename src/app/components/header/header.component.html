@@ -1,42 +1,37 @@
-<header class="main-header" [class.header-scrolled]="isScrolled()">
-  <nav class="navbar" aria-label="Main navigation">
-    <div class="container">
+<header
+  class="main-header"
+  [class.is-scrolled]="isScrolled()"
+  [class.menu-open]="isMenuOpen()"
+>
+  <div class="header-bar">
+    <div class="site-container header-container">
       <a
-        class="navbar-brand"
         href="#home"
-        aria-label="Mahmoud Mohamed — Home"
+        class="brand"
+        [attr.aria-label]="'header.brand.homeLabel' | translate"
         (click)="navigateTo('home')"
       >
-        <span class="avatar-wrapper" aria-hidden="true">
-          <img
-            src="images/mahmoud.jpg"
-            alt=""
-            class="avatar-img"
-            width="42"
-            height="42"
-          />
+        <span class="brand-photo">
+          <img src="/images/mahmoud.jpg" alt="" width="40" height="40" />
+
+          <span class="brand-status" aria-hidden="true"></span>
         </span>
 
-        <span class="brand-name">Mahmoud Mohamed</span>
+        <span class="brand-copy">
+          <span class="brand-name">
+            {{ "header.brand.name" | translate }}
+          </span>
+
+          <span class="brand-role">
+            {{ "header.brand.role" | translate }}
+          </span>
+        </span>
       </a>
 
-      <button
-        class="menu-button"
-        type="button"
-        aria-controls="navbarNav"
-        [attr.aria-expanded]="isMenuOpen()"
-        [attr.aria-label]="
-          isMenuOpen() ? 'Close navigation' : 'Open navigation'
-        "
-        [class.is-open]="isMenuOpen()"
-        (click)="toggleMenu()"
+      <nav
+        class="desktop-navigation"
+        [attr.aria-label]="'header.navigation.label' | translate"
       >
-        <span class="menu-line"></span>
-        <span class="menu-line"></span>
-        <span class="menu-line"></span>
-      </button>
-
-      <div class="navigation" id="navbarNav" [class.is-open]="isMenuOpen()">
         <ul class="nav-list">
           @for (link of navLinks; track link.id) {
             <li>
@@ -49,23 +44,179 @@
                 [href]="'#' + link.id"
                 (click)="navigateTo(link.id)"
               >
-                {{ link.label }}
+                {{ link.translationKey | translate }}
               </a>
             </li>
           }
         </ul>
+      </nav>
+
+      <div class="header-actions">
+        <div class="utility-group">
+          <button
+            type="button"
+            class="utility-button language-button"
+            [attr.aria-label]="'header.language.switch' | translate"
+            [attr.title]="'header.language.switch' | translate"
+            (click)="toggleLanguage()"
+          >
+            <i class="bi bi-translate" aria-hidden="true"></i>
+
+            <span>
+              {{ "header.language.short" | translate }}
+            </span>
+          </button>
+
+          <span class="utility-divider" aria-hidden="true"></span>
+
+          <button
+            type="button"
+            class="utility-button theme-button"
+            [attr.aria-label]="
+              (themeService.isDark()
+                ? 'header.theme.light'
+                : 'header.theme.dark'
+              ) | translate
+            "
+            [attr.title]="
+              (themeService.isDark()
+                ? 'header.theme.light'
+                : 'header.theme.dark'
+              ) | translate
+            "
+            (click)="toggleTheme()"
+          >
+            @if (themeService.isDark()) {
+              <i class="bi bi-sun" aria-hidden="true"></i>
+            } @else {
+              <i class="bi bi-moon-stars" aria-hidden="true"></i>
+            }
+          </button>
+        </div>
 
         <a
           href="/cv/Mahmoud.Mohamed.CV.pdf"
           download="Mahmoud.Mohamed.CV.pdf"
-          class="cv-btn"
-          aria-label="Download Mahmoud Mohamed CV as PDF"
+          class="resume-button"
+          [attr.aria-label]="'header.cv.ariaLabel' | translate"
+        >
+          <span>
+            {{ "header.cv.label" | translate }}
+          </span>
+
+          <i class="bi bi-arrow-down-right" aria-hidden="true"></i>
+        </a>
+
+        <button
+          type="button"
+          class="menu-button"
+          [class.active]="isMenuOpen()"
+          aria-controls="mobileNavigation"
+          [attr.aria-expanded]="isMenuOpen()"
+          [attr.aria-label]="
+            (isMenuOpen() ? 'header.menu.close' : 'header.menu.open')
+              | translate
+          "
+          (click)="toggleMenu()"
+        >
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      <div
+        id="mobileNavigation"
+        class="mobile-navigation"
+        [class.visible]="isMenuOpen()"
+      >
+        <nav [attr.aria-label]="'header.navigation.mobileLabel' | translate">
+          <ul class="mobile-nav-list">
+            @for (link of navLinks; track link.id) {
+              <li>
+                <a
+                  class="mobile-nav-link"
+                  [class.active]="activeSection() === link.id"
+                  [href]="'#' + link.id"
+                  [attr.aria-current]="
+                    activeSection() === link.id ? 'location' : null
+                  "
+                  (click)="navigateTo(link.id)"
+                >
+                  <span>
+                    {{ link.translationKey | translate }}
+                  </span>
+
+                  <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+                </a>
+              </li>
+            }
+          </ul>
+        </nav>
+
+        <div class="mobile-controls">
+          <button
+            type="button"
+            class="mobile-control"
+            [attr.aria-label]="'header.language.switch' | translate"
+            (click)="toggleLanguage()"
+          >
+            <i class="bi bi-translate" aria-hidden="true"></i>
+
+            <span>
+              {{ "header.language.mobile" | translate }}
+            </span>
+          </button>
+
+          <button
+            type="button"
+            class="mobile-control"
+            [attr.aria-label]="
+              (themeService.isDark()
+                ? 'header.theme.light'
+                : 'header.theme.dark'
+              ) | translate
+            "
+            (click)="toggleTheme()"
+          >
+            @if (themeService.isDark()) {
+              <i class="bi bi-sun" aria-hidden="true"></i>
+
+              <span>
+                {{ "header.theme.lightLabel" | translate }}
+              </span>
+            } @else {
+              <i class="bi bi-moon-stars" aria-hidden="true"></i>
+
+              <span>
+                {{ "header.theme.darkLabel" | translate }}
+              </span>
+            }
+          </button>
+        </div>
+
+        <a
+          href="/cv/Mahmoud.Mohamed.CV.pdf"
+          download="Mahmoud.Mohamed.CV.pdf"
+          class="mobile-resume"
+          [attr.aria-label]="'header.cv.ariaLabel' | translate"
           (click)="closeMenu()"
         >
+          <span>
+            {{ "header.cv.download" | translate }}
+          </span>
+
           <i class="bi bi-download" aria-hidden="true"></i>
-          <span>Download CV</span>
         </a>
       </div>
     </div>
-  </nav>
+  </div>
+
+  @if (isMenuOpen()) {
+    <button
+      type="button"
+      class="menu-backdrop"
+      [attr.aria-label]="'header.menu.close' | translate"
+      (click)="closeMenu()"
+    ></button>
+  }
 </header>

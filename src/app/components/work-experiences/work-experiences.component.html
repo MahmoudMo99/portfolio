@@ -1,83 +1,121 @@
-<section id="experience" class="experience-section">
-  <div class="container">
-    <div class="section-heading text-center">
-      <span class="section-label">
-        <i class="bi bi-briefcase" aria-hidden="true"></i>
-        Experience
-      </span>
+<section
+  id="experience"
+  class="experience-section"
+  aria-labelledby="experience-title"
+>
+  <div class="site-container">
+    <div class="experience-layout">
+      <div class="experience-intro">
+        <div class="intro-inner">
+          <span class="experience-eyebrow">
+            {{ "experience.eyebrow" | translate }}
+          </span>
 
-      <h2>Professional Experience</h2>
+          <h2 id="experience-title">
+            {{ "experience.title.before" | translate }}
 
-      <p>
-        A timeline of my development work, freelance projects, technical
-        training, and mentoring experience.
-      </p>
-    </div>
+            <span>
+              {{ "experience.title.highlight" | translate }}
+            </span>
+          </h2>
 
-    <div class="experience-timeline">
-      @for (exp of experiences; track exp.title + exp.date) {
-        <article class="experience-item">
-          <div class="timeline-marker" aria-hidden="true">
-            <span></span>
-          </div>
+          <p class="experience-description">
+            {{ "experience.description" | translate }}
+          </p>
 
-          <div class="experience-card">
-            <div class="experience-card-header">
-              <div class="experience-icon" aria-hidden="true">
-                <i [class]="'bi ' + exp.icon"></i>
-              </div>
+          <!-- <div class="experience-note">
+            <span class="note-line" aria-hidden="true"></span>
 
-              <div class="experience-info">
-                <div class="experience-title-row">
-                  <h3>{{ exp.title }}</h3>
+            <p>
+              {{ "experience.note" | translate }}
+            </p>
+          </div> -->
+        </div>
+      </div>
 
-                  @if (exp.current) {
-                    <span class="current-badge">
-                      <span class="current-dot" aria-hidden="true"></span>
-                      Current
-                    </span>
-                  }
+      <div class="experience-list">
+        @for (
+          exp of experiences;
+          track exp.titleKey + exp.dateKey;
+          let index = $index
+        ) {
+          <article class="experience-item" [class.is-current]="exp.current">
+            <div class="experience-rail" aria-hidden="true">
+              <span class="experience-index"> 0{{ index + 1 }} </span>
+
+              <span class="rail-dot"></span>
+            </div>
+
+            <div class="experience-card">
+              <div class="experience-top">
+                <div class="experience-heading">
+                  <span class="experience-icon" aria-hidden="true">
+                    <i [class]="'bi ' + exp.icon"></i>
+                  </span>
+
+                  <div>
+                    <div class="title-row">
+                      <h3>
+                        {{ exp.titleKey | translate }}
+                      </h3>
+
+                      @if (exp.current) {
+                        <span class="current-badge">
+                          <span class="current-dot"></span>
+
+                          {{ "experience.current" | translate }}
+                        </span>
+                      }
+                    </div>
+
+                    <p class="organization">
+                      {{ exp.organizationKey | translate }}
+                    </p>
+                  </div>
                 </div>
 
-                <p class="experience-organization">
-                  {{ exp.organization }}
-                </p>
+                <div class="experience-meta">
+                  <span class="experience-date">
+                    {{ exp.dateKey | translate }}
+                  </span>
+
+                  <span class="experience-type">
+                    {{ exp.typeKey | translate }}
+                  </span>
+                </div>
+              </div>
+
+              <div class="experience-body">
+                <ul>
+                  @for (
+                    descriptionKey of exp.descriptionKeys;
+                    track descriptionKey
+                  ) {
+                    <li>
+                      {{ descriptionKey | translate }}
+                    </li>
+                  }
+                </ul>
+
+                @if (exp.reviewLink) {
+                  <a
+                    [href]="exp.reviewLink"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="review-link"
+                  >
+                    <span>
+                      {{ "experience.actions.clientReview" | translate }}
+                    </span>
+
+                    <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+                  </a>
+                }
               </div>
             </div>
-
-            <div class="experience-meta">
-              <span>
-                <i class="bi bi-calendar3" aria-hidden="true"></i>
-                {{ exp.date }}
-              </span>
-
-              <span>
-                <i class="bi bi-tag" aria-hidden="true"></i>
-                {{ exp.type }}
-              </span>
-            </div>
-
-            <ul class="experience-description">
-              @for (item of exp.description; track item) {
-                <li>{{ item }}</li>
-              }
-            </ul>
-
-            @if (exp.reviewLink) {
-              <a
-                [href]="exp.reviewLink"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="review-link"
-              >
-                <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
-
-                {{ exp.linkLabel || "View Link" }}
-              </a>
-            }
-          </div>
-        </article>
-      }
+          </article>
+        }
+      </div>
     </div>
   </div>
 </section>

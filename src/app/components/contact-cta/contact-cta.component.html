@@ -1,48 +1,81 @@
-<section id="contact" class="contact-cta-section">
-  <div class="container">
-    <div class="contact-card">
-      <div class="contact-content">
-        <span class="section-label">
+<section id="contact" class="contact-section" aria-labelledby="contact-title">
+  <div class="site-container">
+    <div class="contact-panel">
+      <div class="contact-copy">
+        <div class="availability">
           <span class="availability-dot" aria-hidden="true"></span>
-          Open to Angular / Frontend opportunities
-        </span>
 
-        <h2>Let’s connect.</h2>
+          <span>
+            {{ "contact.availability" | translate }}
+          </span>
+        </div>
+
+        <h2 id="contact-title">
+          {{ "contact.title.before" | translate }}
+          <br />
+          <span>
+            {{ "contact.title.highlight" | translate }}
+          </span>
+        </h2>
 
         <p>
-          I'm currently open to Angular / Frontend opportunities and
-          conversations with teams building modern web products. Feel free to
-          reach out.
+          {{ "contact.description" | translate }}
         </p>
       </div>
 
       <div class="contact-actions">
-        @for (link of contactLinks; track link.href) {
-          <a
-            [href]="link.href"
-            [attr.target]="link.external ? '_blank' : null"
-            [attr.rel]="link.external ? 'noopener noreferrer' : null"
-            class="contact-link"
-            [class.primary-link]="link.primary"
-            [attr.aria-label]="'Contact Mahmoud Mohamed via ' + link.label"
-          >
-            <span class="contact-icon" aria-hidden="true">
-              <i [class]="'bi ' + link.icon"></i>
-            </span>
+        <a
+          href="mailto:mahmoud.mmi.dev@gmail.com"
+          class="email-action"
+          [attr.aria-label]="'contact.links.email.ariaLabel' | translate"
+        >
+          <span class="action-icon" aria-hidden="true">
+            <i class="bi bi-envelope-fill"></i>
+          </span>
 
-            <span class="contact-link-content">
-              <strong>{{ link.label }}</strong>
-              <small>{{ link.value }}</small>
-            </span>
+          <span class="action-content">
+            <small>
+              {{ "contact.links.email.label" | translate }}
+            </small>
 
-            @if (link.external) {
+            <strong> mahmoud.mmi.dev&#64;gmail.com </strong>
+          </span>
+
+          <span class="action-arrow" aria-hidden="true">
+            <i class="bi bi-arrow-up-right"></i>
+          </span>
+        </a>
+
+        <div class="secondary-actions">
+          @for (link of secondaryLinks; track link.href) {
+            <a
+              [href]="link.href"
+              [attr.target]="link.external ? '_blank' : null"
+              [attr.rel]="link.external ? 'noopener noreferrer' : null"
+              class="secondary-action"
+              [attr.aria-label]="link.labelKey | translate"
+            >
+              <span class="secondary-icon" aria-hidden="true">
+                <i [class]="'bi ' + link.icon"></i>
+              </span>
+
+              <span class="secondary-content">
+                <strong>
+                  {{ link.labelKey | translate }}
+                </strong>
+
+                <small>
+                  {{ link.valueKey | translate }}
+                </small>
+              </span>
+
               <i
-                class="bi bi-arrow-up-right contact-arrow"
+                class="bi bi-arrow-up-right secondary-arrow"
                 aria-hidden="true"
               ></i>
-            }
-          </a>
-        }
+            </a>
+          }
+        </div>
       </div>
     </div>
   </div>

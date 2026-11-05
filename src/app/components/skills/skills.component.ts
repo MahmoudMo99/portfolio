@@ -1,15 +1,17 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { TranslatePipe } from '@ngx-translate/core';
 
 interface SkillCategory {
-  title: string;
+  titleKey: string;
+  descriptionKey: string;
   icon: string;
-  description: string;
   items: readonly string[];
+  primary?: boolean;
 }
 
 @Component({
   selector: 'app-skills',
-  imports: [],
+  imports: [TranslatePipe],
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -17,10 +19,9 @@ interface SkillCategory {
 export class SkillsComponent {
   readonly skillCategories: readonly SkillCategory[] = [
     {
-      title: 'Frontend Foundations',
+      titleKey: 'skills.categories.frontend.title',
+      descriptionKey: 'skills.categories.frontend.description',
       icon: 'bi-code-slash',
-      description:
-        'Core technologies for responsive, maintainable, and accessible web interfaces.',
       items: [
         'HTML5',
         'CSS3',
@@ -33,10 +34,10 @@ export class SkillsComponent {
       ],
     },
     {
-      title: 'Angular Ecosystem',
+      titleKey: 'skills.categories.angular.title',
+      descriptionKey: 'skills.categories.angular.description',
       icon: 'bi-lightning-charge',
-      description:
-        'Modern Angular patterns and application architecture used across my projects.',
+      primary: true,
       items: [
         'Angular',
         'Standalone Components',
@@ -52,10 +53,9 @@ export class SkillsComponent {
       ],
     },
     {
-      title: 'UI & Frontend Libraries',
+      titleKey: 'skills.categories.ui.title',
+      descriptionKey: 'skills.categories.ui.description',
       icon: 'bi-window-sidebar',
-      description:
-        'Libraries and tools for component-driven UI, visualization, localization, and content.',
       items: [
         'PrimeNG',
         'Chart.js',
@@ -65,10 +65,9 @@ export class SkillsComponent {
       ],
     },
     {
-      title: 'Backend, APIs & Data',
+      titleKey: 'skills.categories.backend.title',
+      descriptionKey: 'skills.categories.backend.description',
       icon: 'bi-server',
-      description:
-        'Backend technologies and data services used in full-stack and API-driven projects.',
       items: [
         'Node.js',
         'Express.js',
@@ -80,17 +79,15 @@ export class SkillsComponent {
       ],
     },
     {
-      title: 'Testing & Developer Tools',
+      titleKey: 'skills.categories.tools.title',
+      descriptionKey: 'skills.categories.tools.description',
       icon: 'bi-tools',
-      description:
-        'Tools used for testing, API development, version control, deployment, and collaboration.',
       items: ['Jasmine', 'Git', 'GitHub', 'Postman', 'Vercel', 'Figma'],
     },
     {
-      title: 'Core Engineering Concepts',
+      titleKey: 'skills.categories.engineering.title',
+      descriptionKey: 'skills.categories.engineering.description',
       icon: 'bi-diagram-3',
-      description:
-        'Software engineering and computer science fundamentals that guide implementation decisions.',
       items: [
         'OOP',
         'Data Structures',

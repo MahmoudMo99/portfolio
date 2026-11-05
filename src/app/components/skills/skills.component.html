@@ -1,45 +1,88 @@
-<section id="skills" class="skills-section">
-  <div class="container">
-    <div class="section-heading text-center">
-      <span class="section-label">
-        <i class="bi bi-braces" aria-hidden="true"></i>
-        My Skills
-      </span>
+<section id="skills" class="skills-section" aria-labelledby="skills-title">
+  <div class="site-container">
+    <div class="skills-layout">
+      <div class="skills-intro">
+        <div class="skills-intro-inner">
+          <span class="skills-eyebrow">
+            {{ "skills.eyebrow" | translate }}
+          </span>
 
-      <h2>Technical Skills</h2>
+          <h2 id="skills-title">
+            {{ "skills.title.before" | translate }}
 
-      <p>
-        Technologies, Angular patterns, engineering concepts, and development
-        tools I use to build modern web applications.
-      </p>
-    </div>
+            <span>
+              {{ "skills.title.highlight" | translate }}
+            </span>
+          </h2>
 
-    <div class="row g-4">
-      @for (category of skillCategories; track category.title) {
-        <div class="col-md-6 col-lg-4">
-          <article class="skill-card">
-            <div class="skill-card-header">
-              <div class="skill-icon" aria-hidden="true">
-                <i [class]="'bi ' + category.icon"></i>
-              </div>
+          <p>
+            {{ "skills.description" | translate }}
+          </p>
 
-              <div class="skill-heading">
-                <h3>{{ category.title }}</h3>
-                <p>{{ category.description }}</p>
+          <div class="skills-focus">
+            <span class="focus-line"></span>
+
+            <div>
+              <span class="focus-label">
+                {{ "skills.focus.label" | translate }}
+              </span>
+
+              <strong>
+                {{ "skills.focus.value" | translate }}
+              </strong>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="skills-board">
+        @for (
+          category of skillCategories;
+          track category.titleKey;
+          let index = $index
+        ) {
+          <article class="skill-row" [class.primary-row]="category.primary">
+            <div class="skill-index">0{{ index + 1 }}</div>
+
+            <div class="skill-category">
+              <div class="category-heading">
+                <span class="category-icon" aria-hidden="true">
+                  <i [class]="'bi ' + category.icon"></i>
+                </span>
+
+                <div>
+                  <div class="category-title-row">
+                    <h3>
+                      {{ category.titleKey | translate }}
+                    </h3>
+
+                    @if (category.primary) {
+                      <span class="primary-badge">
+                        {{ "skills.primary" | translate }}
+                      </span>
+                    }
+                  </div>
+
+                  <p>
+                    {{ category.descriptionKey | translate }}
+                  </p>
+                </div>
               </div>
             </div>
 
             <div
-              class="skills-list"
-              [attr.aria-label]="category.title + ' skills'"
+              class="skill-items"
+              [attr.aria-label]="category.titleKey | translate"
             >
               @for (skill of category.items; track skill) {
-                <span>{{ skill }}</span>
+                <span>
+                  {{ skill }}
+                </span>
               }
             </div>
           </article>
-        </div>
-      }
+        }
+      </div>
     </div>
   </div>
 </section>

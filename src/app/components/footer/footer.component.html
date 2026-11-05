@@ -1,27 +1,48 @@
 <footer id="footer" class="main-footer">
-  <div class="container">
-    <div class="footer-content">
+  <div class="site-container">
+    <div class="footer-main">
       <div class="footer-brand">
-        <h3>Mahmoud Mohamed</h3>
-        <p>Software Engineer | Angular Frontend Developer</p>
+        <a
+          href="#home"
+          class="brand-link"
+          [attr.aria-label]="'footer.brand.homeLabel' | translate"
+        >
+          <span class="brand-mark" aria-hidden="true"> MM </span>
+
+          <span class="brand-copy">
+            <strong>
+              {{ "footer.brand.name" | translate }}
+            </strong>
+
+            <small>
+              {{ "footer.brand.role" | translate }}
+            </small>
+          </span>
+        </a>
       </div>
 
-      <nav class="footer-nav" aria-label="Footer navigation">
+      <nav
+        class="footer-nav"
+        [attr.aria-label]="'footer.navigation.ariaLabel' | translate"
+      >
         @for (link of navigationLinks; track link.href) {
           <a [href]="link.href">
-            {{ link.label }}
+            {{ link.labelKey | translate }}
           </a>
         }
       </nav>
 
-      <div class="footer-social" aria-label="Social and contact links">
+      <div
+        class="footer-social"
+        [attr.aria-label]="'footer.social.ariaLabel' | translate"
+      >
         @for (link of socialLinks; track link.href) {
           <a
             [href]="link.href"
             [attr.target]="link.external ? '_blank' : null"
             [attr.rel]="link.external ? 'noopener noreferrer' : null"
-            [attr.aria-label]="link.label"
-            [attr.title]="link.label"
+            [attr.aria-label]="link.labelKey | translate"
+            [attr.title]="link.labelKey | translate"
           >
             <i [class]="'bi ' + link.icon" aria-hidden="true"></i>
           </a>
@@ -30,23 +51,22 @@
     </div>
 
     <div class="footer-bottom">
-      <small> © {{ currentYear }} Mahmoud Mohamed. All rights reserved. </small>
+      <p>
+        © {{ currentYear }} {{ "footer.brand.name" | translate }}.
+        {{ "footer.copyright" | translate }}
+      </p>
 
-      <small class="footer-built-with">
-        Built with Angular &amp; TypeScript
-      </small>
+      <p class="built-with">
+        <span>
+          {{ "footer.builtWith" | translate }}
+        </span>
+
+        <strong>Angular</strong>
+
+        <span class="built-dot" aria-hidden="true"></span>
+
+        <strong>TypeScript</strong>
+      </p>
     </div>
   </div>
-
-  @if (showBackToTop()) {
-    <button
-      class="back-to-top"
-      type="button"
-      (click)="scrollToTop()"
-      aria-label="Back to top"
-      title="Back to top"
-    >
-      <i class="bi bi-arrow-up" aria-hidden="true"></i>
-    </button>
-  }
 </footer>

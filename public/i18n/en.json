@@ -1,0 +1,389 @@
+{
+  "header": {
+    "brand": {
+      "name": "Mahmoud Mohamed",
+      "role": "Software Engineer · Angular Developer",
+      "homeLabel": "Mahmoud Mohamed — Home"
+    },
+    "navigation": {
+      "label": "Main navigation",
+      "mobileLabel": "Mobile navigation",
+      "home": "Home",
+      "about": "About",
+      "experience": "Experience",
+      "projects": "Projects",
+      "skills": "Skills",
+      "reviews": "Reviews",
+      "contact": "Contact"
+    },
+    "menu": {
+      "open": "Open navigation menu",
+      "close": "Close navigation menu"
+    },
+    "language": {
+      "switch": "Switch to Arabic",
+      "short": "AR",
+      "mobile": "العربية"
+    },
+    "theme": {
+      "light": "Switch to light mode",
+      "dark": "Switch to dark mode",
+      "lightLabel": "Light mode",
+      "darkLabel": "Dark mode"
+    },
+    "cv": {
+      "label": "Resume",
+      "download": "Download CV",
+      "ariaLabel": "Download Mahmoud Mohamed CV"
+    }
+  },
+
+  "hero": {
+    "availability": "Open to Angular / Frontend opportunities",
+    "title": {
+      "before": "I turn product requirements into",
+      "highlight": "clear, scalable Angular experiences."
+    },
+    "description": {
+      "beforeName": "I'm",
+      "name": "Mahmoud Mohamed",
+      "afterName": ", a Software Engineer and Angular Frontend Developer building maintainable interfaces, dashboards, Arabic RTL experiences, and API-driven applications."
+    },
+    "actions": {
+      "projects": "Explore My Work",
+      "contact": "Let's Talk"
+    },
+    "stack": {
+      "label": "Core stack"
+    },
+    "card": {
+      "eyebrow": "Engineering profile",
+      "name": "Mahmoud Mohamed",
+      "status": "Available",
+      "imageAlt": "Mahmoud Mohamed",
+      "roleLabel": "Focused on",
+      "role": "Angular product engineering",
+      "currentLabel": "Current role",
+      "currentValue": "External Instructor at ITI"
+    }
+  },
+  "about": {
+    "eyebrow": "About Me",
+    "title": {
+      "before": "I approach frontend as",
+      "highlight": "an engineering discipline."
+    },
+    "description": "My work combines Angular engineering, responsive and RTL interfaces, API integration, and practical mentoring — with an emphasis on building software that is structured, maintainable, and useful.",
+    "story": {
+      "label": "How I work",
+      "title": "I care about the structure behind the interface.",
+      "paragraph1": "I translate product requirements into Angular applications with clear component boundaries, predictable data flow, reusable UI, and an architecture that stays practical as the application grows.",
+      "paragraph2": "My work includes Angular Signals, Reactive Forms, routing, RxJS, authentication flows, guards, interceptors, REST API integration, responsive layouts, and Arabic RTL experiences."
+    },
+    "instructor": {
+      "label": "Development & mentoring",
+      "description": "Alongside development, I work as a Part-Time External Instructor at ITI, teaching practical web development and mentoring trainees through projects, debugging, and code reviews."
+    },
+    "focus": {
+      "label": "Engineering Focus",
+      "title": "What I work with",
+      "ariaLabel": "Frontend engineering focus areas",
+      "angular": {
+        "title": "Angular Engineering",
+        "description": "Reusable components, Signals, Reactive Forms, routing, and maintainable application structure."
+      },
+      "ui": {
+        "title": "Responsive & RTL UI",
+        "description": "Responsive interfaces built deliberately for desktop, mobile, Arabic content, and RTL behavior."
+      },
+      "api": {
+        "title": "API-Driven Applications",
+        "description": "REST APIs, RxJS workflows, authentication, guards, interceptors, and application state."
+      }
+    },
+    "actions": {
+      "experience": "View My Experience"
+    },
+    "education": {
+      "label": "Education & Training",
+      "title": "Academic foundation. Practical growth.",
+      "description": "Computer science education supported by intensive technical training and continuous hands-on learning.",
+      "items": {
+        "master": {
+          "date": "2025 — Present",
+          "title": "Master's in Computer Science",
+          "detail1": "Faculty of Computers and Information",
+          "detail2": "Assiut University"
+        },
+        "iti": {
+          "date": "2024 — 2025",
+          "title": "Intensive Training Program — MEARN Stack",
+          "detail1": "Full-Stack Web Development",
+          "detail2": "Information Technology Institute (ITI)"
+        },
+        "bachelor": {
+          "date": "2020 — 2024",
+          "title": "Bachelor's in Computers & Information",
+          "detail1": "Computer Science Department",
+          "detail2": "South Valley University"
+        }
+      }
+    }
+  },
+  "experience": {
+    "eyebrow": "Experience",
+    "title": {
+      "before": "Experience shaped by",
+      "highlight": "building and teaching."
+    },
+    "description": "My experience spans Angular product development, freelance delivery, technical training, and mentoring across real projects and learning environments.",
+    "current": "Current",
+    "actions": {
+      "clientReview": "View Client Review"
+    },
+    "items": {
+      "iti": {
+        "title": "External Instructor",
+        "organization": "Information Technology Institute (ITI)",
+        "date": "07/2025 — Present",
+        "type": "Part-Time",
+        "description1": "Deliver hands-on web development training across the MEARN Stack, including Angular, React, Node.js, Express.js, MongoDB, HTML, CSS, and JavaScript.",
+        "description2": "Mentor trainees through projects, debugging, code reviews, and practical implementation of web application features."
+      },
+      "educationPlatform": {
+        "title": "Freelance Angular Developer",
+        "organization": "Confidential Client",
+        "date": "08/2026",
+        "type": "Educational Platform",
+        "description1": "Developed the Angular frontend for an educational training and assessment platform, including admin dashboard screens, student portal workflows, and responsive UI components.",
+        "description2": "Built reusable Angular components, Reactive Forms, routing, and REST API integrations with a .NET backend.",
+        "description3": "Collaborated with backend and UI/UX team members to deliver clear and practical user workflows."
+      },
+      "webflow": {
+        "title": "Freelance Webflow Developer",
+        "organization": "Mostaql",
+        "date": "12/2025 — 01/2026",
+        "type": "Website Enhancement",
+        "description1": "Redesigned and enhanced a Webflow website, improving UI/UX, mobile responsiveness, and on-page SEO across key pages.",
+        "description2": "Improved layout structure, spacing, typography, navigation, CTA behavior, and overall visual consistency."
+      },
+      "eyouth": {
+        "title": "Freelancing Coach — Software Development",
+        "organization": "EYouth",
+        "date": "10/2024 — 04/2025",
+        "type": "DEPI Initiative",
+        "description1": "Mentored participants in freelancing, portfolio building, client communication, project presentation, and preparation for freelance opportunities.",
+        "description2": "Provided practical mentoring and career guidance as part of the Digital Egypt Pioneers Initiative (DEPI)."
+      },
+      "booking": {
+        "title": "Freelance Angular Developer",
+        "organization": "Mostaql",
+        "date": "11/2024 — 01/2025",
+        "type": "Booking Web Application",
+        "description1": "Developed the frontend of a booking management application covering bookings, services, employees, and availability.",
+        "description2": "Built responsive Angular interfaces using reusable components, Reactive Forms, routing, guards, interceptors, and REST API integration."
+      },
+      "ux": {
+        "title": "Freelance UI/UX & SRS Consultant",
+        "organization": "Mostaql",
+        "date": "09/2024",
+        "type": "Documentation & UX Design",
+        "description1": "Created an SRS document and UX wireframes defining user flows, application screens, and core system requirements."
+      }
+    }
+  },
+  "portfolio": {
+    "eyebrow": "Selected Work",
+    "title": {
+      "before": "Projects built around",
+      "highlight": "real product challenges."
+    },
+    "description": "A selection of Angular and full-stack work covering Arabic-first products, operations dashboards, e-commerce, AI-assisted experiences, and production-focused frontend development.",
+    "skillsLabel": "Technologies used",
+    "actions": {
+      "live": "Live Demo",
+      "repository": "GitHub",
+      "video": "Watch Video",
+      "github": "Explore More on GitHub",
+      "githubAria": "View more projects on Mahmoud Mohamed's GitHub profile",
+      "liveAria": "View live project",
+      "repositoryAria": "View GitHub repository for",
+      "videoAria": "Watch project video for"
+    },
+    "projects": {
+      "qurb": {
+        "title": "Qurb | قُرب",
+        "category": "Angular · PWA",
+        "description": "An Arabic-first Islamic PWA featuring Madinah Mushaf Quran reading with offline support, prayer times, azkar, hadith collections, daily Wird tracking, and personal favorites."
+      },
+      "retailOps": {
+        "title": "RetailOps Admin Dashboard",
+        "category": "Operations Dashboard",
+        "description": "An Angular operations dashboard with authentication, permission-based RBAC, data management workflows, analytics, localization, and responsive RTL support."
+      },
+      "touche": {
+        "title": "Touché de Gateau",
+        "category": "Arabic E-Commerce",
+        "description": "A responsive Arabic RTL e-commerce frontend covering product discovery, filtering, cart and checkout flows, feature-based architecture, and Signals-driven state."
+      },
+      "nova": {
+        "title": "Nova AI Learning Assistant",
+        "category": "AI · Full Stack",
+        "description": "A full-stack AI learning assistant with Gemini response streaming, multi-turn conversations, Markdown rendering, local chat history, and a responsive Angular interface."
+      },
+      "portfolio": {
+        "title": "Personal Portfolio",
+        "category": "Angular",
+        "description": "A bilingual Angular portfolio built to present selected projects, professional experience, technical skills, and verified client feedback in a focused experience."
+      },
+      "housing": {
+        "title": "University Campus Housing Management",
+        "category": "Full Stack",
+        "description": "A university housing management system covering student workflows, room selection, availability, violations, reporting, and administrative operations."
+      }
+    }
+  },
+  "skills": {
+    "eyebrow": "Technical Skills",
+    "title": {
+      "before": "A practical stack for",
+      "highlight": "modern web products."
+    },
+    "description": "Angular is at the center of my frontend work, supported by TypeScript, RxJS, API integration, UI tooling, testing, and core software engineering fundamentals.",
+    "primary": "Core Focus",
+    "focus": {
+      "label": "Primary specialization",
+      "value": "Angular Frontend Engineering"
+    },
+    "categories": {
+      "frontend": {
+        "title": "Frontend Foundations",
+        "description": "The core technologies I use to build responsive, accessible, and maintainable web interfaces."
+      },
+      "angular": {
+        "title": "Angular Ecosystem",
+        "description": "The Angular patterns and architecture I use across production-style applications and frontend projects."
+      },
+      "ui": {
+        "title": "UI & Frontend Libraries",
+        "description": "Libraries for component-driven interfaces, data visualization, localization, icons, and rich content."
+      },
+      "backend": {
+        "title": "Backend, APIs & Data",
+        "description": "Backend technologies and data services used when building or integrating full-stack applications."
+      },
+      "tools": {
+        "title": "Testing & Developer Tools",
+        "description": "Tools supporting testing, API development, version control, deployment, design, and collaboration."
+      },
+      "engineering": {
+        "title": "Core Engineering Concepts",
+        "description": "Computer science and software engineering fundamentals that guide architecture and implementation decisions."
+      }
+    }
+  },
+  "features": {
+    "eyebrow": "What I Build",
+    "title": {
+      "before": "Frontend solutions designed for",
+      "highlight": "real product needs."
+    },
+    "description": "I focus on the kinds of frontend work that sit at the center of real applications — structured Angular products, operational systems, and responsive Arabic experiences.",
+    "items": {
+      "angular": {
+        "title": "Angular Web Applications",
+        "description": "Structured Angular applications built around reusable components, Signals, RxJS, Reactive Forms, routing, and REST API integration.",
+        "detail": "Built with maintainability and clear application structure in mind."
+      },
+      "systems": {
+        "title": "Dashboards & Business Systems",
+        "description": "Data-driven interfaces for operational workflows, forms, tables, filtering, authentication, permissions, analytics, and administration.",
+        "detail": "Designed around practical workflows and day-to-day product use."
+      },
+      "rtl": {
+        "title": "Arabic & RTL Product Experiences",
+        "description": "Responsive interfaces designed specifically for Arabic content, RTL behavior, accessibility, reusable UI patterns, and consistent interaction across devices.",
+        "detail": "RTL treated as part of the product experience, not an afterthought."
+      }
+    }
+  },
+  "testimonials": {
+    "eyebrow": "Client Feedback",
+    "title": {
+      "before": "Feedback from",
+      "highlight": "real client work."
+    },
+    "description": "Verified feedback from freelance projects where delivery, communication, accuracy, and collaboration mattered as much as the final implementation.",
+    "rating": "5 out of 5 rating",
+    "verification": {
+      "title": "Verified reviews",
+      "description": "Each review links directly to its original source on Mostaql."
+    },
+    "actions": {
+      "review": "View Original Review",
+      "reviewAria": "View original client review for"
+    },
+    "reviews": {
+      "booking": {
+        "client": "Mostaql Client",
+        "platform": "Verified on Mostaql",
+        "project": "Angular Booking Web Application"
+      },
+      "srs": {
+        "client": "Mostaql Client",
+        "platform": "Verified on Mostaql",
+        "project": "UI/UX & SRS Project"
+      }
+    }
+  },
+  "contact": {
+    "availability": "Open to Angular / Frontend opportunities",
+    "title": {
+      "before": "Building something meaningful?",
+      "highlight": "Let’s talk."
+    },
+    "description": "I'm open to Angular and Frontend opportunities with teams building useful web products. If my experience fits what you're working on, feel free to reach out.",
+    "links": {
+      "email": {
+        "label": "Email me",
+        "ariaLabel": "Send an email to Mahmoud Mohamed"
+      },
+      "linkedin": {
+        "label": "LinkedIn",
+        "value": "Connect professionally"
+      },
+      "github": {
+        "label": "GitHub",
+        "value": "Explore my repositories"
+      }
+    }
+  },
+  "footer": {
+    "brand": {
+      "name": "Mahmoud Mohamed",
+      "role": "Software Engineer · Angular Frontend Developer",
+      "homeLabel": "Mahmoud Mohamed — Back to home"
+    },
+    "navigation": {
+      "ariaLabel": "Footer navigation",
+      "home": "Home",
+      "about": "About",
+      "experience": "Experience",
+      "projects": "Projects",
+      "skills": "Skills",
+      "reviews": "Reviews",
+      "contact": "Contact"
+    },
+    "social": {
+      "ariaLabel": "Social and contact links",
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "email": "Email Mahmoud Mohamed"
+    },
+    "copyright": "All rights reserved.",
+    "builtWith": "Built with"
+  },
+  "scrollToTop": {
+    "label": "Back to top"
+  }
+}

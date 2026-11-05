@@ -1,0 +1,388 @@
+{
+  "header": {
+    "brand": {
+      "name": "محمود محمد",
+      "role": "مهندس برمجيات · مطور Angular",
+      "homeLabel": "محمود محمد — الرئيسية"
+    },
+    "navigation": {
+      "label": "التنقل الرئيسي",
+      "mobileLabel": "قائمة التنقل",
+      "home": "الرئيسية",
+      "about": "عني",
+      "experience": "الخبرات",
+      "projects": "المشاريع",
+      "skills": "المهارات",
+      "reviews": "الآراء",
+      "contact": "تواصل"
+    },
+    "menu": {
+      "open": "فتح قائمة التنقل",
+      "close": "إغلاق قائمة التنقل"
+    },
+    "language": {
+      "switch": "التبديل إلى الإنجليزية",
+      "short": "EN",
+      "mobile": "English"
+    },
+    "theme": {
+      "light": "التبديل إلى الوضع الفاتح",
+      "dark": "التبديل إلى الوضع الداكن",
+      "lightLabel": "الوضع الفاتح",
+      "darkLabel": "الوضع الداكن"
+    },
+    "cv": {
+      "label": "السيرة الذاتية",
+      "download": "تحميل السيرة الذاتية",
+      "ariaLabel": "تحميل السيرة الذاتية لمحمود محمد"
+    }
+  },
+  "hero": {
+    "availability": "متاح لفرص Angular و Frontend",
+    "title": {
+      "before": "أحوّل متطلبات المنتج إلى",
+      "highlight": "تجارب Angular واضحة وقابلة للتوسع."
+    },
+    "description": {
+      "beforeName": "أنا",
+      "name": "محمود محمد",
+      "afterName": "، مهندس برمجيات ومطور Angular، أبني واجهات قابلة للصيانة، ولوحات تحكم، وتجارب عربية تدعم RTL، وتطبيقات مرتبطة بالـ APIs."
+    },
+    "actions": {
+      "projects": "استكشف مشاريعي",
+      "contact": "تواصل معي"
+    },
+    "stack": {
+      "label": "التقنيات الأساسية"
+    },
+    "card": {
+      "eyebrow": "الملف المهني",
+      "name": "محمود محمد",
+      "status": "متاح للفرص",
+      "imageAlt": "محمود محمد",
+      "roleLabel": "أركز على",
+      "role": "هندسة منتجات Angular",
+      "currentLabel": "العمل الحالي",
+      "currentValue": "External Instructor في ITI"
+    }
+  },
+  "about": {
+    "eyebrow": "عني",
+    "title": {
+      "before": "أتعامل مع الـ Frontend باعتباره",
+      "highlight": "هندسة متكاملة."
+    },
+    "description": "يجمع عملي بين هندسة Angular، والواجهات المتجاوبة ودعم RTL، والتكامل مع الـ APIs، والتدريب العملي، مع التركيز على بناء برمجيات منظمة وقابلة للصيانة وتقدم قيمة حقيقية.",
+    "story": {
+      "label": "طريقة عملي",
+      "title": "أهتم بالبنية التي تقف خلف الواجهة.",
+      "paragraph1": "أحوّل متطلبات المنتج إلى تطبيقات Angular ذات مكونات واضحة، وتدفق بيانات منظم، وواجهات قابلة لإعادة الاستخدام، وبنية تظل عملية مع نمو التطبيق.",
+      "paragraph2": "يشمل عملي Angular Signals، وReactive Forms، وRouting، وRxJS، وتدفقات Authentication، وGuards، وInterceptors، والتكامل مع REST APIs، والواجهات المتجاوبة وتجارب RTL."
+    },
+    "instructor": {
+      "label": "تطوير وتدريب",
+      "description": "بجانب التطوير أعمل كـ External Instructor بنظام Part-Time في ITI، وأقدم تدريبًا عمليًا في تطوير الويب مع إرشاد المتدربين خلال المشاريع والـ debugging ومراجعة الكود."
+    },
+    "focus": {
+      "label": "التركيز الهندسي",
+      "title": "ما أعمل عليه",
+      "ariaLabel": "مجالات التركيز في هندسة الواجهات",
+      "angular": {
+        "title": "هندسة Angular",
+        "description": "مكونات قابلة لإعادة الاستخدام، وSignals، وReactive Forms، وRouting، وبنية تطبيق قابلة للصيانة."
+      },
+      "ui": {
+        "title": "واجهات متجاوبة وRTL",
+        "description": "واجهات مصممة بعناية للديسكتوب والموبايل والمحتوى العربي وسلوك RTL."
+      },
+      "api": {
+        "title": "تطبيقات مرتبطة بالـ APIs",
+        "description": "REST APIs وRxJS وAuthentication وGuards وInterceptors وإدارة حالة التطبيق."
+      }
+    },
+    "actions": {
+      "experience": "استكشف خبراتي"
+    },
+    "education": {
+      "label": "التعليم والتدريب",
+      "title": "أساس أكاديمي. وتطور عملي مستمر.",
+      "description": "دراسة في علوم الحاسب مدعومة بتدريب تقني مكثف وتعلم عملي مستمر.",
+      "items": {
+        "master": {
+          "date": "2025 — حتى الآن",
+          "title": "ماجستير في علوم الحاسب",
+          "detail1": "كلية الحاسبات والمعلومات",
+          "detail2": "جامعة أسيوط"
+        },
+        "iti": {
+          "date": "2024 — 2025",
+          "title": "برنامج التدريب المكثف — MEARN Stack",
+          "detail1": "Full-Stack Web Development",
+          "detail2": "معهد تكنولوجيا المعلومات ITI"
+        },
+        "bachelor": {
+          "date": "2020 — 2024",
+          "title": "بكالوريوس الحاسبات والمعلومات",
+          "detail1": "قسم علوم الحاسب",
+          "detail2": "جامعة جنوب الوادي"
+        }
+      }
+    }
+  },
+  "experience": {
+    "eyebrow": "الخبرات",
+    "title": {
+      "before": "خبرات تشكلت من",
+      "highlight": "التطوير والتدريب."
+    },
+    "description": "تجمع خبرتي بين تطوير منتجات Angular، وتنفيذ مشاريع Freelance، والتدريب التقني، والإرشاد العملي في مشاريع وبيئات تعلم حقيقية.",
+    "current": "حاليًا",
+    "actions": {
+      "clientReview": "عرض تقييم العميل"
+    },
+    "items": {
+      "iti": {
+        "title": "External Instructor",
+        "organization": "معهد تكنولوجيا المعلومات ITI",
+        "date": "07/2025 — حتى الآن",
+        "type": "Part-Time",
+        "description1": "أقدم تدريبًا عمليًا في تطوير الويب عبر تقنيات MEARN Stack، بما يشمل Angular وReact وNode.js وExpress.js وMongoDB وHTML وCSS وJavaScript.",
+        "description2": "أرشد المتدربين خلال المشاريع والـ debugging ومراجعة الكود والتطبيق العملي لخصائص تطبيقات الويب."
+      },
+      "educationPlatform": {
+        "title": "Freelance Angular Developer",
+        "organization": "عميل خاص",
+        "date": "08/2026",
+        "type": "منصة تعليمية",
+        "description1": "طورت واجهة Angular لمنصة تدريب وتقييم تعليمية تشمل شاشات لوحة الإدارة وتدفقات بوابة الطلاب ومكونات UI متجاوبة.",
+        "description2": "بنيت مكونات Angular قابلة لإعادة الاستخدام وReactive Forms وRouting وربط REST APIs مع Backend مبني باستخدام .NET.",
+        "description3": "تعاونت مع فريق الـ Backend والـ UI/UX للوصول إلى تدفقات استخدام واضحة وعملية."
+      },
+      "webflow": {
+        "title": "Freelance Webflow Developer",
+        "organization": "مستقل",
+        "date": "12/2025 — 01/2026",
+        "type": "تطوير وتحسين موقع",
+        "description1": "أعدت تصميم وتحسين موقع Webflow مع تطوير تجربة المستخدم والتجاوب على الموبايل وتحسين الـ On-Page SEO في الصفحات الرئيسية.",
+        "description2": "حسّنت بنية الصفحات والمسافات والخطوط والتنقل وسلوك الـ CTAs والاتساق البصري للموقع."
+      },
+      "eyouth": {
+        "title": "Freelancing Coach — Software Development",
+        "organization": "EYouth",
+        "date": "10/2024 — 04/2025",
+        "type": "مبادرة DEPI",
+        "description1": "أرشدت المشاركين في العمل الحر وبناء الـ Portfolio والتواصل مع العملاء وعرض المشاريع والاستعداد لفرص Freelance.",
+        "description2": "قدمت إرشادًا عمليًا ومهنيًا ضمن مبادرة رواد مصر الرقمية DEPI."
+      },
+      "booking": {
+        "title": "Freelance Angular Developer",
+        "organization": "مستقل",
+        "date": "11/2024 — 01/2025",
+        "type": "تطبيق إدارة حجوزات",
+        "description1": "طورت Frontend لتطبيق إدارة حجوزات يشمل الحجوزات والخدمات والموظفين وإدارة المواعيد المتاحة.",
+        "description2": "بنيت واجهات Angular متجاوبة باستخدام مكونات قابلة لإعادة الاستخدام وReactive Forms وRouting وGuards وInterceptors والتكامل مع REST APIs."
+      },
+      "ux": {
+        "title": "Freelance UI/UX & SRS Consultant",
+        "organization": "مستقل",
+        "date": "09/2024",
+        "type": "توثيق وتصميم UX",
+        "description1": "أنشأت مستند SRS وUX wireframes لتحديد تدفقات المستخدم وشاشات التطبيق والمتطلبات الأساسية للنظام."
+      }
+    }
+  },
+  "portfolio": {
+    "eyebrow": "أبرز المشاريع",
+    "title": {
+      "before": "مشاريع بُنيت لحل",
+      "highlight": "تحديات حقيقية."
+    },
+    "description": "مجموعة مختارة من مشاريعي في Angular والـ Full Stack، تشمل منتجات عربية، ولوحات تحكم، ومتاجر إلكترونية، وتجارب مدعومة بالذكاء الاصطناعي، وتطبيقات Frontend عملية.",
+    "skillsLabel": "التقنيات المستخدمة",
+    "actions": {
+      "live": "عرض المشروع",
+      "repository": "GitHub",
+      "video": "مشاهدة الفيديو",
+      "github": "المزيد على GitHub",
+      "githubAria": "عرض المزيد من مشاريع محمود محمد على GitHub",
+      "liveAria": "عرض المشروع مباشرة",
+      "repositoryAria": "عرض مستودع GitHub لمشروع",
+      "videoAria": "مشاهدة فيديو مشروع"
+    },
+    "projects": {
+      "qurb": {
+        "title": "قُرب | Qurb",
+        "category": "Angular · PWA",
+        "description": "تطبيق إسلامي عربي PWA يضم قراءة القرآن من مصحف المدينة مع دعم العمل دون اتصال، ومواقيت الصلاة، والأذكار، والأحاديث، والورد اليومي، والمفضلة."
+      },
+      "retailOps": {
+        "title": "RetailOps Admin Dashboard",
+        "category": "لوحة إدارة وتشغيل",
+        "description": "لوحة عمليات مبنية باستخدام Angular تشمل Authentication ونظام صلاحيات RBAC وإدارة البيانات والتحليلات ودعم اللغات وواجهات RTL المتجاوبة."
+      },
+      "touche": {
+        "title": "Touché de Gateau",
+        "category": "متجر إلكتروني عربي",
+        "description": "واجهة متجر إلكتروني عربية وRTL تشمل استعراض المنتجات والفلترة والسلة والـ Checkout، مع Feature-Based Architecture وإدارة للحالة باستخدام Signals."
+      },
+      "nova": {
+        "title": "Nova AI Learning Assistant",
+        "category": "AI · Full Stack",
+        "description": "مساعد تعليمي Full Stack مدعوم بالذكاء الاصطناعي مع Streaming لاستجابات Gemini، ومحادثات متعددة الرسائل، ودعم Markdown، وحفظ سجل المحادثات، وواجهة Angular متجاوبة."
+      },
+      "portfolio": {
+        "title": "Personal Portfolio",
+        "category": "Angular",
+        "description": "Portfolio ثنائي اللغة مبني باستخدام Angular لعرض أبرز المشاريع والخبرات والمهارات التقنية وتقييمات العملاء بشكل احترافي ومركز."
+      },
+      "housing": {
+        "title": "University Campus Housing Management",
+        "category": "Full Stack",
+        "description": "نظام لإدارة المدن الجامعية يغطي إجراءات الطلاب واختيار الغرف والتوافر والمخالفات والتقارير وعمليات الإدارة."
+      }
+    }
+  },
+  "skills": {
+    "eyebrow": "المهارات التقنية",
+    "title": {
+      "before": "مجموعة تقنيات عملية لبناء",
+      "highlight": "منتجات ويب حديثة."
+    },
+    "description": "تمثل Angular الأساس في عملي كـ Frontend Developer، وتدعمها TypeScript وRxJS والتكامل مع الـ APIs وأدوات الواجهات والاختبار ومفاهيم هندسة البرمجيات.",
+    "primary": "التخصص الأساسي",
+    "focus": {
+      "label": "التخصص الرئيسي",
+      "value": "Angular Frontend Engineering"
+    },
+    "categories": {
+      "frontend": {
+        "title": "أساسيات الـ Frontend",
+        "description": "التقنيات الأساسية التي أستخدمها لبناء واجهات متجاوبة وقابلة للصيانة وسهلة الاستخدام."
+      },
+      "angular": {
+        "title": "منظومة Angular",
+        "description": "أنماط Angular والبنية التي أستخدمها في التطبيقات والمشاريع المبنية بأسلوب قريب من بيئات العمل الحقيقية."
+      },
+      "ui": {
+        "title": "مكتبات وأدوات الواجهات",
+        "description": "مكتبات لبناء المكونات وعرض البيانات ودعم اللغات والأيقونات والمحتوى داخل الواجهات."
+      },
+      "backend": {
+        "title": "Backend وAPIs والبيانات",
+        "description": "تقنيات Backend وخدمات بيانات أستخدمها عند بناء أو ربط تطبيقات Full Stack."
+      },
+      "tools": {
+        "title": "الاختبار وأدوات التطوير",
+        "description": "أدوات للاختبار وتطوير الـ APIs وإدارة الإصدارات والنشر والتصميم والتعاون."
+      },
+      "engineering": {
+        "title": "مفاهيم هندسة البرمجيات",
+        "description": "أساسيات علوم الحاسب وهندسة البرمجيات التي تساعدني في اتخاذ قرارات أفضل في التصميم والتنفيذ."
+      }
+    }
+  },
+  "features": {
+    "eyebrow": "ما أبنيه",
+    "title": {
+      "before": "حلول Frontend مصممة لتلبية",
+      "highlight": "احتياجات منتجات حقيقية."
+    },
+    "description": "أركز على أنواع الـ Frontend الموجودة في قلب التطبيقات الحقيقية، من منتجات Angular المنظمة إلى أنظمة الإدارة والتشغيل والتجارب العربية المتجاوبة.",
+    "items": {
+      "angular": {
+        "title": "تطبيقات Angular",
+        "description": "تطبيقات Angular منظمة تعتمد على مكونات قابلة لإعادة الاستخدام وSignals وRxJS وReactive Forms وRouting والتكامل مع REST APIs.",
+        "detail": "بنية واضحة تساعد على الصيانة والتطوير مع نمو التطبيق."
+      },
+      "systems": {
+        "title": "لوحات التحكم وأنظمة الأعمال",
+        "description": "واجهات تعتمد على البيانات لإدارة العمليات والنماذج والجداول والفلترة وAuthentication والصلاحيات والتحليلات والإدارة.",
+        "detail": "مصممة حول تدفقات استخدام عملية واحتياجات العمل اليومية."
+      },
+      "rtl": {
+        "title": "تجارب عربية وRTL",
+        "description": "واجهات متجاوبة مصممة للمحتوى العربي وسلوك RTL مع الاهتمام بإمكانية الوصول والمكونات القابلة لإعادة الاستخدام واتساق التجربة بين الأجهزة.",
+        "detail": "دعم RTL كجزء من تجربة المنتج نفسها، وليس مجرد تعديل بصري."
+      }
+    }
+  },
+  "testimonials": {
+    "eyebrow": "آراء العملاء",
+    "title": {
+      "before": "آراء من",
+      "highlight": "تجارب عمل حقيقية."
+    },
+    "description": "تقييمات موثقة من مشاريع Freelance كان فيها الالتزام بالتسليم والتواصل والدقة والتعاون جزءًا أساسيًا من نجاح المشروع.",
+    "rating": "تقييم 5 من 5",
+    "verification": {
+      "title": "تقييمات موثقة",
+      "description": "كل تقييم مرتبط مباشرة بالمصدر الأصلي على مستقل."
+    },
+    "actions": {
+      "review": "عرض التقييم الأصلي",
+      "reviewAria": "عرض تقييم العميل الأصلي لمشروع"
+    },
+    "reviews": {
+      "booking": {
+        "client": "عميل على مستقل",
+        "platform": "تقييم موثق على مستقل",
+        "project": "تطبيق إدارة حجوزات Angular"
+      },
+      "srs": {
+        "client": "عميل على مستقل",
+        "platform": "تقييم موثق على مستقل",
+        "project": "مشروع UI/UX وSRS"
+      }
+    }
+  },
+  "contact": {
+    "availability": "متاح لفرص Angular و Frontend",
+    "title": {
+      "before": "لديكم منتج يستحق البناء؟",
+      "highlight": "دعنا نتحدث."
+    },
+    "description": "أنا متاح لفرص Angular وFrontend مع فرق تعمل على منتجات ويب حقيقية ومفيدة. إذا كانت خبرتي مناسبة لما تعملون عليه، يسعدني التواصل.",
+    "links": {
+      "email": {
+        "label": "راسلني عبر البريد",
+        "ariaLabel": "إرسال بريد إلكتروني إلى محمود محمد"
+      },
+      "linkedin": {
+        "label": "LinkedIn",
+        "value": "للتواصل المهني"
+      },
+      "github": {
+        "label": "GitHub",
+        "value": "استكشف مشاريعي"
+      }
+    }
+  },
+  "footer": {
+    "brand": {
+      "name": "محمود محمد",
+      "role": "مهندس برمجيات · مطور Angular",
+      "homeLabel": "محمود محمد — العودة إلى الرئيسية"
+    },
+    "navigation": {
+      "ariaLabel": "روابط التنقل في تذييل الموقع",
+      "home": "الرئيسية",
+      "about": "عني",
+      "experience": "الخبرات",
+      "projects": "المشاريع",
+      "skills": "المهارات",
+      "reviews": "التقييمات",
+      "contact": "تواصل"
+    },
+    "social": {
+      "ariaLabel": "روابط التواصل والحسابات",
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "email": "مراسلة محمود محمد عبر البريد"
+    },
+    "copyright": "جميع الحقوق محفوظة.",
+    "builtWith": "تم البناء باستخدام"
+  },
+  "scrollToTop": {
+    "label": "العودة إلى الأعلى"
+  }
+}

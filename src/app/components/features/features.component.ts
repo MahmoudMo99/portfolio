@@ -1,14 +1,16 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { TranslatePipe } from '@ngx-translate/core';
 
 interface FeatureItem {
   icon: string;
-  title: string;
-  description: string;
+  titleKey: string;
+  descriptionKey: string;
+  detailKey: string;
 }
 
 @Component({
   selector: 'app-features',
-  imports: [],
+  imports: [TranslatePipe],
   templateUrl: './features.component.html',
   styleUrl: './features.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -17,21 +19,21 @@ export class FeaturesComponent {
   readonly features: readonly FeatureItem[] = [
     {
       icon: 'bi-code-slash',
-      title: 'Angular Web Applications',
-      description:
-        'Building structured Angular applications with standalone components, Signals, RxJS, Reactive Forms, routing, and REST API integration.',
+      titleKey: 'features.items.angular.title',
+      descriptionKey: 'features.items.angular.description',
+      detailKey: 'features.items.angular.detail',
     },
     {
       icon: 'bi-speedometer2',
-      title: 'Dashboards & Business Systems',
-      description:
-        'Developing data-driven interfaces with tables, filters, forms, authentication, role-based access, analytics, and responsive layouts.',
+      titleKey: 'features.items.systems.title',
+      descriptionKey: 'features.items.systems.description',
+      detailKey: 'features.items.systems.detail',
     },
     {
       icon: 'bi-layout-text-window-reverse',
-      title: 'Responsive & Arabic RTL Experiences',
-      description:
-        'Creating accessible, responsive interfaces with thoughtful UX, reusable UI patterns, and full Arabic RTL support.',
+      titleKey: 'features.items.rtl.title',
+      descriptionKey: 'features.items.rtl.description',
+      detailKey: 'features.items.rtl.detail',
     },
   ];
 }
