@@ -216,6 +216,12 @@
         "category": "Angular · PWA",
         "description": "An Arabic-first Islamic PWA featuring Madinah Mushaf Quran reading with offline support, prayer times, azkar, hadith collections, daily Wird tracking, and personal favorites."
       },
+
+      "air2app": {
+        "title": "Air2App",
+        "description": "A gesture-powered creative studio with real-time hand tracking, shape recognition, interactive Canvas objects, physics, and a camera-free demo.",
+        "category": "GESTURE-POWERED STUDIO"
+      },
       "retailOps": {
         "title": "RetailOps Admin Dashboard",
         "category": "Operations Dashboard",
@@ -230,11 +236,6 @@
         "title": "Nova AI Learning Assistant",
         "category": "AI · Full Stack",
         "description": "A full-stack AI learning assistant with Gemini response streaming, multi-turn conversations, Markdown rendering, local chat history, and a responsive Angular interface."
-      },
-      "portfolio": {
-        "title": "Personal Portfolio",
-        "category": "Angular",
-        "description": "A bilingual Angular portfolio built to present selected projects, professional experience, technical skills, and verified client feedback in a focused experience."
       },
       "housing": {
         "title": "University Campus Housing Management",

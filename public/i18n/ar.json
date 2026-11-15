@@ -215,6 +215,12 @@
         "category": "Angular · PWA",
         "description": "تطبيق إسلامي عربي PWA يضم قراءة القرآن من مصحف المدينة مع دعم العمل دون اتصال، ومواقيت الصلاة، والأذكار، والأحاديث، والورد اليومي، والمفضلة."
       },
+
+      "air2app": {
+        "title": "Air2App",
+        "description": "استوديو إبداعي تفاعلي يعتمد على تتبّع حركة اليد للرسم في الهواء، والتعرّف على الأشكال وتحريكها وتدويرها، مع مؤثرات فيزيائية وتجربة بدون كاميرا.",
+        "category": "استوديو تفاعلي بإيماءات اليد"
+      },
       "retailOps": {
         "title": "RetailOps Admin Dashboard",
         "category": "لوحة إدارة وتشغيل",
@@ -229,11 +235,6 @@
         "title": "Nova AI Learning Assistant",
         "category": "AI · Full Stack",
         "description": "مساعد تعليمي Full Stack مدعوم بالذكاء الاصطناعي مع Streaming لاستجابات Gemini، ومحادثات متعددة الرسائل، ودعم Markdown، وحفظ سجل المحادثات، وواجهة Angular متجاوبة."
-      },
-      "portfolio": {
-        "title": "Personal Portfolio",
-        "category": "Angular",
-        "description": "Portfolio ثنائي اللغة مبني باستخدام Angular لعرض أبرز المشاريع والخبرات والمهارات التقنية وتقييمات العملاء بشكل احترافي ومركز."
       },
       "housing": {
         "title": "University Campus Housing Management",
